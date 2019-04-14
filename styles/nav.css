@@ -1,0 +1,91 @@
+/* navigation */
+.nav {
+  display: flex;
+  align-items: stretch;
+}
+
+.nav a {
+  display: flex;
+  font: bold 16px/20px 'Source Sans Pro', serif;
+  text-decoration: none;
+  position: relative;
+  color: var(--nav__header-color);
+  transition: color .3s, padding .3s;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  height: 40px;
+}
+
+.nav__header a {
+  padding: 0 21px;
+}
+
+.nav__footer a {
+  margin: 0 21px;
+}
+
+.nav__footer a:last-child {
+  margin-right: 0;
+}
+
+.nav a.current {
+  color: var(--nav__header-current-color);
+}
+
+.nav__header a {
+  height: 68px;
+}
+
+.nav__header a.current::after {
+  content: '';
+  height: 5px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--nav__header-current-color);
+  border-radius: 5px;
+  transition: background-color .3s;
+}
+
+.nav a:focus {
+  color: var(--nav__header-focus-color);
+}
+
+.nav a:hover {
+  color: var(--nav__header-hover-color);
+}
+
+.nav a:active {
+  color: var(--nav__header-active-color);
+}
+
+.nav__header {
+  align-self: stretch;
+}
+
+.scrolled .nav__header a {
+  color: var(--scrolled-nav__header-color);
+}
+
+.scrolled .nav__header a:focus {
+  color: var(--scrolled-nav__header-focus-color);
+}
+
+.scrolled .nav__header a:hover {
+  color: var(--scrolled-nav__header-hover-color);
+}
+
+.scrolled .nav__header a:active {
+  color: var(--scrolled-nav__header-active-color);
+}
+
+.scrolled .nav__header a.current {
+  color: var(--scrolled-nav__header-current-color);
+}
+
+.scrolled .nav__header a.current::after {
+  background-color: var(--scrolled-nav__header-current-color);
+}

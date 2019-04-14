@@ -1,0 +1,27 @@
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 16px;
+  background-color: transparent;
+  box-shadow: 0 -5px 5px 5px transparent;
+  transition: background-color .3s, box-shadow .3s, padding .3s;
+  z-index: 100;
+  display: flex;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+header .section__inner {
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+}
+
+.scrolled header {
+  padding-top: 0;
+  box-shadow: 0 1px 4px rgba(155, 155, 155, .56);
+  background-color: #F9FAFF;
+}
