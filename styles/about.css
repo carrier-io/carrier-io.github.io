@@ -2,12 +2,15 @@
 
 /* about section */
 .about {
-  position: relative;
-  height: 765px;
-  padding-top: 230px;
+  min-height: 765px;
   background: var(--about__bg-color);
-  z-index: 1;
   --about-width: 100%;
+}
+
+.about .section__inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 230px;
 }
 
 .about__bg {
@@ -17,7 +20,7 @@
   left: 100%;
   width: 2571px;
   height: 763px;
-  margin-left: calc((-620px - var(--about-width) * .2));
+  margin-left: -920px;
 }
 
 .about__bg .platform1 {
