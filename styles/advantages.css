@@ -1,0 +1,51 @@
+/* advantages */
+.advantages {
+  padding: 115px 0 100px;
+  text-align: center;
+  background: url('../images/lside-bg.png') no-repeat 0 100px,
+  url('../images/rside-bg.png') no-repeat 100% 100%,
+  linear-gradient(var(--about__bg-color) 0%, var(--about__bg-color) 100%);
+}
+
+.advantages .section__inner {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.advantages .section__title {
+  flex-basis: 100%;
+}
+
+.advantages .subsection {
+  max-width: 320px;
+}
+
+.advantages .subsection .title__image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 310px;
+}
+
+.advantages .subsection .title__image img {
+  position: relative;
+  z-index: 0;
+}
+
+.advantages .subsection .title__image .platform img {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-10px) translateX(calc(-50% - 35px));
+}
+
+.advantages .subsection.time .title__image .picture img {
+  transform: translateY(20px) translateX(10px);
+}
+
+.advantages .subsection.metrics .title__image .picture img {
+  transform: translateY(-10px) translateX(-5px);
+}

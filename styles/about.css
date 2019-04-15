@@ -1,0 +1,96 @@
+@import "theme.css";
+
+/* about section */
+.about {
+  position: relative;
+  height: 765px;
+  padding-top: 230px;
+  background: var(--about__bg-color);
+  z-index: 1;
+  --about-width: 100%;
+}
+
+.about__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 100%;
+  width: 2571px;
+  height: 763px;
+  margin-left: calc((-620px - var(--about-width) * .2));
+}
+
+.about__bg .platform1 {
+  position: absolute;
+  top: 350px;
+  left: 240px;
+}
+
+.about__bg .platform2 {
+  position: absolute;
+  top: 500px;
+  left: 530px;
+}
+
+.about__title {
+  position: relative;
+  max-width: 35%;
+  margin: 0 0 50px;
+  padding: 0 0 20px;
+  text-align: left;
+}
+
+.about__title::after {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 75px;
+  height: 5px;
+  content: '';
+  transition: background-color .3s;
+  border-radius: 5px;
+  background-color: rgba(var(--main__highlight-color), 1);
+}
+
+.about .section__text {
+  line-height: 26px;
+  max-width: 40%;
+  text-align: left;
+}
+
+.about .get-button__section {
+  padding: 40px 0 25px;
+}
+
+.about .get__button {
+  width: 276px;
+}
+
+.about .os-icons__label {
+  font-size: 14px;
+  line-height: 36px;
+  margin: 0;
+  color: rgba(56, 43, 91, .6);
+}
+
+.about .os__icons {
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+}
+
+.about .os__icons li {
+  display: inline-block;
+}
+
+.about .os__icons li:not(:last-child) {
+  padding-right: 35px;
+}
+
+.about .os__icon {
+  width: 18px;
+  height: 18px;
+  fill: rgb(133, 126, 157);
+}

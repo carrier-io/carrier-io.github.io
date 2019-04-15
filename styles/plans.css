@@ -1,0 +1,12 @@
+/* plans */
+.plans {
+  padding: 85px 0 115px;
+  text-align: center;
+  background: url('../images/lside-bg.png') no-repeat 0 60px,
+  url('../images/rside-bg.png') no-repeat 100% calc(100% - 60px);
+}
+
+.plans .section__text {
+  max-width: 580px;
+  margin: 32px auto 48px;
+}

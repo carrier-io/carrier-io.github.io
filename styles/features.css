@@ -1,0 +1,43 @@
+/* features */
+.features {
+  padding: 170px 0 130px;
+  background: url('../images/rbg-rect.png') no-repeat right 270px,
+  url('../images/lbg-rect.png') no-repeat left calc(100% - 120px),
+  linear-gradient(176deg, var(--about__bg-color) 0%, var(--about__bg-color) 140px, rgb(255, 255, 255) 141px);
+}
+
+.features .subsection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features .section__title {
+  margin-bottom: 32px;
+}
+
+.features .description {
+  max-width: 480px;
+}
+
+.features .coupled {
+  padding: 0 0 130px;
+}
+
+.features .coupled .picture {
+  order: 2;
+}
+
+.features .coupled .description {
+  order: 1;
+  margin-right: 120px;
+}
+
+.features .compare .picture {
+  order: 1;
+}
+
+.features .compare .description {
+  order: 2;
+  margin-left: 120px;
+}

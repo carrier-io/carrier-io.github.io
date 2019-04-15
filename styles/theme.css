@@ -1,0 +1,32 @@
+/* theme settings */
+:root {
+  --body__bg-color: #fff;
+  --about__bg-color: rgb(249, 250, 255);
+
+  --main-color: rgb(56, 43, 91);
+  --main__highlight-color-value: 87, 18, 176;
+  --main__highlight-color: rgb(87, 18, 176);
+
+  --nav__header-color: rgba(255, 255, 255, .4);
+  --nav__header-current-color: rgba(255, 255, 255, 1);
+  --nav__header-hover-color: var(--nav__header-current-color);
+  --nav__header-focus-color: var(--nav__header-current-color);
+  --nav__header-active-color: rgba(255, 255, 255, .9);
+
+  --scrolled-nav__header-color: var(--main-color);
+  --scrolled-nav__header-current-color: rgba(var(--main__highlight-color-value), 1);
+  --scrolled-nav__header-hover-color: rgba(var(--main__highlight-color-value), .6);
+  --scrolled-nav__header-focus-color: var(--scrolled-nav__header-hover-color);
+  --scrolled-nav__header-active-color: rgba(var(--main__highlight-color-value), 0.3);
+
+  --main__title-color: var(--main-color);
+  --main__text-color: var(--main-color);
+
+  --advantages__grad-edge: 5%;
+
+  /* effects */
+  --rndPos: 0;
+  --levDur: 0;
+  --rndOp: 1;
+  --opDur: 0;
+}

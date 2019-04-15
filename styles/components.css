@@ -1,0 +1,94 @@
+/* components */
+.components {
+  padding: 145px 0 130px;
+  background: url('../images/comp_stars-b.png') no-repeat center bottom,
+  url('../images/comp_stars-t.png') no-repeat center top,
+  url('../images/comp_stars-l.png') no-repeat left center,
+  url('../images/comp_stars-r.png') no-repeat right center,
+  linear-gradient(45deg, rgb(62, 20, 147) 0%, rgb(100, 31, 195) 100%);
+}
+
+.components section {
+  position: static;
+}
+
+.components .section__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.components .picture {
+  width: 680px;
+  height: 441px;
+}
+
+.components .picture image {
+  position: absolute;
+  z-index: 0;
+}
+
+.components .picture .back image {
+  bottom: 0;
+  left: 0;
+}
+
+.components .partial {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  background-repeat: no-repeat;
+}
+
+.components .platform .partial {
+  top: 38px;
+  left: calc(93px + 75px);
+  width: 232px;
+  height: 250px;
+  background-image: url('../images/component-platform.png');
+}
+
+.components .elastic .partial {
+  top: 100px;
+  left: calc(278px + 75px);
+  width: 354px;
+  height: 271px;
+  background-image: url('../images/component-elastic.png');
+}
+
+.components .integration .partial {
+  top: -23px;
+  left: calc(304px + 75px);
+  width: 221px;
+  height: 244px;
+  background-image: url('../images/component-integration.png');
+}
+
+.components .description {
+  max-width: 420px;
+  margin-left: 100px;
+  color: #fff;
+}
+
+.components .section__title {
+  padding: 0 20px 50px;
+  color: #fff;
+}
+
+.components .subsection {
+  margin: 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.components .subsection:hover {
+  background: rgba(255, 255, 255, .14);
+}
+
+.components .subsection:hover .partial {
+  display: block;
+}
+
+.components .description .subsection__text {
+  margin: 0
+}

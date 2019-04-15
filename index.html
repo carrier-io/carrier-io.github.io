@@ -1,10 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Carrier | Continuous Test Automation Framework</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Description"
+        content="CARRIER helps to enable shift-left testing practices into Software Development Process without stress of Development Team">
+  <title>Carrier | Continuous Test Automation Framework</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 </head>
+
 <body>
-    Hello World
+<header>
+  <div class="section__inner">
+    <a href="/" class="logo logo__header" aria-label="Carrier">
+      <svg width="118" height="36" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="images/icons.svg#logo"></use>
+      </svg>
+    </a>
+    <nav class="nav nav__header">
+      <a href="#about" class="current">About</a>
+      <a href="#components">Components</a>
+      <a href="#how">How it works?</a>
+      <a href="#plans">Our plans</a>
+    </nav>
+    <div class="links links__header">
+      <a aria-label="Telegram" class="icon" href="https://t.me/getcarrierio" rel="noreferrer" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="images/icons.svg#telegram"></use>
+        </svg>
+      </a>
+      <a aria-label="Slack" class="icon"
+         href="https://join.slack.com/t/carrier-chat/shared_invite/enQtNTg3MjA5NzI4ODA3LTZkYWUxNTZkY2FlYTViM2VlYTVmYTMyODRiOTczYmUwZDM1NTg4OTRlZjVmZjI2NjgzMzc3NDA0Nzk4Nzg1NTA"
+         rel="noreferrer"
+         target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="images/icons.svg#slack"></use>
+        </svg>
+      </a>
+      <a aria-label="Docker" class="icon" href="https://hub.docker.com/u/getcarrier" rel="noreferrer" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="images/icons.svg#docker"></use>
+        </svg>
+      </a>
+      <a aria-label="GitHub" class="icon" href="https://github.com/carrier-io/carrier-io.github.io" rel="noreferrer"
+         target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="images/icons.svg#github"></use>
+        </svg>
+      </a>
+    </div>
+    <!-- <a href="//github.com/carrier-io/carrier-io.github.io" class="fork">Fork me on Github</a> -->
+  </div>
+</header>
+<main class="main">
+  <section id="about">
+    <section class="section about">
+      <div class="section__inner">
+        <div class="about__bg">
+          <picture class="picture">
+            <source srcset="images/about-bg.webp" type="image/webp"/>
+            <img src="images/about-bg.jpg" width="2571" height="763" alt=""/>
+          </picture>
+          <picture class="platform1 rnd levitate">
+            <source srcset="images/about-patform1.webp" type="image/webp"/>
+            <img src="images/about-patform1.png" width="213" height="213" alt=""/>
+          </picture>
+          <picture class="platform2 rnd levitate">
+            <source srcset="images/about-platform2.webp" type="image/webp"/>
+            <img src="images/about-platform2.png" width="193" height="230" alt=""/>
+          </picture>
+        </div>
+        <h1 class="about__title">Continuous testing platform</h1>
+        <p class="section__text">CARRIER helps to enable shift-left testing practices into Software Development
+          Process without stress of Development Team</p>
+        <div class="get-button__section">
+          <a href="https://github.com/carrier-io/carrier-io.github.io" class="get__button">Get carrier</a>
+        </div>
+        <p class="os-icons__label">Available for:</p>
+        <ul class="os__icons">
+          <li class="ubuntu" aria-label="Ubuntu">
+            <svg class="os__icon" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons.svg#ubuntu"></use>
+            </svg>
+          </li>
+          <li class="centos" aria-label="CentOS">
+            <svg class="os__icon" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons.svg#centos"></use>
+            </svg>
+          </li>
+          <li class="windows" aria-label="Windows">
+            <svg class="os__icon" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons.svg#windows"></use>
+            </svg>
+          </li>
+          <li class="macos" aria-label="Mac OS">
+            <svg class="os__icon" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons.svg#macos"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section advantages">
+      <h2 class="section__title">Carrier advantages</h2>
+      <div class="section__inner">
+        <section class="subsection ci">
+          <div class="title__image">
+            <picture class="picture rnd levitate">
+              <source srcset="images/advan-ci.webp" type="image/webp"/>
+              <img src="images/advan-ci.png" width="187" height="185" alt="CI friendly design"/>
+            </picture>
+            <picture class="platform">
+              <source srcset="images/advan-platform.webp" type="image/webp"/>
+              <img src="images/advan-platform.png" width="263" height="114" alt=""/>
+            </picture>
+          </div>
+          <h3 class="subsection_title">CI friendly design</h3>
+          <p class="subsection__text">Allows to save up to 2 man/month on platform rollout comparing to new start</p>
+        </section>
+        <section class="subsection time">
+          <div class="title__image">
+            <picture class="picture rnd levitate">
+              <source srcset="images/advan-time.webp" type="image/webp"/>
+              <img src="images/advan-time.png" width="218" height="126" alt="Reduces time"/>
+            </picture>
+            <picture class="platform">
+              <source srcset="images/advan-platform.webp" type="image/webp"/>
+              <img src="images/advan-platform.png" width="263" height="114" alt=""/>
+            </picture>
+          </div>
+          <h3 class="subsection__title">Reduces time</h3>
+          <p class="subsection__text">Integration with modern test automation results management systems helps to
+            reduce time required on failures analysis up to 4 times</p>
+        </section>
+        <section class="subsection metrics">
+          <div class="title__image">
+            <picture class="picture rnd levitate">
+              <source srcset="images/advan-metrics.webp" type="image/webp"/>
+              <img src="images/advan-metrics.png" width="123" height="184" alt="Accurate metrics"/>
+            </picture>
+            <picture class="platform">
+              <source srcset="images/advan-platform.webp" type="image/webp"/>
+              <img src="images/advan-platform.png" width="263" height="114" alt=""/>
+            </picture>
+          </div>
+          <h3 class="subsection_title">Accurate metrics</h3>
+          <p class="subsection__text">Ability to configure performance thresholds on request basis helps to provide
+            accurate performance metrics</p>
+        </section>
+      </div>
+    </section>
+    <section class="section features">
+      <div class="section__inner">
+        <div class="subsection coupled">
+          <picture class="picture">
+            <source srcset="images/coupled__ill.webp" type="image/webp"/>
+            <img src="images/coupled__ill.png" width="551" height="388" alt="Loose coupled platform"/>
+          </picture>
+          <div class="description">
+            <h2 class="section__title">Loose coupled platform</h2>
+            <p class="section__text">Carrier is an open-source loose coupled continuous testing platform that allows
+              you to combine components that is right for you and in a way you want them to be</p>
+          </div>
+        </div>
+        <div class="subsection compare">
+          <picture class="picture">
+            <source srcset="images/compare-ill.webp" type="image/webp"/>
+            <img src="images/compare-ill.png" width="580" height="444" alt="Back to back comparison of builds"/>
+          </picture>
+          <div class="description">
+            <h2 class="section__title">Back to back comparison of builds</h2>
+            <p class="section__text">Optimized results storage mechanism allows to back to back comparison of builds
+              even if one of them is a year old</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="section components" id="components">
+    <div class="section__inner">
+      <div class="picture">
+        <picture class="back">
+          <source srcset="images/components-bg.webp" type="image/webp"/>
+          <img src="images/components-bg.png" width="680" height="418" alt="How it works?"/>
+        </picture>
+      </div>
+      <div class="description">
+        <h2 class="section__title">Under the Hood</h2>
+        <section class="subsection platform">
+          <p class="subsection__text"><strong>Platform components</strong> - used to persist, visualize and analyze
+            results</p>
+          <div class="partial rnd opacity"></div>
+        </section>
+        <section class="subsection elastic">
+          <p class="subsection__text"><strong>Elastic components</strong> - stateless units used to conduct tests,
+            gather execution results and transfer them to platform or external components for persistence
+          </p>
+          <div class="partial rnd opacity"></div>
+        </section>
+        <section class="subsection integration">
+          <p class="subsection__text"><strong>External integrations</strong> - systems used to initiate tests, enhance
+            results analysis, and close the feedback loop</p>
+          <div class="partial rnd opacity"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+  <section class="section how" id="how">
+    <form class="section__inner" action="">
+      <h2 class="section__title">How it works?</h2>
+      <p class="section__text">Optimized results storage mechanism allows to back to back comparison of builds
+      </p>
+      <div class="videos">
+        <section class="subsection">
+          <a class="video" href="#" aria-label="Play">
+            <span class="play">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons.svg#video-play"></use>
+              </svg>
+            </span>
+          </a>
+          <h4 class="subsection_title">Technology</h4>
+          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds
+          </p>
+        </section>
+        <section class="subsection">
+          <a class="video" href="#" aria-label="Play">
+            <span class="play">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons.svg#video-play"></use>
+              </svg>
+            </span>
+          </a>
+          <h4 class="subsection_title">Management</h4>
+          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds
+          </p>
+        </section>
+        <section class="subsection">
+          <a class="video" href="#" aria-label="Play">
+            <span class="play">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons.svg#video-play"></use>
+              </svg>
+            </span>
+          </a>
+          <h4 class="subsection_title">How to use?</h4>
+          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds
+          </p>
+        </section>
+      </div>
+    </form>
+  </section>
+  <section class="section plans" id="plans">
+    <div class="section__inner">
+      <h2 class="section__title">Our plans</h2>
+      <p class="section__text">CARRIER helps to enable shift-left testing practices into Software Development Process
+        without stress of Development Team</p>
+      <p class="section__text">
+        <a href="https://github.com/carrier-io/carrier-io.github.io" class="get__button">View on Github</a>
+      </p>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="section__inner">
+    <div class="footer__bg">
+      <picture class="picture">
+        <source srcset="images/stars.webp" type="image/webp"/>
+        <img src="images/stars.png" alt=""/>
+      </picture>
+    </div>
+    <div class="flex-row">
+      <a href="/" class="logo logo__footer" aria-label="Carrier">
+        <svg width="118" height="36" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="images/icons.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="nav nav__footer">
+        <a href="#about" class="current">About</a>
+        <a href="#components">Components</a>
+        <a href="#how">How it works?</a>
+        <a href="#plans">Our plans</a>
+      </nav>
+    </div>
+    <div class="flex-row">
+      <div class="copyright">
+        <p class="copyright__sponsored">Sponsored by EPAM Systems</p>
+        <p class="copyright__text">&copy; 2019 getcarrier.io All rights reserved.</p>
+      </div>
+      <div class="links links__footer">
+        <a aria-label="Telegram" class="icon" href="https://t.me/getcarrierio" rel="noreferrer" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#telegram"></use>
+          </svg>
+        </a>
+        <a aria-label="Slack" class="icon"
+           href="https://join.slack.com/t/carrier-chat/shared_invite/enQtNTg3MjA5NzI4ODA3LTZkYWUxNTZkY2FlYTViM2VlYTVmYTMyODRiOTczYmUwZDM1NTg4OTRlZjVmZjI2NjgzMzc3NDA0Nzk4Nzg1NTA"
+           rel="noreferrer"
+           target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#slack"></use>
+          </svg>
+        </a>
+        <a aria-label="Docker" class="icon" href="https://hub.docker.com/u/getcarrier" rel="noreferrer" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#docker"></use>
+          </svg>
+        </a>
+        <a aria-label="GitHub" class="icon" href="//github.com/carrier-io/carrier-io.github.io" rel="noreferrer"
+           target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#github"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
 </body>
+
 </html>

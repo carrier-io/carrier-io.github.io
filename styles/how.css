@@ -1,0 +1,53 @@
+/* how it works */
+.how {
+  padding: 120px 0 160px;
+  text-align: center;
+  background-color: var(--about__bg-color);
+}
+
+.how .section__title {
+  margin-bottom: 32px;
+}
+
+.how .section__text {
+  margin-bottom: 88px;
+}
+
+.how .videos {
+  display: flex;
+}
+
+.how .subsection {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.how .subsection:not(:first-child) {
+  margin-left: 20px;
+}
+
+.how .subsection .subsection__title {
+  padding: 8px 0;
+}
+
+.how .video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin: 0 0 32px;
+  background: royalblue;
+}
+
+.how .video .play {
+  display: block;
+  width: 80px;
+  height: 80px;
+  fill: rgba(255, 255, 255, .45);
+}
+
+.how .video:hover .play {
+  fill: rgba(255, 255, 255, .6);
+}
