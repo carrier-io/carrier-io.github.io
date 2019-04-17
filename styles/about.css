@@ -21,6 +21,13 @@
   width: 2571px;
   height: 763px;
   margin-left: -920px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2571' height='763'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='NaN' x2='NaN' y1='80.8375743%25' y2='27.7410741%25'%3E%3Cstop offset='0%25' stop-color='%23361489'/%3E%3Cstop offset='100%25' stop-color='%235412AD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23a)' fill-rule='evenodd' d='M3571 0H0l499.36 745.23051c10.3349 15.42351 29.92407 21.70828 47.30297 15.17617L2571 0z'/%3E%3C/svg%3E");;
+}
+
+.about__bg .big__platform {
+  position: absolute;
+  bottom: 22px;
+  left: 326px;
 }
 
 .about__bg .platform1 {
@@ -33,6 +40,18 @@
   position: absolute;
   top: 500px;
   left: 530px;
+}
+
+.about__bg .platform3 {
+  position: absolute;
+  top: 240px;
+  left: 250px;
+}
+
+.about__bg .platform4 {
+  position: absolute;
+  top: 200px;
+  left: 330px;
 }
 
 .about__title {
