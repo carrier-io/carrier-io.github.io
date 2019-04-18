@@ -24,44 +24,102 @@
 }
 
 .components .picture image {
-  position: absolute;
+  position: relative;
   z-index: 0;
 }
 
-.components .picture .back image {
-  bottom: 0;
-  left: 0;
-}
 
-.components .partial {
-  position: absolute;
-  z-index: 1;
+.components .subsection:not(:hover) .partial {
   display: none;
+}
+
+.components .glow__box {
+  position: absolute;
+  width: 106px;
+  height: 132px;
+  background-image: url('../images/glow-box@1x.png');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.components .platform .partial {
-  top: 38px;
-  left: calc(93px + 75px);
-  width: 232px;
-  height: 250px;
-  background-image: url('../images/component-platform.png');
+.components .partial .title {
+  position: absolute;
+  fill: #f2f2f2;
 }
 
-.components .elastic .partial {
-  top: 100px;
-  left: calc(278px + 75px);
-  width: 354px;
-  height: 271px;
-  background-image: url('../images/component-elastic.png');
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .img {
+    background-image: url('../images/glow-box@2x.png');
+  }
 }
 
-.components .integration .partial {
-  top: -23px;
-  left: calc(304px + 75px);
-  width: 221px;
-  height: 244px;
-  background-image: url('../images/component-integration.png');
+/* platform */
+.components .platform .title {
+  top: 228px;
+  left: 168px;
+  width: 102px;
+  height: 60px;
+}
+
+.components .platform .glow__box.box1 {
+  top: 87px;
+  left: 187px;
+}
+
+.components .platform .glow__box.box2 {
+  top: 27px;
+  left: 291px;
+}
+
+.components .platform .glow__box.box3 {
+  top: 149px;
+  left: 293px;
+}
+
+/* integration */
+.components .integration .title {
+  top: 33px;
+  left: 502px;
+  width: 98px;
+  height: 58px;
+}
+
+.components .integration .glow__box.box1 {
+  top: -25px;
+  left: 381px;
+}
+
+.components .integration .glow__box.box2 {
+  top: 35px;
+  left: 492px;
+}
+
+.components .integration .glow__box.box3 {
+  top: 90px;
+  left: 399px;
+}
+
+/* elastic */
+.components .elastic .title {
+  top: 336px;
+  left: 353px;
+  width: 61px;
+  height: 35px;
+}
+
+.components .elastic .glow__box.box1 {
+  top: 212px;
+  left: 403px;
+}
+
+.components .elastic .glow__box.box2 {
+  top: 153px;
+  left: 507px;
+}
+
+.components .elastic .glow__box.box3 {
+  top: 98px;
+  left: 601px;
 }
 
 .components .description {
@@ -83,10 +141,6 @@
 
 .components .subsection:hover {
   background: rgba(255, 255, 255, .14);
-}
-
-.components .subsection:hover .partial {
-  display: block;
 }
 
 .components .description .subsection__text {

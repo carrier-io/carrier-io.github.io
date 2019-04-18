@@ -1,8 +1,8 @@
 /* services links */
 .links {
   display: flex;
-  padding: 17px 0 17px 50px;
   align-items: flex-end;
+  padding: 17px 0 17px 50px;
 }
 
 .links .icon:not(:first-child) {
@@ -10,50 +10,50 @@
   margin: 0 0 0 24px;
 }
 
-.links .icon svg {
+.links .icon {
   display: block;
   width: 32px;
   height: 32px;
-  fill: var(--nav__header-color);
   transition: fill .3s;
+  fill: var(--nav__header-color);
 }
 
-.links__header .icon:focus svg {
+.links__header .icon:focus {
   fill: var(--nav__header-focus-color);
 }
 
-.links__header .icon:hover svg {
+.links__header .icon:hover {
   fill: var(--nav__header-hover-color);
 }
 
-.links__header .icon:active svg {
+.links__header .icon:active {
   fill: var(--nav__header-active-color);
 }
 
-.scrolled .links__header .icon svg {
+.scrolled .links__header .icon {
   fill: var(--scrolled-nav__header-current-color);
 }
 
-.scrolled .links__header .icon:focus svg {
+.scrolled .links__header .icon:focus {
   fill: var(--scrolled-nav__header-focus-color);
 }
 
-.scrolled .links__header .icon:hover svg {
+.scrolled .links__header .icon:hover {
   fill: var(--scrolled-nav__header-hover-color);
 }
 
-.scrolled .links__header .icon:active svg {
+.scrolled .links__header .icon:active {
   fill: var(--scrolled-nav__header-active-color);
 }
 
-.links__footer .icon:focus svg {
+.links__footer .icon:focus {
   fill: var(--nav__header-focus-color);
 }
 
-.links__footer .icon:hover svg {
+.links__footer .icon:hover {
   fill: var(--nav__header-hover-color);
 }
 
-.links__footer .icon:active svg {
+.links__footer .icon:active {
   fill: var(--nav__header-active-color);
 }

@@ -1,9 +1,8 @@
 /* features */
 .features {
-  padding: 170px 0 130px;
-  background: url('../images/rbg-rect.png') no-repeat right 270px,
-  url('../images/lbg-rect.png') no-repeat left calc(100% - 120px),
-  linear-gradient(176deg, var(--about__bg-color) 0%, var(--about__bg-color) 140px, rgb(255, 255, 255) 141px);
+  padding: 70px 0 130px;
+  background: url('../images/rbg-rect.png') no-repeat right 160px,
+  url('../images/lbg-rect.png') no-repeat left calc(100% - 120px);
 }
 
 .features .subsection {

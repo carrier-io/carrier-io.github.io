@@ -1,10 +1,9 @@
 /* advantages */
 .advantages {
-  padding: 115px 0 100px;
+  padding: 115px 0 200px;
   text-align: center;
-  background: url('../images/lside-bg.png') no-repeat 0 100px,
-  url('../images/rside-bg.png') no-repeat 100% 100%,
-  linear-gradient(var(--about__bg-color) 0%, var(--about__bg-color) 100%);
+  background: url(../images/lside-bg.png) no-repeat 0 100px, url(../images/rside-bg.png) no-repeat 100% calc(100% - 150px), linear-gradient(var(--about__bg-color) 0%, var(--about__bg-color) 100%);
+  clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 100px), 0px 100%);
 }
 
 .advantages .section__inner {
