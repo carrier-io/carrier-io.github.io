@@ -3,125 +3,165 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Description"
-        content="CARRIER helps to enable shift-left testing practices into Software Development Process without stress of Development Team">
-  <title>Carrier | Continuous Testing Toolkit</title>
+  <title>Carrier | Continuous Test Automation Framework</title>
+  <meta
+    content="CARRIER helps to enable shift-left testing practices into Software Development Process without stress of Development Team"
+    name="Description">
 
-  <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" as="script">
+  <link href="./apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="./favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="./favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="./site.webmanifest" rel="manifest">
+  <link color="#5bbad5" href="./safari-pinned-tab.svg" rel="mask-icon">
+  <meta content="#da532c" name="msapplication-TileColor">
+  <meta content="#ffffff" name="theme-color">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link rel="stylesheet" href="styles.css">
-  <script rel="preload" src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" ></script>
+  <link as="script" href="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" rel="preload">
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+
+  <link as="script" href="./siema.min.js" rel="preload">
+  <script src="./siema.min.js"></script>
+
+  <link as="style" href="styles.css" rel="preload">
+  <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
+<div class="blanket"></div>
 <header>
   <div class="section__inner">
-    <a href="/" class="logo logo__header" aria-label="Carrier">
-      <svg width="118" height="36" xmlns="http://www.w3.org/2000/svg">
+    <a aria-label="Carrier" class="logo logo__header" href="/">
+      <svg height="36" width="118" xmlns="http://www.w3.org/2000/svg">
         <use xlink:href="images/icons.svg#logo"></use>
       </svg>
     </a>
-    <nav class="nav nav__header">
-      <a href="#about" class="current">About</a>
-      <a href="#components">Components</a>
-      <a href="#how">How it works?</a>
-      <a href="#plans">Our plans</a>
-    </nav>
-    <div class="links links__header">
-      <a aria-label="Telegram" class="icon" href="https://t.me/getcarrierio" rel="noreferrer" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="images/icons.svg#telegram"></use>
-        </svg>
-      </a>
-      <a aria-label="Slack" class="icon"
-         href="https://join.slack.com/t/carrier-chat/shared_invite/enQtNTg3MjA5NzI4ODA3LTZkYWUxNTZkY2FlYTViM2VlYTVmYTMyODRiOTczYmUwZDM1NTg4OTRlZjVmZjI2NjgzMzc3NDA0Nzk4Nzg1NTA"
-         rel="noreferrer"
-         target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="images/icons.svg#slack"></use>
-        </svg>
-      </a>
-      <a aria-label="Docker" class="icon" href="https://hub.docker.com/u/getcarrier" rel="noreferrer" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="images/icons.svg#docker"></use>
-        </svg>
-      </a>
-      <a aria-label="GitHub" class="icon" href="https://github.com/carrier-io/carrier-io.github.io" rel="noreferrer"
-         target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="images/icons.svg#github"></use>
-        </svg>
-      </a>
+    <button class="hamburger" id="hamburger">
+      <svg class="open" height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="images/icons.svg#openmenu"></use>
+      </svg>
+      <svg class="close" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="images/icons.svg#closemenu"></use>
+      </svg>
+    </button>
+    <div class="menu">
+      <nav class="nav nav__header">
+        <a class="current" href="#about">About</a>
+        <a href="#components">Components</a>
+        <a href="#how">How it works?</a>
+        <a href="#plans">Our plans</a>
+      </nav>
+      <div class="links links__header">
+        <h2 class="links__title">Our community</h2>
+        <a aria-label="Telegram" class="icon" href="https://t.me/getcarrierio" rel="noreferrer" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#telegram"></use>
+          </svg>
+        </a>
+        <a aria-label="Slack" class="icon"
+           href="https://join.slack.com/t/carrier-chat/shared_invite/enQtNTg3MjA5NzI4ODA3LTZkYWUxNTZkY2FlYTViM2VlYTVmYTMyODRiOTczYmUwZDM1NTg4OTRlZjVmZjI2NjgzMzc3NDA0Nzk4Nzg1NTA"
+           rel="noreferrer"
+           target="_blank">
+          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#slack"></use>
+          </svg>
+        </a>
+        <a aria-label="Docker" class="icon" href="https://hub.docker.com/u/getcarrier" rel="noreferrer" target="_blank">
+          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#docker"></use>
+          </svg>
+        </a>
+        <a aria-label="GitHub" class="icon" href="https://github.com/carrier-io/carrier-io.github.io" rel="noreferrer"
+           target="_blank">
+          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#github"></use>
+          </svg>
+        </a>
+      </div>
     </div>
     <!-- <a href="//github.com/carrier-io/carrier-io.github.io" class="fork">Fork me on Github</a> -->
   </div>
 </header>
 <main class="main">
   <section id="about">
-    <section class="section about">
+    <section class="section hero">
       <div class="section__inner">
-        <div class="about__bg">
-          <picture class="big__platform">
-            <source srcset="images/platform@2x.webp 2x, images/platform@1x.webp 1x" type="image/webp"/>
-            <img src="images/platform@1x.png"
-                 width="630" height="681" alt=""
-                 srcset="images/platform@2x.png 2x"/>
+        <div class="hero__bg">
+          <picture class="big-platform">
+            <source media="(max-width: 414px)"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/hero_platform_tablet@2x.webp 2x, images/hero_platform_tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/hero_platform_tablet@2x.png 2x, images/hero_platform_tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/hero_platform@2x.webp 2x, images/hero_platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/hero_platform@2x.png 2x, images/hero_platform@1x.png 1x"/>
+
+            <img alt="" src="images/hero_platform@1x.png"/>
           </picture>
-          <picture class="platform1 rnd levitate">
+          <picture class="left-platform rnd levitate">
             <source srcset="images/left-platform@2x.webp 2x, images/left-platform@1x.webp 1x" type="image/webp"/>
-            <img src="images/left-platform@1x.png"
-                 width="213" height="213" alt=""
-                 srcset="images/left-platform@2x.png 2x"/>
+            <source srcset="images/left-platform@2x.png 2x, images/left-platform@1x.png 1x"/>
+            <img alt="" src="images/left-platform@1x.png"/>
           </picture>
-          <picture class="platform2 rnd levitate">
+          <picture class="bottom-platform rnd levitate">
             <source srcset="images/bottom-platform@2x.webp 2x, images/bottom-platform@1x.webp 1x" type="image/webp"/>
-            <img src="images/bottom-platform@1x.png"
-                 width="193" height="230" alt=""
-                 srcset="images/bottom-platform@2x.png 2x"/>
+            <source srcset="images/bottom-platform@2x.png 2x, images/bottom-platform@1x.png 1x"/>
+            <img alt="" src="images/bottom-platform@1x.png"/>
           </picture>
-          <picture class="platform3 rnd levitate">
+          <picture class="middle-platform rnd levitate">
             <source srcset="images/middle-platform@2x.webp 2x, images/middle-platform@1x.webp 1x" type="image/webp"/>
-            <img src="images/middle-platform@1x.png"
-                 width="125" height="71" alt=""
-                 srcset="images/middle-platform@2x.png 2x"/>
+            <source srcset="images/middle-platform@2x.png 2x, images/middle-platform@1x.png 1x"/>
+            <img alt="" src="images/middle-platform@1x.png"/>
           </picture>
-          <picture class="platform4 rnd levitate">
+          <picture class="small-platform rnd levitate">
             <source srcset="images/small-platform@2x.webp 2x, images/small-platform@1x.webp 1x" type="image/webp"/>
-            <img src="images/small-platform@1x.png"
-                 width="91" height="60" alt=""
-                 srcset="images/small-platform@2x.png 2x"/>
+            <source srcset="images/small-platform@2x.png 2x, images/small-platform@1x.png 1x"/>
+            <img alt="" src="images/small-platform@1x.png"/>
           </picture>
         </div>
-        <h1 class="about__title">Continuous testing toolkit</h1>
-        <p class="section__text">Set of tools and practices to integrate non-functional tests into delivery pipeline and organize effective feedback loop</p>
-        <div class="get-button__section">
-          <a href="https://github.com/carrier-io/carrier-io" class="get__button">Get carrier</a>
+        <div class="about__description">
+          <h1 class="about__title">Continuous testing toolkit</h1>
+          <p class="section__text">Set of tools and practices to integrate non-functional tests into delivery pipeline
+            and organize effective feedback loop</p>
+          <div class="get-button__section">
+            <a class="get__button" href="https://github.com/carrier-io/carrier-io.github.io">Get carrier</a>
+          </div>
+          <div class="os__availability">
+            <p class="os__icons-label">Available for:</p>
+            <ul class="os__icons">
+              <li aria-label="Ubuntu" class="ubuntu">
+                <svg class="os__icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons.svg#ubuntu"></use>
+                </svg>
+              </li>
+              <li aria-label="CentOS" class="centos">
+                <svg class="os__icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons.svg#centos"></use>
+                </svg>
+              </li>
+              <li aria-label="Windows" class="windows">
+                <svg class="os__icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons.svg#windows"></use>
+                </svg>
+              </li>
+              <li aria-label="Mac OS" class="macos">
+                <svg class="os__icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons.svg#macos"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p class="os-icons__label">Available for:</p>
-        <ul class="os__icons">
-          <li class="ubuntu" aria-label="Ubuntu">
-            <svg class="os__icon" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="images/icons.svg#ubuntu"></use>
-            </svg>
-          </li>
-          <li class="centos" aria-label="CentOS">
-            <svg class="os__icon" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="images/icons.svg#centos"></use>
-            </svg>
-          </li>
-          <li class="windows" aria-label="Windows">
-            <svg class="os__icon" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="images/icons.svg#windows"></use>
-            </svg>
-          </li>
-          <li class="macos" aria-label="Mac OS">
-            <svg class="os__icon" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="images/icons.svg#macos"></use>
-            </svg>
-          </li>
-        </ul>
       </div>
     </section>
     <section class="section advantages">
@@ -130,61 +170,112 @@
         <section class="subsection ci">
           <div class="title__image">
             <picture class="picture rnd levitate">
-              <source srcset="images/advan-ci@2x.webp 2x, images/advan-ci@1x.webp 1x" type="image/webp"/>
-              <img src="images/advan-ci@1x.png"
-                   width="187" height="185"
-                   alt="CI friendly design"
-                   srcset="images/advan-ci@2x.png 2x"/>
+              <source media="(max-width: 414px)"
+                      srcset="images/advan_ci_mobile@2x.webp 2x, images/advan_ci_mobile@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(max-width: 414px)"
+                      srcset="images/advan_ci_mobile@2x.png 2x, images/advan_ci_mobile@1x.png 1x"/>
+
+              <source media="(max-width: 1024px)"
+                      srcset="images/advan_ci_tablet@2x.webp 2x, images/advan_ci_tablet@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(max-width: 1024px)"
+                      srcset="images/advan_ci_tablet@2x.png 2x, images/advan_ci_tablet@1x.png 1x"/>
+
+              <source media="(min-width: 1025px)"
+                      srcset="images/advan-ci@2x.webp 2x, images/advan-ci@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(min-width: 1025px)"
+                      srcset="images/advan-ci@2x.png 2x, images/advan-ci@1x.png 1x"/>
+
+              <img alt="CI friendly design" src="images/advan-ci@1x.png"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img src="images/advan-platform@1x.png"
-                   width="263" height="114" alt=""
-                   srcset="images/advan-platform@2x.png 2x"/>
+              <img alt=""
+                   src="images/advan-platform@1x.png"
+                   srcset="images/advan-platform@2x.png 2x,images/advan-platform@1x.png 1x"/>
             </picture>
           </div>
           <h3 class="subsection_title">Easy to Rollout</h3>
           <p class="subsection__text">Container based solution allows to save costs on test infrastructure</p>
-          <p class="subsection__text">Our team can help with current state analysis to identify the optimal way to continuous testing</p>
+          <p class="subsection__text">Our team can help with current state analysis to identify the optimal way to
+            continuous testing</p>
         </section>
         <section class="subsection time">
           <div class="title__image">
             <picture class="picture rnd levitate">
+              <source media="(max-width: 414px)"
+                      srcset="images/advan_time_mobile@2x.webp 2x, images/advan_time_mobile@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(max-width: 414px)"
+                      srcset="images/advan_time_mobile@2x.png 2x, images/advan_time_mobile@1x.png 1x"/>
+
+              <source media="(max-width: 1024px)"
+                      srcset="images/advan_time_tablet@2x.webp 2x, images/advan_time_tablet@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(max-width: 1024px)"
+                      srcset="images/advan_time_tablet@2x.png 2x, images/advan_time_tablet@1x.png 1x"/>
+
+              <source media="(min-width: 1025px)"
+                      srcset="images/advan-time@2x.webp 2x, images/advan-time@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(min-width: 1025px)"
+                      srcset="images/advan-time@2x.png 2x, images/advan-time@1x.png 1x"/>
+
               <source srcset="images/advan-time@2x.webp 2x, images/advan-time@1x.webp 1x" type="image/webp"/>
-              <img src="images/advan-time@1x.png"
-                   width="218" height="126"
-                   alt="Reduces time"
-                   srcset="images/advan-time@2x.png 2x"/>
+              <img alt="Reduces time"
+                   src="images/advan-time@1x.png"
+                   srcset="images/advan-time@2x.png 2x,images/advan-time@1x.png 1x"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img src="images/advan-platform@1x.png"
-                   width="263" height="114" alt=""
-                   srcset="images/advan-platform@2x.png 2x"/>
+              <img alt=""
+                   src="images/advan-platform@1x.png"
+                   srcset="images/advan-platform@2x.png 2x, images/advan-platform@1x.png 1x"/>
             </picture>
           </div>
           <h3 class="subsection__title">Easy to Jump-start</h3>
-          <p class="subsection__text">Established non-functional testing enablement processes give first results in terms of days and weeks not a months</p>
+          <p class="subsection__text">Established non-functional testing enablement processes give first results in
+            terms of days and weeks not a months</p>
           <p class="subsection__text">Out team can help to uplift existing non-functional tests to CI friendly state</p>
         </section>
         <section class="subsection metrics">
           <div class="title__image">
             <picture class="picture rnd levitate">
+              <source media="(max-width: 414px)"
+                      srcset="images/advan_metrics_mobile@2x.webp 2x, images/advan_metrics_mobile@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(max-width: 414px)"
+                      srcset="images/advan_metrics_mobile@2x.png 2x, images/advan_metrics_mobile@1x.png 1x"/>
+
+              <source media="(max-width: 1024px)"
+                      srcset="images/advan_metrics_tablet@2x.webp 2x, images/advan_metrics_tablet@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(max-width: 1024px)"
+                      srcset="images/advan_metrics_tablet@2x.png 2x, images/advan_metrics_tablet@1x.png 1x"/>
+
+              <source media="(min-width: 1025px)"
+                      srcset="images/advan-metrics@2x.webp 2x, images/advan-metrics@1x.webp 1x"
+                      type="image/webp"/>
+              <source media="(min-width: 1025px)"
+                      srcset="images/advan-metrics@2x.png 2x, images/advan-metrics@1x.png 1x"/>
+
               <source srcset="images/advan-metrics@2x.webp 2x, images/advan-metrics@1x.webp 1x" type="image/webp"/>
-              <img src="images/advan-metrics@1x.png"
-                   width="123" height="184"
-                   alt="Accurate metrics"
-                   srcset="images/advan-metrics@2x.png 2x"/>
+              <img alt="Accurate metrics"
+                   src="images/advan-metrics@1x.png"
+                   srcset="images/advan-metrics@2x.png 2x, images/advan-metrics@1x.png 1x"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img src="images/advan-platform@1x.png"
-                   width="263" height="114" alt=""
-                   srcset="images/advan-platform@2x.png 2x"/>
+              <img alt=""
+                   src="images/advan-platform@1x.png"
+                   srcset="images/advan-platform@2x.png 2x, images/advan-platform@1x.png 1x"/>
             </picture>
           </div>
           <h3 class="subsection_title">Easy to Understand</h3>
-          <p class="subsection__text">Email and chat notification provide actual information on a state of application performance and security</p>
+          <p class="subsection__text">Email and chat notification provide actual information on a state of application
+            performance and security</p>
           <p class="subsection__text">Centralized dashboards show all non-functional trends in one place</p>
           <p class="subsection__text">Automated issues reporting minimize risk of problem to be forgotten</p>
         </section>
@@ -194,36 +285,87 @@
       <div class="section__inner">
         <div class="subsection coupled">
           <picture class="picture">
-            <source srcset="images/coupled@2x.webp 2x, images/coupled@1x.webp 1x" type="image/webp"/>
-            <img width="552" height="388"
-                 alt="Loose coupled platform"
-                 src="images/coupled@1x.png"
-                 srcset="images/coupled@2x.png 2x,images/coupled@1x.png 1x"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/coupled_mobile@2x.webp 2x, images/coupled_mobile@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/coupled_mobile@2x.png 2x, images/coupled_mobile@1x.png 1x"/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/coupled_tablet@2x.webp 2x, images/coupled_tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/coupled_tablet@2x.png 2x, images/coupled_tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/coupled@2x.webp 2x, images/coupled@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/coupled@2x.png 2x, images/coupled@1x.png 1x"/>
+
+            <img alt="Loose coupled platform" src="images/coupled@1x.png"/>
           </picture>
           <div class="description">
             <h2 class="section__title">Carrier Covers</h2>
-            <p class="section__text">Static Application Security Testing with <a href="https://hub.docker.com/r/getcarrier/sast">SAST container</a></p>
-            <p class="section__text">Backend Performance Testing with <a href="https://hub.docker.com/r/getcarrier/perfmeter">jMeter</a> and <a href="https://hub.docker.com/r/getcarrier/perfgun">Gatling</a> containers</p>
-            <p class="section__text">Frontend Performance Testing with zero coding using <a href="https://hub.docker.com/r/getcarrier/perf-ui">PerfUI container</a></p>
-            <p class="section__text">Dynamic Application Security Testing with <a href="https://hub.docker.com/r/getcarrier/dast">DAST container</a></p>
-            <p class="section__text">UI Synthetic Monitoring covered by <a href="https://hub.docker.com/r/getcarrier/perf-ui">PerfUI container</a></p>
-            <p class="section__text">API Synthetic Monitoring covered by APIMon container</p>
+            <ul class="description__list">
+              <li class="section__text">Static Application Security Testing with
+                <a href="https://hub.docker.com/r/getcarrier/sast">SAST container</a>
+              </li>
+              <li class="section__text">Backend Performance Testing with
+                <a href="https://hub.docker.com/r/getcarrier/perfmeter">jMeter</a> and
+                <a href="https://hub.docker.com/r/getcarrier/perfgun">Gatling</a> containers
+              </li>
+              <li class="section__text">Frontend Performance Testing with zero coding using
+                <a href="https://hub.docker.com/r/getcarrier/perf-ui">PerfUI container</a>
+              </li>
+              <li class="section__text">Dynamic Application Security Testing with
+                <a href="https://hub.docker.com/r/getcarrier/dast">DAST container</a>
+              </li>
+              <li class="section__text">UI Synthetic Monitoring covered by
+                <a href="https://hub.docker.com/r/getcarrier/perf-ui">PerfUI container</a>
+              </li>
+              <li class="section__text">API Synthetic Monitoring covered by APIMon container</li>
+            </ul>
           </div>
         </div>
         <div class="subsection compare">
           <picture class="picture">
-            <source srcset="images/compare@2x.webp 2x, images/compare@1x.webp 1x" type="image/webp"/>
-            <img src="images/compare@1x.png"
-                 width="580" height="444"
-                 alt="Back to back comparison of builds"
-                 srcset="images/compare@2x.png 2x"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/compare_mobile@2x.webp 2x, images/compare_mobile@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/compare_mobile@2x.png 2x, images/compare_mobile@1x.png 1x"/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/compare_tablet@2x.webp 2x, images/compare_tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/compare_tablet@2x.png 2x, images/compare_tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/compare@2x.webp 2x, images/compare@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/compare@2x.png 2x, images/compare@1x.png 1x"/>
+
+            <img alt="Back to back comparison of builds" src="images/compare@1x.png"/>
           </picture>
           <div class="description">
             <h2 class="section__title">Reporting that helps</h2>
-            <p class="section__text">Performance results <a href="https://github.com/carrier-io/carrier-io/tree/master/grafana_dashboards">aggregation dashboards</a> help to track trends in real time and over significant periods of time</p>
-            <p class="section__text">Security program and project reports help to keeps track on flaws outstanding and ones that breaks policy compliance</p>
-            <p class="section__text">Email and chat <a href="https://github.com/carrier-io/galloper/tree/master/lambdas">notifications</a> provide actual information on state of security and performance issues and trends</p>
-            <p class="section__text">Jira integration helps to avoid concerns and issues being missed</p>
+            <ul class="description__list">
+              <li class="section__text">Performance results
+                <a href="https://github.com/carrier-io/carrier-io/tree/master/grafana_dashboards">aggregation
+                  dashboards</a> help to track trends in real time and over significant periods of time
+              </li>
+              <li class="section__text">Security program and project reports help to keeps track on flaws outstanding
+                and ones that breaks policy compliance
+              </li>
+              <li class="section__text">Email and chat
+                <a href="https://github.com/carrier-io/galloper/tree/master/lambdas">notifications</a> provide actual
+                information on state of security and performance issues and trends
+              </li>
+              <li class="section__text">Jira integration helps to avoid concerns and issues being missed</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -232,12 +374,27 @@
   <section class="section components" id="components">
     <div class="section__inner">
       <div class="picture">
-        <picture>
-          <source srcset="images/components-bg.webp, images/components-bg2x.webp 2x" type="image/webp"/>
-          <img src="images/components-bg.png"
-               width="680" height="418"
-               alt="How it works?"
-               srcset="images/components-bg2x.png 2x"/>
+        <picture class="back">
+          <source media="(max-width: 414px)"
+                  srcset="images/components_mobile@2x.webp 2x, images/components_mobile@1x.webp 1x"
+                  type="image/webp"/>
+          <source media="(max-width: 414px)"
+                  srcset="images/components_mobile@2x.png 2x, images/components_mobile@1x.png 1x"/>
+
+          <source media="(max-width: 1024px)"
+                  srcset="images/components_tablet@2x.webp 2x, images/components_tablet@1x.webp 1x"
+                  type="image/webp"/>
+          <source media="(max-width: 1024px)"
+                  srcset="images/components_tablet@2x.png 2x, images/components_tablet@1x.png 1x"/>
+
+          <source media="(min-width: 1025px)"
+                  srcset="images/components@2x.webp 2x, images/components@1x.webp 1x"
+                  type="image/webp"/>
+          <source media="(min-width: 1025px)"
+                  srcset="images/components@2x.png 2x, images/components@1x.png 1x"/>
+
+          <source srcset="images/components@1x.webp" type="image/webp"/>
+          <img alt="How it works?" src="images/components@1x.png"/>
         </picture>
       </div>
       <div class="description">
@@ -295,46 +452,58 @@
     </div>
   </section>
   <section class="section how" id="how">
-    <form class="section__inner" action="">
+    <form action="" class="section__inner">
       <h2 class="section__title">How it works?</h2>
-      <p class="section__text">Optimized results storage mechanism allows to back to back comparison of builds
-      </p>
-      <div class="videos">
+      <p class="section__text">Optimized results storage mechanism allows to back to back comparison of builds</p>
+      <!--      <div class="videos" >-->
+      <div class="videos" data-flickity='{ "wrapAround": true }'>
         <section class="subsection">
-          <a class="video" href="#" aria-label="Play">
+          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=4yek0Jb0sBg" target="_blank">
             <span class="play">
               <svg xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="images/icons.svg#video-play"></use>
               </svg>
             </span>
           </a>
-          <h4 class="subsection_title">Technology</h4>
-          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds
-          </p>
+          <h4 class="subsection__title">Technology</h4>
+          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of
+            builds</p>
         </section>
         <section class="subsection">
-          <a class="video" href="#" aria-label="Play">
-            <span class="play">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="images/icons.svg#video-play"></use>
-              </svg>
-            </span>
+          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=feBF_IY-HI8" target="_blank">
+              <span class="play">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons.svg#video-play"></use>
+                </svg>
+              </span>
           </a>
-          <h4 class="subsection_title">Management</h4>
-          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds
-          </p>
+          <h4 class="subsection__title">Management</h4>
+          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of
+            builds</p>
         </section>
         <section class="subsection">
-          <a class="video" href="#" aria-label="Play">
+          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=EwY6doa-0Bg" target="_blank">
             <span class="play">
               <svg xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="images/icons.svg#video-play"></use>
               </svg>
             </span>
           </a>
-          <h4 class="subsection_title">How to use?</h4>
-          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds
-          </p>
+          <h4 class="subsection__title">How to use?</h4>
+          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of
+            builds</p>
+        </section>
+        <section class="subsection">
+          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=YbWZcgOYHAc" target="_blank">
+            <span class="play">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons.svg#video-play"></use>
+              </svg>
+            </span>
+          </a>
+          <h4 class="subsection__title">How to use?</h4>
+          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of
+            builds</p>
         </section>
       </div>
     </form>
@@ -344,9 +513,9 @@
       <h2 class="section__title">Our plans</h2>
       <p class="section__text">CARRIER helps to enable shift-left testing practices into Software Development Process
         without stress of Development Team</p>
-      <p class="section__text">
-        <a href="https://github.com/carrier-io/carrier-io.github.io" class="get__button">View on Github</a>
-      </p>
+      <div class="get-button__section">
+        <a class="get__button" href="https://github.com/carrier-io/carrier-io.github.io">View on Github</a>
+      </div>
     </div>
   </section>
 </main>
@@ -354,21 +523,18 @@
   <div class="section__inner">
     <div class="footer__bg">
       <picture class="picture">
-        <source srcset="images/footer-bg@2x.webp 2x, images/footer-bg@1x.webp 1x" type="image/webp"/>
-        <img src="images/footer-bg@1x.png"
-             width="710" height="149"
-             alt="Back to back comparison of builds"
-             srcset="images/footer-bg@2x.png 2x"/>
+        <source srcset="images/stars.webp" type="image/webp"/>
+        <img alt="" src="images/stars.png"/>
       </picture>
     </div>
     <div class="flex-row">
-      <a href="/" class="logo logo__footer" aria-label="Carrier">
-        <svg width="118" height="36" xmlns="http://www.w3.org/2000/svg">
+      <a aria-label="Carrier" class="logo logo__footer" href="/">
+        <svg height="36" width="118" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="images/icons.svg#logo"></use>
         </svg>
       </a>
       <nav class="nav nav__footer">
-        <a href="#about" class="current">About</a>
+        <a class="current" href="#about">About</a>
         <a href="#components">Components</a>
         <a href="#how">How it works?</a>
         <a href="#plans">Our plans</a>
@@ -377,11 +543,11 @@
     <div class="flex-row">
       <div class="copyright">
         <p class="copyright__sponsored">Sponsored by EPAM Systems</p>
-        <p class="copyright__text">&copy; 2019 getcarrier.io All rights reserved.</p>
+        <p class="copyright__text">getcarrier.io &copy; 2019 All rights reserved.</p>
       </div>
       <div class="links links__footer">
         <a aria-label="Telegram" class="icon" href="https://t.me/getcarrierio" rel="noreferrer" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg">
+          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="images/icons.svg#telegram"></use>
           </svg>
         </a>
@@ -389,18 +555,18 @@
            href="https://join.slack.com/t/carrier-chat/shared_invite/enQtNTg3MjA5NzI4ODA3LTZkYWUxNTZkY2FlYTViM2VlYTVmYTMyODRiOTczYmUwZDM1NTg4OTRlZjVmZjI2NjgzMzc3NDA0Nzk4Nzg1NTA"
            rel="noreferrer"
            target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg">
+          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="images/icons.svg#slack"></use>
           </svg>
         </a>
         <a aria-label="Docker" class="icon" href="https://hub.docker.com/u/getcarrier" rel="noreferrer" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg">
+          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="images/icons.svg#docker"></use>
           </svg>
         </a>
         <a aria-label="GitHub" class="icon" href="//github.com/carrier-io/carrier-io.github.io" rel="noreferrer"
            target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg">
+          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="images/icons.svg#github"></use>
           </svg>
         </a>

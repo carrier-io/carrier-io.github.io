@@ -1,44 +1,89 @@
 /* how it works */
 .how {
-  padding: 120px 0 160px;
   text-align: center;
-  background-color: var(--about__bg-color);
+  background-color: var(--about-bg__color);
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how {
+    padding: 120px 0 160px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* tablet view */
+  .how {
+    padding: 50px 0;
+  }
+
+  .how .section__inner {
+    padding: 0;
+  }
 }
 
 .how .section__title {
   margin-bottom: 32px;
 }
 
-.how .section__text {
-  margin-bottom: 88px;
+.how .videos {
+  /*display: flex;*/
 }
 
-.how .videos {
-  display: flex;
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .videos {
+    margin: 88px 0 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* tablet view */
+  .how .videos {
+    overflow: hidden;
+    width: 100%;
+    padding: 45px 0 0;
+  }
 }
 
 .how .subsection {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  text-align: left;
-}
-
-.how .subsection:not(:first-child) {
-  margin-left: 20px;
+  width: 380px;
 }
 
 .how .subsection .subsection__title {
   padding: 8px 0;
+  margin: 0;
+  text-align: left;
+}
+
+.how .subsection .subsection__text {
+  text-align: left;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* tablet view */
+  .how .subsection .subsection__title {
+    padding: 8px 10px;
+  }
+
+  .how .subsection .subsection__text {
+    padding: 8px 10px;
+  }
 }
 
 .how .video {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 380px;
   height: 300px;
-  margin: 0 0 32px;
-  background: royalblue;
+  margin: 0 auto 32px;
+  background: royalblue no-repeat 50% 50%;
+  background-size: cover;
 }
 
 .how .video .play {
@@ -50,4 +95,8 @@
 
 .how .video:hover .play {
   fill: rgba(255, 255, 255, .6);
+}
+
+.how .flickity-prev-next-button {
+  top: 150px;
 }

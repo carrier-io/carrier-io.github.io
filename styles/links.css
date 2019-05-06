@@ -12,48 +12,87 @@
 
 .links .icon {
   display: block;
+  transition: fill var(--transition-time);
+  fill: var(--nav-header__color);
+}
+
+.links .icon svg {
   width: 32px;
   height: 32px;
-  transition: fill .3s;
-  fill: var(--nav__header-color);
 }
 
-.links__header .icon:focus {
-  fill: var(--nav__header-focus-color);
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .links__title {
+    display: none;
+  }
+
+  .links__header .icon:focus {
+    fill: var(--nav-header__color__focus);
+  }
+
+  .links__header .icon:hover {
+    fill: var(--nav-header__color__hover);
+  }
+
+  .links__header .icon:active {
+    fill: var(--nav-header__color__active);
+  }
+
+  .scrolled .links__header .icon {
+    fill: var(--nav-header__color__current__scrolled);
+  }
+
+  .scrolled .links__header .icon:focus {
+    fill: var(--nav-header__color__focus__scrolled);
+  }
+
+  .scrolled .links__header .icon:hover {
+    fill: var(--nav-header__color__hover__scrolled);
+  }
+
+  .scrolled .links__header .icon:active {
+    fill: var(--nav-header__color__active__scrolled);
+  }
 }
 
-.links__header .icon:hover {
-  fill: var(--nav__header-hover-color);
-}
+@media only screen and (max-width: 1024px) {
+  /* tablet view */
+  .links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 24px 24px 75px;
+  }
 
-.links__header .icon:active {
-  fill: var(--nav__header-active-color);
-}
+  .links__header {
+    background-color: var(--main-highlight__color);
+  }
 
-.scrolled .links__header .icon {
-  fill: var(--scrolled-nav__header-current-color);
-}
+  .links .icon:not(:first-child) {
+    margin: 0;
+  }
 
-.scrolled .links__header .icon:focus {
-  fill: var(--scrolled-nav__header-focus-color);
-}
+  .links .icon:not(:last-child) {
+    margin: 0 24px 0 0;
+  }
 
-.scrolled .links__header .icon:hover {
-  fill: var(--scrolled-nav__header-hover-color);
-}
-
-.scrolled .links__header .icon:active {
-  fill: var(--scrolled-nav__header-active-color);
+  .links__title {
+    font-size: 16px;
+    flex-basis: 100%;
+    margin: 0 0 16px;
+    padding: 16px 0;
+    color: var(--nav-header__color);
+  }
 }
 
 .links__footer .icon:focus {
-  fill: var(--nav__header-focus-color);
+  fill: var(--nav-header__color__focus);
 }
 
 .links__footer .icon:hover {
-  fill: var(--nav__header-hover-color);
+  fill: var(--nav-header__color__hover);
 }
 
 .links__footer .icon:active {
-  fill: var(--nav__header-active-color);
+  fill: var(--nav-header__color__active);
 }
