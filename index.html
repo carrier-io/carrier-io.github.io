@@ -17,11 +17,11 @@
   <meta content="#ffffff" name="theme-color">
   <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link as="script" href="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" rel="preload">
-  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+  <link as="script" href="lib/intersection-observer.min.js" rel="preload">
+  <script src="lib/intersection-observer.min.js"></script>
 
-  <link as="script" href="./siema.min.js" rel="preload">
-  <script src="./siema.min.js"></script>
+  <link as="script" href="lib/siema.min.js" rel="preload">
+  <script src="lib/siema.min.js"></script>
 
   <link as="style" href="styles.css" rel="preload">
   <link href="styles.css" rel="stylesheet">
@@ -36,7 +36,7 @@
         <use xlink:href="images/icons.svg#logo"></use>
       </svg>
     </a>
-    <button class="hamburger" id="hamburger">
+    <button aria-label="Toggle menu" class="hamburger">
       <svg class="open" height="0" width="0" xmlns="http://www.w3.org/2000/svg">
         <use xlink:href="images/icons.svg#openmenu"></use>
       </svg>
@@ -96,7 +96,7 @@
 
             <source media="(max-width: 1024px)"
                     srcset="images/hero_platform_tablet@2x.webp 2x, images/hero_platform_tablet@1x.webp 1x"
-                    type="image/webp"/>
+                      type="image/webp"/>
             <source media="(max-width: 1024px)"
                     srcset="images/hero_platform_tablet@2x.png 2x, images/hero_platform_tablet@1x.png 1x"/>
 
@@ -458,7 +458,8 @@
       <!--      <div class="videos" >-->
       <div class="videos" data-flickity='{ "wrapAround": true }'>
         <section class="subsection">
-          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=4yek0Jb0sBg" target="_blank">
+          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=4yek0Jb0sBg" rel="noreferrer"
+             target="_blank">
             <span class="play">
               <svg xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="images/icons.svg#video-play"></use>
@@ -470,7 +471,8 @@
             builds</p>
         </section>
         <section class="subsection">
-          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=feBF_IY-HI8" target="_blank">
+          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=feBF_IY-HI8" rel="noreferrer"
+             target="_blank">
               <span class="play">
                 <svg xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="images/icons.svg#video-play"></use>
@@ -482,7 +484,8 @@
             builds</p>
         </section>
         <section class="subsection">
-          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=EwY6doa-0Bg" target="_blank">
+          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=EwY6doa-0Bg" rel="noreferrer"
+             target="_blank">
             <span class="play">
               <svg xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="images/icons.svg#video-play"></use>
@@ -494,7 +497,8 @@
             builds</p>
         </section>
         <section class="subsection">
-          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=YbWZcgOYHAc" target="_blank">
+          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=YbWZcgOYHAc" rel="noreferrer"
+             target="_blank">
             <span class="play">
               <svg xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="images/icons.svg#video-play"></use>

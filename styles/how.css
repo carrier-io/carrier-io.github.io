@@ -54,14 +54,14 @@
 }
 
 .how .subsection .subsection__title {
-  padding: 8px 0;
   margin: 0;
+  padding: 8px 0;
   text-align: left;
 }
 
 .how .subsection .subsection__text {
-  text-align: left;
   margin: 0;
+  text-align: left;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -76,7 +76,9 @@
 }
 
 .how .video {
+  position: relative;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   width: 380px;
@@ -86,17 +88,25 @@
   background-size: cover;
 }
 
+.how .video picture {
+  width: auto;
+  height: 100%;
+}
+
 .how .video .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: block;
   width: 80px;
   height: 80px;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
   fill: rgba(255, 255, 255, .45);
 }
 
 .how .video:hover .play {
-  fill: rgba(255, 255, 255, .6);
-}
-
-.how .flickity-prev-next-button {
-  top: 150px;
+  background-color: rgba(0, 0, 0, .3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  fill: rgba(255, 255, 255, .85);
 }

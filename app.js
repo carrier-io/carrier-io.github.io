@@ -1,15 +1,19 @@
 (function () {
-  const root = document.documentElement;
-  const body = document.querySelector('body');
+  const videosByDevice = {
+    desktop: 3,
+    tablet: 2,
+    mobile: 1
+  };
 
   const navLinks = document.querySelectorAll('.nav a');
   const navEls = document.querySelectorAll('[id]');
 
-  const hamburger = document.getElementById('hamburger');
+  const hamburger = document.querySelector('.hamburger');
 
   const components = document.getElementById('components');
 
-  setHandler(window, 'DOMContentLoaded', init);
+  setHandler(window, 'DOMContentLoaded', initOnReady);
+  setHandler(window, 'load', initOnLoad);
 
   function setHandler(els, eventType, handler, options) {
     const setHandler = (el) => {
@@ -24,33 +28,25 @@
     }
   }
 
-  function init() {
-    const deviceType = getComputedStyle(root).getPropertyValue('--device-type').trim();
+  function initOnReady() {
+    const body = document.querySelector('body');
 
-    setHandler(window, 'scroll', scrolledHandler(), false);
+    setEffects();
+    scrollSpy(navEls);
+    setScrolled(body);
+
+    setHandler(window, 'scroll', scrolledHandler(), {passive: true});
     setHandler([...navLinks], 'click', navigateTo, false);
     setHandler(window, 'hashchange', hashchangeHandler);
     setHandler(hamburger, 'click', toggleMenu);
     setHandler(components, 'click', componentsClick, false);
 
     setHandler(window, 'resize', componentsClick);
+  }
 
-    setEffects();
-    scrollSpy(navEls);
-    setScrolled(body);
-
-    let galleryPageSize;
-
-    switch (deviceType) {
-      case 'desktop':
-        galleryPageSize = 3;
-        break;
-      case 'tablet':
-        galleryPageSize = 2;
-        break;
-      default:
-        galleryPageSize = 1;
-    }
+  function initOnLoad() {
+    const root = document.documentElement;
+    const deviceType = getComputedStyle(root).getPropertyValue('--device-type').trim();
 
     initVideos();
 
@@ -58,7 +54,7 @@
       selector: '.videos',
       duration: 500,
       easing: 'ease-out',
-      perPage: galleryPageSize,
+      perPage: videosByDevice[deviceType],
       startIndex: 0,
       draggable: true,
       multipleDrag: true,
@@ -74,8 +70,56 @@
 
   function initVideos() {
     const els = document.querySelectorAll('a.video');
-    els.forEach(el => el.style.backgroundImage = `url(//img.youtube.com/vi/${getSearchParams(el.search).v || ''}/0.jpg)`);
+
+    els.forEach(el => {
+      const foundPicture = el.querySelector('picture');
+      if (foundPicture) {
+        el.removeChild(foundPicture);
+      }
+
+      const id = getSearchParams(el.search).v;
+
+      const imgSrc = `//img.youtube.com/vi/${id || ''}/0.jpg`;
+      const imgSrcHD = `//img.youtube.com/vi/${id || ''}/maxresdefault.jpg`;
+      const webpSrc = `//img.youtube.com/vi_webp/${id || ''}/0.webp`;
+      const webpSrcHD = `//img.youtube.com/vi_webp/${id || ''}/maxresdefault.webp`;
+
+      const medias = {
+        source: [
+          {srcset: `${webpSrc} 1x, ${webpSrcHD} 2x`, type: "image/webp"},
+          {srcset: `${imgSrc} 1x, ${imgSrcHD} 2x`}
+        ],
+        img: {src: imgSrc}
+      };
+
+      el.appendChild(getPicture(medias));
+    });
   }
+
+  function getPicture(medias) {
+    const picture = document.createElement('picture');
+
+    medias.source.forEach(src => {
+      const {srcset, type} = src;
+      const source = document.createElement('source');
+
+      source.srcset = srcset;
+
+      if (type) {
+        source.type = type;
+      }
+
+      picture.appendChild(source);
+    });
+
+    const image = document.createElement('img');
+    image.alt = '';
+    image.src = medias.img.src;
+    picture.appendChild(image);
+
+    return picture;
+  }
+
 
   function getSearchParams(search) {
     return search.slice(1).split('&').reduce((obj, part) => {
@@ -102,9 +146,6 @@
     e.preventDefault();
 
     const destination = document.querySelector(e.target.hash);
-
-    console.log(e.target.hash, destination.offsetTop, window.screenTop);
-
     window.scrollTo(null, destination.offsetTop);
   }
 
@@ -114,6 +155,7 @@
   }
 
   function scrolledHandler() {
+    const body = document.querySelector('body');
     let scrolledTimeout;
 
     return () => {
