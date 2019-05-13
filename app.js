@@ -70,6 +70,7 @@
 
   function initVideos() {
     const els = document.querySelectorAll('a.video');
+    const carouselState = {scrolled: false, pressed: false};
 
     els.forEach(el => {
       const foundPicture = el.querySelector('picture');
@@ -93,7 +94,37 @@
       };
 
       el.appendChild(getPicture(medias));
+
+      setHandler(el, 'mousedown', handleMouseDown);
+      setHandler(el, 'mousemove', handleMouseMove);
+      setHandler(el, 'click', handleClick);
+      setHandler(el.querySelector('svg'), 'click', preventToParent);
     });
+
+    function preventToParent(e) {
+      e.target.parentElement.dispatchEvent(e);
+    }
+
+    function handleMouseDown() {
+      carouselState.pressed = true;
+    }
+
+    function handleMouseMove() {
+      if (carouselState.pressed) {
+        carouselState.scrolled = true;
+      }
+    }
+
+    function handleClick(e) {
+      if (carouselState.scrolled) {
+        console.log('scrolled');
+        carouselState.scrolled = false;
+        carouselState.pressed = false;
+
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }
   }
 
   function getPicture(medias) {
