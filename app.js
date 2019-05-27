@@ -1,8 +1,8 @@
 (function () {
-  const videosByDevice = {
-    desktop: 3,
-    tablet: 2,
-    mobile: 1
+  const devices = {
+    desktop: { videos: 3 },
+    tablet: { videos: 2 },
+    mobile: { videos: 1 }
   };
 
   const navLinks = document.querySelectorAll('.nav a');
@@ -12,8 +12,12 @@
 
   const components = document.getElementById('components');
 
+  let siema;
+  let dots;
+
   setHandler(window, 'DOMContentLoaded', initOnReady);
-  setHandler(window, 'load', initOnLoad);
+  setHandler(window, 'load', initVideos);
+  setHandler(window, 'resize', debounce(initVideos, 100));
 
   function setHandler(els, eventType, handler, options) {
     const setHandler = (el) => {
@@ -35,7 +39,7 @@
     scrollSpy(navEls);
     setScrolled(body);
 
-    setHandler(window, 'scroll', scrolledHandler(), {passive: true});
+    setHandler(window, 'scroll', scrolledHandler(), { passive: true });
     setHandler([...navLinks], 'click', navigateTo, false);
     setHandler(window, 'hashchange', hashchangeHandler);
     setHandler(hamburger, 'click', toggleMenu);
@@ -44,85 +48,102 @@
     setHandler(window, 'resize', componentsClick);
   }
 
-  function initOnLoad() {
+  function initVideos() {
+    if (siema) {
+      siema.destroy(true);
+    }
+    if (dots) {
+      dots.destroy();
+    }
+
     const root = document.documentElement;
     const deviceType = getComputedStyle(root).getPropertyValue('--device-type').trim();
+    const deviceSettings = devices[deviceType];
+    const els = document.querySelectorAll('a.video');
+    const isTouch = isTouchDevice();
+    const videosLength = els.length;
 
-    initVideos();
+    let slideIndex = 0;
 
-    new Siema({
+    els.forEach(setPreview);
+
+    dots = new Dots({ selector: '#how .dots', length: els.length });
+    siema = new Siema({
       selector: '.videos',
       duration: 500,
       easing: 'ease-out',
-      perPage: videosByDevice[deviceType],
+      perPage: deviceSettings.videos,
       startIndex: 0,
-      draggable: true,
-      multipleDrag: true,
+      draggable: isTouch,
+      multipleDrag: isTouch,
       threshold: 60,
       loop: true,
       rtl: false,
       onInit: () => {
+        dots.setActive(slideIndex);
       },
       onChange: () => {
+        slideIndex = siema.currentSlide < 0 ? videosLength + siema.currentSlide : siema.currentSlide
+        dots.setActive(slideIndex);
       },
     });
+
+    setHandler(document.querySelector(".control.prev"), "click", () => siema.prev());
+    setHandler(document.querySelector(".control.next"), "click", () => siema.next());
   }
 
-  function initVideos() {
-    const els = document.querySelectorAll('a.video');
-    const carouselState = {scrolled: false, pressed: false};
-
-    els.forEach(el => {
-      const foundPicture = el.querySelector('picture');
-      if (foundPicture) {
-        el.removeChild(foundPicture);
-      }
-
-      const id = getSearchParams(el.search).v;
-
-      const imgSrc = `//img.youtube.com/vi/${id || ''}/0.jpg`;
-      const imgSrcHD = `//img.youtube.com/vi/${id || ''}/maxresdefault.jpg`;
-      const webpSrc = `//img.youtube.com/vi_webp/${id || ''}/0.webp`;
-      const webpSrcHD = `//img.youtube.com/vi_webp/${id || ''}/maxresdefault.webp`;
-
-      const medias = {
-        source: [
-          {srcset: `${webpSrc} 1x, ${webpSrcHD} 2x`, type: "image/webp"},
-          {srcset: `${imgSrc} 1x, ${imgSrcHD} 2x`}
-        ],
-        img: {src: imgSrc}
-      };
-
-      el.appendChild(getPicture(medias));
-
-      setHandler(el, 'mousedown', handleMouseDown);
-      setHandler(el, 'mousemove', handleMouseMove);
-      setHandler(el, 'click', handleClick);
-      setHandler(el.querySelector('svg'), 'click', preventToParent);
-    });
-
-    function preventToParent(e) {
-      e.target.parentElement.dispatchEvent(e);
+  function setPreview(el) {
+    const foundPicture = el.querySelector('picture');
+    if (foundPicture) {
+      foundPicture.parentNode.removeChild(foundPicture);
+    }
+    const foundPlay = el.querySelector('.play');
+    if (foundPlay) {
+      foundPlay.parentNode.removeChild(foundPlay);
     }
 
-    function handleMouseDown() {
-      carouselState.pressed = true;
+    const id = getSearchParams(el.search).v;
+
+    const imgSrc = `//img.youtube.com/vi/${id || ''}/0.jpg`;
+    const imgSrcHD = `//img.youtube.com/vi/${id || ''}/maxresdefault.jpg`;
+    const webpSrc = `//img.youtube.com/vi_webp/${id || ''}/0.webp`;
+    const webpSrcHD = `//img.youtube.com/vi_webp/${id || ''}/maxresdefault.webp`;
+
+    const medias = {
+      source: [
+        { srcset: `${webpSrc} 1x, ${webpSrcHD} 2x`, type: "image/webp" },
+        { srcset: `${imgSrc} 1x, ${imgSrcHD} 2x` }
+      ],
+      img: { src: imgSrc, height: "100%" }
+    };
+
+    const playElement = document.createElement('span');
+    playElement.classList.add('play');
+    playElement.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="images/icons.svg#video-play"></use></svg>';
+
+    el.appendChild(getPicture(medias));
+    el.appendChild(playElement);
+  }
+
+  function Dots(options) {
+    const dots = [];
+
+    for (let i = 0; i < options.length; i++) {
+      const dot = document.createElement('span')
+      dot.setAttribute('class', 'dot');
+      document.querySelector(options.selector).append(dot)
+      dots.push(dot);
     }
 
-    function handleMouseMove() {
-      if (carouselState.pressed) {
-        carouselState.scrolled = true;
-      }
-    }
-
-    function handleClick(e) {
-      if (carouselState.scrolled) {
-        console.log('scrolled');
-        carouselState.scrolled = false;
-        carouselState.pressed = false;
-
-        e.preventDefault();
-        e.stopPropagation();
+    return {
+      setActive: (index) => {
+        dots.forEach(dot => dot.classList.remove('active'))
+        dots[index].classList.add('active');
+      },
+      destroy: () => {
+        dots.forEach(dot => {
+          dot.parentNode.removeChild(dot)
+        });
       }
     }
   }
@@ -131,7 +152,7 @@
     const picture = document.createElement('picture');
 
     medias.source.forEach(src => {
-      const {srcset, type} = src;
+      const { srcset, type } = src;
       const source = document.createElement('source');
 
       source.srcset = srcset;
@@ -144,21 +165,20 @@
     });
 
     const image = document.createElement('img');
-    image.alt = '';
-    image.src = medias.img.src;
+    image.setAttribute('src', medias.img.src);
+    image.setAttribute('height', medias.img.height);
+    image.setAttribute('alt', '');
     picture.appendChild(image);
 
     return picture;
   }
 
-
   function getSearchParams(search) {
     return search.slice(1).split('&').reduce((obj, part) => {
       const [key, value] = part.split('=');
 
-      return {...obj, [key]: value}
+      return { ...obj, [key]: value }
     }, {})
-
   }
 
   function componentsClick(e) {
@@ -181,8 +201,8 @@
   }
 
   function hashchangeHandler() {
-    navLinks.forEach(({classList}) => classList.remove('current'));
-    [...navLinks].filter(({hash}) => hash === location.hash).forEach(el => el.classList.add('current'));
+    navLinks.forEach(({ classList }) => classList.remove('current'));
+    [...navLinks].filter(({ hash }) => hash === location.hash).forEach(el => el.classList.add('current'));
   }
 
   function scrolledHandler() {
@@ -262,5 +282,29 @@
 
   function getByClassName(els, className) {
     return [...els].filter(el => el.classList.contains(className))
+  }
+
+  function debounce(func, delay) {
+    let inDebounce;
+    return function () {
+      const context = this;
+      const args = arguments;
+      clearTimeout(inDebounce);
+      inDebounce = setTimeout(() => func.apply(context, args), delay)
+    }
+  }
+
+  function isTouchDevice() {
+    const prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+    const mq = function (query) {
+      return window.matchMedia(query).matches;
+    };
+
+    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+      return true;
+    }
+
+    const query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+    return mq(query);
   }
 }());
