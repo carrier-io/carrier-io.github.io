@@ -5,6 +5,9 @@
     mobile: { videos: 1 }
   };
 
+  const root = document.documentElement;
+  const deviceType = getComputedStyle(root).getPropertyValue('--device-type').trim();
+
   const navLinks = document.querySelectorAll('.nav a');
   const navEls = document.querySelectorAll('[id]');
 
@@ -43,9 +46,11 @@
     setHandler([...navLinks], 'click', navigateTo, false);
     setHandler(window, 'hashchange', hashchangeHandler);
     setHandler(hamburger, 'click', toggleMenu);
-    setHandler(components, 'click', componentsClick, false);
 
-    setHandler(window, 'resize', componentsClick);
+    if (deviceType !== 'mobile') {
+      setHandler(components, 'click', componentsClick, false);
+      setHandler(window, 'resize', componentsClick);
+    }
   }
 
   function initVideos() {
@@ -56,8 +61,6 @@
       dots.destroy();
     }
 
-    const root = document.documentElement;
-    const deviceType = getComputedStyle(root).getPropertyValue('--device-type').trim();
     const deviceSettings = devices[deviceType];
     const els = document.querySelectorAll('a.video');
     const isTouch = isTouchDevice();
@@ -269,7 +272,6 @@
       );
 
     const rnds = document.querySelectorAll(".rnd");
-    const root = document.documentElement;
     const levitate = getByClassName(rnds, 'levitate');
     const opacity = getByClassName(rnds, 'opacity');
 

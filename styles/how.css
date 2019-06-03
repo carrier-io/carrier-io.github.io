@@ -5,40 +5,21 @@
 
   --button-size: 20px;
   --button-margin: 22px;
-  --video-width: 380px;
-  --video-height: 300px;
   --dot-size: 50;
   --dot-margin: 50;
   --dot-color: rgba(0, 0, 0, .2);
   --dot-color-active: rgba(0, 0, 0, .5);
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .how {
-    --dot-size: 10px;
-    --dot-margin: 10px;
-  }
-}
 @media only screen and (max-width: 414px) {
   /* mobile view */
   .how {
+    padding: 30px 0;
+
     --dot-size: 5px;
     --dot-margin: 5px;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  /* desktop view */
-  .how {
-    padding: 120px 0 160px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .how {
-    padding: 50px 0;
+    --video-width: 100%;
+    --video-height: 285px;
   }
 
   .how .section__inner {
@@ -46,8 +27,47 @@
   }
 }
 
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .how {
+    padding: 50px 0;
+
+    --dot-size: 10px;
+    --dot-margin: 10px;
+
+    --video-width: 300px;
+    --video-height: 270px;
+  }
+
+  .how .section__inner {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how {
+    padding: 120px 0 160px;
+
+    --video-width: 380px;
+    --video-height: 300px;
+  }
+}
+
 .how .section__title {
   margin-bottom: 32px;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .section__title {
+    margin-bottom: 16px;
+    padding: 0 17px;
+  }
+
+  .how .section__text {
+    padding: 0 17px;
+  }
 }
 
 .how .videos-holder {
@@ -79,6 +99,32 @@
   fill: rgba(124, 124, 124, .6);
 }
 
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .videos-holder {
+    padding: 15px 0 0;
+  }
+
+  .how .videos {
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .how .videos-holder {
+    padding: 45px 0 0;
+  }
+
+  .how .videos {
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+  }
+}
+
 @media only screen and (min-width: 1025px) {
   /* desktop view */
   .how .videos-holder {
@@ -89,19 +135,6 @@
 
   .how .control {
     display: flex;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .how .videos-holder {
-    padding: 45px 0 0;
-  }
-
-  .how .videos {
-    overflow: hidden;
-    width: 100%;
-    padding: 0;
   }
 }
 
@@ -125,14 +158,18 @@
   text-align: left;
 }
 
-@media only screen and (min-width: 1025px) {
-  /* desktop view */
-  .how .subsection {
-    margin: 0 10px;
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .subsection .subsection__title {
+    padding: 16px 10px;
+  }
+
+  .how .subsection .subsection__text {
+    padding: 0 10px;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
   .how .subsection .subsection__title {
     padding: 8px 10px;
@@ -140,6 +177,13 @@
 
   .how .subsection .subsection__text {
     padding: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .subsection {
+    margin: 0 10px;
   }
 }
 
@@ -153,6 +197,24 @@
   height: var(--video-height);
   margin: 0 auto 32px;
   background-size: cover;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .video {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .video {
+    opacity: .8;
+  }
+
+  .how .video:hover {
+    opacity: 1;
+  }
 }
 
 .how .video picture {
@@ -169,24 +231,25 @@
   height: 80px;
   transform: translateX(-50%) translateY(-50%);
   border-radius: 50%;
-  fill: rgba(124, 124, 124, .45);
-}
-
-.how .video:hover .play {
-  background-color: rgba(0, 0, 0, .3);
   box-shadow: 0 0 10px rgba(0, 0, 0, .33);
   fill: rgba(255, 255, 255, .85);
 }
 
 @media only screen and (min-width: 1025px) {
   /* desktop view */
-  .how .dots {
-    display: none;
+  .how .video .play {
+    fill: rgba(255, 255, 255, .5);
+  }
+
+  .how .video:hover .play {
+    background-color: rgba(0, 0, 0, .3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .33);
+    fill: rgba(255, 255, 255, .85);
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* tablet view */
+  /* mobile & tablet view */
   .how .dots {
     display: flex;
     align-items: center;
@@ -205,5 +268,26 @@
 
   .how .dots .dot.active {
     background-color: var(--dot-color-active);
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .dots {
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* mobile view */
+  .how .dots {
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .dots {
+    display: none;
   }
 }

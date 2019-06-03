@@ -4,6 +4,18 @@
   padding: 35px 0;
 }
 
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+}
+
 .footer .section__inner {
   position: relative;
   z-index: 0;

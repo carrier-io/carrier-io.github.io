@@ -1,22 +1,19 @@
 /* advantages */
 .advantages {
-  padding: 115px 0 200px;
   text-align: center;
   background-color: var(--about-bg__color);
 }
 
-@media only screen and (min-width: 1025px) {
-  /* desktop view */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
   .advantages {
-    background: url('../images/lside-bg.png') no-repeat 0 100px,
-    url('../images/rside-bg.png') no-repeat 100% calc(100% - 150px),
-    linear-gradient(var(--about-bg__color) 0%, var(--about-bg__color) 100%);
-    -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 100px), 0px 100%);
-    clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 100px), 0px 100%);
+    padding: 55px 0 75px;
+    -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 50px), 0px 100%);
+    clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 50px), 0px 100%);
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
   .advantages {
     padding: 85px 0;
@@ -25,35 +22,65 @@
   }
 }
 
-.advantages .section__inner {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .advantages .section__inner {
-    justify-content: space-between;
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .advantages {
+    padding: 115px 0 200px;
+    background: url('../images/lside-bg.png') no-repeat 0 100px,
+    url('../images/rside-bg.png') no-repeat 100% calc(100% - 150px),
+    linear-gradient(var(--about-bg__color) 0%, var(--about-bg__color) 100%);
+    -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 100px), 0px 100%);
+    clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 100px), 0px 100%);
   }
 }
 
 @media only screen and (max-width: 414px) {
   /* mobile view */
   .advantages .section__inner {
+    display: flex;
     align-items: center;
     flex-direction: column;
   }
 }
 
-.advantages .subsection {
-  max-width: 320px;
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .advantages .section__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages .section__title {
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .advantages .section__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .advantages .section__title {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
   .advantages .subsection {
     overflow-x: hidden;
     max-width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .advantages .subsection {
+    max-width: 320px;
   }
 }
 
@@ -65,24 +92,24 @@
   justify-content: center;
 }
 
-@media only screen and (min-width: 1025px) {
-  /* desktop view */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
   .advantages .subsection .title__image {
-    height: 310px;
+    height: 150px;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
   .advantages .subsection .title__image {
     height: 210px;
   }
 }
 
-@media only screen and (max-width: 414px) {
-  /* mobile view */
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
   .advantages .subsection .title__image {
-    height: 150px;
+    height: 310px;
   }
 }
 
@@ -92,6 +119,13 @@
 }
 
 /* ci image */
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .advantages .subsection.ci .title__image .picture img {
+    transform: translateX(7px);
+  }
+}
+
 @media only screen and (min-width: 1025px) {
   /* desktop view */
   .advantages .subsection.ci .title__image .picture img {
@@ -99,14 +133,21 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .advantages .subsection.ci .title__image .picture img {
-    transform: translateX(7px);
+/* time image */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .advantages .subsection.time .title__image .picture img {
+    transform: translateY(15px) translateX(15px);
   }
 }
 
-/* time image */
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .advantages .subsection.time .title__image .picture img {
+    transform: translateY(15px) translateX(15px);
+  }
+}
+
 @media only screen and (min-width: 1025px) {
   /* desktop view */
   .advantages .subsection.time .title__image .picture img {
@@ -114,23 +155,23 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
+/* metrics image */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
   .advantages .subsection.time .title__image .picture img {
     transform: translateY(15px) translateX(15px);
   }
 }
 
-/* metrics image */
-@media only screen and (min-width: 1025px) {
-  /* desktop view */
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
   .advantages .subsection.metrics .title__image .picture img {
     transform: translateY(-10px) translateX(-5px);
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
   .advantages .subsection.metrics .title__image .picture img {
     transform: translateY(-10px) translateX(-5px);
   }
@@ -145,15 +186,15 @@
   height: auto;
 }
 
-@media only screen and (min-width: 1025px) {
-  /* desktop view */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
   .advantages .subsection .title__image .platform img {
-    width: 263px;
-    transform: translateY(-10px) translateX(calc(-50% - 17px));
+    width: 123px;
+    transform: translateY(-5px) translateX(calc(-50% - 9px));
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
   .advantages .subsection .title__image .platform img {
     width: 154px;
@@ -161,10 +202,10 @@
   }
 }
 
-@media only screen and (max-width: 414px) {
-  /* mobile view */
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
   .advantages .subsection .title__image .platform img {
-    width: 123px;
-    transform: translateY(-5px) translateX(calc(-50% - 9px));
+    width: 263px;
+    transform: translateY(-10px) translateX(calc(-50% - 17px));
   }
 }

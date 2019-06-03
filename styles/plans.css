@@ -1,12 +1,41 @@
 /* plans */
 .plans {
-  padding: 85px 0 115px;
   text-align: center;
-  background: url('../images/lside-bg.png') no-repeat 0 60px,
-  url('../images/rside-bg.png') no-repeat 100% calc(100% - 60px);
 }
 
-.plans .section__text {
-  max-width: 580px;
-  margin: 32px auto 48px;
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .plans {
+    padding: 40px 0 60px;
+  }
+
+  .plans .section__text {
+    margin: 16px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .plans {
+    padding: 45px 0 75px;
+  }
+
+  .plans .section__text {
+    max-width: 580px;
+    margin: 32px auto 48px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .plans {
+    padding: 85px 0 115px;
+    background: url('../images/lside-bg.png') no-repeat 0 60px,
+    url('../images/rside-bg.png') no-repeat 100% calc(100% - 60px);
+  }
+
+  .plans .section__text {
+    max-width: 580px;
+    margin: 32px auto 48px;
+  }
 }

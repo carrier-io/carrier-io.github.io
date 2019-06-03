@@ -37,7 +37,7 @@
       </svg>
     </a>
     <button aria-label="Toggle menu" class="hamburger">
-      <svg class="open" height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+      <svg class="open" xmlns="http://www.w3.org/2000/svg">
         <use xlink:href="images/icons.svg#openmenu"></use>
       </svg>
       <svg class="close" xmlns="http://www.w3.org/2000/svg">
@@ -109,8 +109,24 @@
             <img alt="" src="images/hero_platform@1x.png"/>
           </picture>
           <picture class="left-platform rnd levitate">
-            <source srcset="images/left-platform@2x.webp 2x, images/left-platform@1x.webp 1x" type="image/webp"/>
-            <source srcset="images/left-platform@2x.png 2x, images/left-platform@1x.png 1x"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/left-platform-mobile@2x.webp 2x,images/left-platform-mobile@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/left-platform-mobile@2x.png 2x,images/left-platform-mobile@1x.png"/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/left-platform-tablet@2x.webp 2x, images/left-platform-tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/left-platform-tablet@2x.png 2x, images/left-platform-tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/left-platform@2x.webp 2x, images/left-platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/left-platform@2x.png 2x, images/left-platform@1x.png 1x"/>
+
             <img alt="" src="images/left-platform@1x.png"/>
           </picture>
           <picture class="bottom-platform rnd levitate">
@@ -165,8 +181,8 @@
       </div>
     </section>
     <section class="section advantages">
-      <h2 class="section__title">Shift-left for non-functional tests made easy</h2>
       <div class="section__inner">
+        <h2 class="section__title">Shift-left for non-functional tests made easy</h2>
         <section class="subsection ci">
           <div class="title__image">
             <picture class="picture rnd levitate">

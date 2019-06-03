@@ -1,33 +1,35 @@
 /* components */
-.components {
-  padding: 145px 0 130px;
-}
 
-@media only screen and (min-width: 1025px) {
-  /* desktop view */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
   .components {
+    padding: 30px 0;
     background: url('../images/comp_stars-b.png') no-repeat center bottom,
     url('../images/comp_stars-t.png') no-repeat center top,
-    url('../images/comp_stars-l.png') no-repeat left center,
-    url('../images/comp_stars-r.png') no-repeat right center,
-    linear-gradient(45deg, rgb(62, 20, 147) 0%, rgb(100, 31, 195) 100%)
+    linear-gradient(45deg, rgb(62, 20, 147) 0%, rgb(100, 31, 195) 100%);
+    overflow: hidden;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
   .components {
     padding: 50px 0;
     background: url('../images/comp_stars-b.png') no-repeat center bottom,
     url('../images/comp_stars-t.png') no-repeat center top,
-    linear-gradient(45deg, rgb(62, 20, 147) 0%, rgb(100, 31, 195) 100%)
+    linear-gradient(45deg, rgb(62, 20, 147) 0%, rgb(100, 31, 195) 100%);
   }
 }
 
-@media only screen and (max-width: 414px) {
-  /* mobile view */
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
   .components {
-    display: none;
+    padding: 145px 0 130px;
+    background: url('../images/comp_stars-b.png') no-repeat center bottom,
+    url('../images/comp_stars-t.png') no-repeat center top,
+    url('../images/comp_stars-l.png') no-repeat left center,
+    url('../images/comp_stars-r.png') no-repeat right center,
+    linear-gradient(45deg, rgb(62, 20, 147) 0%, rgb(100, 31, 195) 100%);
   }
 }
 
@@ -42,15 +44,15 @@
   padding: 0;
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
   .components .section__inner {
     flex-direction: column;
   }
 }
 
-@media only screen and (max-width: 414px) {
-  /* mobile view */
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
   .components .section__inner {
     flex-direction: column;
   }
@@ -72,19 +74,19 @@
   background-size: contain;
 }
 
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .components .glow__box {
+    width: 100px;
+    height: 128px;
+  }
+}
+
 @media only screen and (min-width: 1025px) {
   /* desktop view */
   .components .glow__box {
     width: 106px;
     height: 132px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .components .glow__box {
-    width: 100px;
-    height: 128px;
   }
 }
 
@@ -99,6 +101,13 @@
   fill: #f2f2f2;
 }
 
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .components .partial .title {
+    display: none;
+  }
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .img {
     background-image: url('../images/glow-box@2x.png');
@@ -106,6 +115,31 @@
 }
 
 /* platform */
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .components .platform .title {
+    top: 218px;
+    left: 147px;
+    width: 104px;
+    height: 62px;
+  }
+
+  .components .platform .glow__box.box1 {
+    top: 81px;
+    left: 165px;
+  }
+
+  .components .platform .glow__box.box2 {
+    top: 24px;
+    left: 265px;
+  }
+
+  .components .platform .glow__box.box3 {
+    top: 141px;
+    left: 268px;
+  }
+}
+
 @media only screen and (min-width: 1025px) {
   /* desktop view */
   .components .platform .title {
@@ -131,32 +165,32 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+/* integration */
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
-  .components .platform .title {
-    top: 218px;
-    left: 147px;
-    width: 104px;
-    height: 62px;
+  .components .integration .title {
+    top: 32px;
+    left: 466px;
+    width: 96px;
+    height: 55px;
   }
 
-  .components .platform .glow__box.box1 {
-    top: 81px;
-    left: 165px;
+  .components .integration .glow__box.box1 {
+    top: -25px;
+    left: 352px;
   }
 
-  .components .platform .glow__box.box2 {
-    top: 24px;
-    left: 265px;
+  .components .integration .glow__box.box2 {
+    top: 32px;
+    left: 455px;
   }
 
-  .components .platform .glow__box.box3 {
-    top: 141px;
-    left: 268px;
+  .components .integration .glow__box.box3 {
+    top: 83px;
+    left: 365px;
   }
 }
 
-/* integration */
 @media only screen and (min-width: 1025px) {
   /* desktop view */
   .components .integration .title {
@@ -182,32 +216,32 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  /* desktop view */
-  .components .integration .title {
-    top: 32px;
-    left: 466px;
-    width: 96px;
-    height: 55px;
+/* elastic */
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .components .elastic .title {
+    top: 320px;
+    left: 323px;
+    width: 62px;
+    height: 34px;
   }
 
-  .components .integration .glow__box.box1 {
-    top: -25px;
-    left: 352px;
+  .components .elastic .glow__box.box1 {
+    top: 204px;
+    left: 372px;
   }
 
-  .components .integration .glow__box.box2 {
-    top: 32px;
-    left: 455px;
+  .components .elastic .glow__box.box2 {
+    top: 148px;
+    left: 471px;
   }
 
-  .components .integration .glow__box.box3 {
-    top: 83px;
-    left: 365px;
+  .components .elastic .glow__box.box3 {
+    top: 95px;
+    left: 561px;
   }
 }
 
-/* elastic */
 @media only screen and (min-width: 1025px) {
   /* desktop view */
   .components .elastic .title {
@@ -233,34 +267,16 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .components .elastic .title {
-    top: 320px;
-    left: 323px;
-    width: 62px;
-    height: 34px;
-  }
-
-  .components .elastic .glow__box.box1 {
-    top: 204px;
-    left: 372px;
-  }
-
-  .components .elastic .glow__box.box2 {
-    top: 148px;
-    left: 471px;
-  }
-
-  .components .elastic .glow__box.box3 {
-    top: 95px;
-    left: 561px;
-  }
-}
-
 /* description */
 .components .description {
   color: #fff;
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .components .description {
+    max-width: 535px;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -271,22 +287,29 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .components .description {
-    max-width: 535px;
-  }
-}
-
 .components .section__title {
   padding: 0 20px 50px;
   color: #fff;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .components .section__title {
+    padding: 0 20px 20px;
+  }
 }
 
 .components .subsection {
   margin: 0;
   padding: 20px;
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .components .subsection {
+    padding: 10px 20px;
+  }
 }
 
 .components .subsection:hover {
