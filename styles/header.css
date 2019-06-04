@@ -23,7 +23,7 @@ header .section__inner {
 .has-menu header,
 .scrolled header {
   padding: 0;
-  background-color: #F9FAFF;
+  background-color: rgba(249, 250, 255, .95);
   box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
 }
 

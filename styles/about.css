@@ -235,9 +235,7 @@
 
 .about__title {
   position: relative;
-  max-width: 35%;
   margin: 0 0 45px;
-  padding: 0 0 20px;
   text-align: left;
 }
 
@@ -255,18 +253,23 @@
 
 @media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
-  .about__description {
-    width: 260px;
-  }
-
   .about__title {
     max-width: 100%;
     padding: 0;
+  }
+
+  .about__description {
+    width: 260px;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   /* desktop view */
+  .about__title {
+    margin-right: 700px;
+    padding: 0 0 20px;
+  }
+
   .about__title::after {
     position: absolute;
     z-index: 0;
@@ -280,10 +283,10 @@
     border-radius: 5px;
     background-color: var(--main-highlight__color);
   }
+
 }
 
 .hero .section__text {
-  max-width: 40%;
   margin: 0;
   text-align: left;
 }
@@ -292,6 +295,14 @@
   /* tablet view */
   .hero .section__text {
     max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .hero .section__text {
+    max-width: 40%;
+    margin-right: 650px;
   }
 }
 

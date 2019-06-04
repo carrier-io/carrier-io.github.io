@@ -6,21 +6,25 @@
   };
 
   const root = document.documentElement;
-  const deviceType = getComputedStyle(root).getPropertyValue('--device-type').trim();
-
   const navLinks = document.querySelectorAll('.nav a');
   const navEls = document.querySelectorAll('[id]');
 
   const hamburger = document.querySelector('.hamburger');
+  const blanket = document.querySelector('.blanket');
 
   const components = document.getElementById('components');
 
   let siema;
   let dots;
+  let deviceType;
+  let isMobile;
 
   setHandler(window, 'DOMContentLoaded', initOnReady);
   setHandler(window, 'load', initVideos);
-  setHandler(window, 'resize', debounce(initVideos, 100));
+  setHandler(window, 'resize', debounce(() => {
+    checkDevice();
+    initVideos();
+  }, 100));
 
   function setHandler(els, eventType, handler, options) {
     const setHandler = (el) => {
@@ -46,11 +50,17 @@
     setHandler([...navLinks], 'click', navigateTo, false);
     setHandler(window, 'hashchange', hashchangeHandler);
     setHandler(hamburger, 'click', toggleMenu);
+    setHandler(blanket, 'click', toggleMenu);
 
-    if (deviceType !== 'mobile') {
+    if (isMobile) {
       setHandler(components, 'click', componentsClick, false);
       setHandler(window, 'resize', componentsClick);
     }
+  }
+
+  function checkDevice() {
+    deviceType = getComputedStyle(root).getPropertyValue('--device-type').trim();
+    isMobile = deviceType !== 'desktop';
   }
 
   function initVideos() {
@@ -199,8 +209,13 @@
   function navigateTo(e) {
     e.preventDefault();
 
+    const header = document.querySelector('header');
     const destination = document.querySelector(e.target.hash);
-    window.scrollTo(null, destination.offsetTop);
+    window.scrollTo(null, destination.offsetTop - header.offsetHeight);
+
+    if (deviceType !== 'desktop') {
+      toggleMenu();
+    }
   }
 
   function hashchangeHandler() {
