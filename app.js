@@ -21,10 +21,7 @@
 
   setHandler(window, 'DOMContentLoaded', initOnReady);
   setHandler(window, 'load', initVideos);
-  setHandler(window, 'resize', debounce(() => {
-    checkDevice();
-    initVideos();
-  }, 100));
+  setHandler(window, 'resize', debounce(initVideos, 100));
 
   function setHandler(els, eventType, handler, options) {
     const setHandler = (el) => {
@@ -42,6 +39,7 @@
   function initOnReady() {
     const body = document.querySelector('body');
 
+    checkDevice();
     setEffects();
     scrollSpy(navEls);
     setScrolled(body);
@@ -64,6 +62,8 @@
   }
 
   function initVideos() {
+    checkDevice();
+
     if (siema) {
       siema.destroy(true);
     }

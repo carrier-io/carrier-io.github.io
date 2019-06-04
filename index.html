@@ -89,10 +89,10 @@
         <div class="hero__bg">
           <picture class="big-platform">
             <source media="(max-width: 414px)"
-                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    srcset="images/hero_bg-mobile@2x.webp 2x, images/hero_bg-mobile@1x.webp 1x"
                     type="image/webp"/>
             <source media="(max-width: 414px)"
-                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                    srcset="images/hero_bg-mobile@2x.png 2x, images/hero_bg-mobile@1x.png 1x"/>
 
             <source media="(max-width: 1024px)"
                     srcset="images/hero_platform_tablet@2x.webp 2x, images/hero_platform_tablet@1x.webp 1x"
@@ -130,18 +130,68 @@
             <img alt="" src="images/left-platform@1x.png"/>
           </picture>
           <picture class="bottom-platform rnd levitate">
+            <source media="(max-width: 414px)"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/bottom-platform-tablet@2x.webp 2x, images/bottom-platform-tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/bottom-platform-tablet@2x.png 2x, images/bottom-platform-tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/bottom-platform@2x.webp 2x, images/bottom-platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/bottom-platform@2x.png 2x, images/bottom-platform@1x.png 1x"/>
+
             <source srcset="images/bottom-platform@2x.webp 2x, images/bottom-platform@1x.webp 1x" type="image/webp"/>
             <source srcset="images/bottom-platform@2x.png 2x, images/bottom-platform@1x.png 1x"/>
             <img alt="" src="images/bottom-platform@1x.png"/>
           </picture>
           <picture class="middle-platform rnd levitate">
-            <source srcset="images/middle-platform@2x.webp 2x, images/middle-platform@1x.webp 1x" type="image/webp"/>
-            <source srcset="images/middle-platform@2x.png 2x, images/middle-platform@1x.png 1x"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/middle-platform-mobile@2x.webp 2x,images/middle-platform-mobile@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/middle-platform-mobile@2x.png 2x,images/middle-platform-mobile@1x.png"/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/middle-platform-tablet@2x.webp 2x, images/middle-platform-tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/middle-platform-tablet@2x.png 2x, images/middle-platform-tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/middle-platform@2x.webp 2x, images/middle-platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/middle-platform@2x.png 2x, images/middle-platform@1x.png 1x"/>
+
             <img alt="" src="images/middle-platform@1x.png"/>
           </picture>
           <picture class="small-platform rnd levitate">
-            <source srcset="images/small-platform@2x.webp 2x, images/small-platform@1x.webp 1x" type="image/webp"/>
-            <source srcset="images/small-platform@2x.png 2x, images/small-platform@1x.png 1x"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/small-platform-mobile@2x.webp 2x,images/small-platform-mobile@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/small-platform-mobile@2x.png 2x,images/small-platform-mobile@1x.png"/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/small-platform-tablet@2x.webp 2x, images/small-platform-tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/small-platform-tablet@2x.png 2x, images/small-platform-tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/small-platform@2x.webp 2x, images/small-platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/small-platform@2x.png 2x, images/small-platform@1x.png 1x"/>
+
             <img alt="" src="images/small-platform@1x.png"/>
           </picture>
         </div>
@@ -204,11 +254,11 @@
               <source media="(min-width: 1025px)"
                       srcset="images/advan-ci@2x.png 2x, images/advan-ci@1x.png 1x"/>
 
-              <img alt="CI friendly design" src="images/advan-ci@1x.png"/>
+              <img loading="lazy" alt="CI friendly design" src="images/advan-ci@1x.png"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img alt=""
+              <img loading="lazy" alt=""
                    src="images/advan-platform@1x.png"
                    srcset="images/advan-platform@2x.png 2x,images/advan-platform@1x.png 1x"/>
             </picture>
@@ -239,13 +289,13 @@
                       srcset="images/advan-time@2x.png 2x, images/advan-time@1x.png 1x"/>
 
               <source srcset="images/advan-time@2x.webp 2x, images/advan-time@1x.webp 1x" type="image/webp"/>
-              <img alt="Reduces time"
+              <img loading="lazy" alt="Reduces time"
                    src="images/advan-time@1x.png"
                    srcset="images/advan-time@2x.png 2x,images/advan-time@1x.png 1x"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img alt=""
+              <img loading="lazy" alt=""
                    src="images/advan-platform@1x.png"
                    srcset="images/advan-platform@2x.png 2x, images/advan-platform@1x.png 1x"/>
             </picture>
@@ -276,13 +326,13 @@
                       srcset="images/advan-metrics@2x.png 2x, images/advan-metrics@1x.png 1x"/>
 
               <source srcset="images/advan-metrics@2x.webp 2x, images/advan-metrics@1x.webp 1x" type="image/webp"/>
-              <img alt="Accurate metrics"
+              <img loading="lazy" alt="Accurate metrics"
                    src="images/advan-metrics@1x.png"
                    srcset="images/advan-metrics@2x.png 2x, images/advan-metrics@1x.png 1x"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img alt=""
+              <img loading="lazy" alt=""
                    src="images/advan-platform@1x.png"
                    srcset="images/advan-platform@2x.png 2x, images/advan-platform@1x.png 1x"/>
             </picture>
@@ -316,7 +366,7 @@
             <source media="(min-width: 1025px)"
                     srcset="images/coupled@2x.png 2x, images/coupled@1x.png 1x"/>
 
-            <img alt="Loose coupled platform" src="images/coupled@1x.png"/>
+            <img loading="lazy" alt="Loose coupled platform" src="images/coupled@1x.png"/>
           </picture>
           <div class="description">
             <h2 class="section__title">Carrier Covers</h2>
@@ -361,7 +411,7 @@
             <source media="(min-width: 1025px)"
                     srcset="images/compare@2x.png 2x, images/compare@1x.png 1x"/>
 
-            <img alt="Back to back comparison of builds" src="images/compare@1x.png"/>
+            <img loading="lazy" alt="Back to back comparison of builds" src="images/compare@1x.png"/>
           </picture>
           <div class="description">
             <h2 class="section__title">Reporting that helps</h2>
@@ -406,7 +456,7 @@
           <source media="(min-width: 1025px)"
                   srcset="images/components@2x.png 2x, images/components@1x.png 1x"/>
 
-          <source srcset="images/components@1x.webp" type="image/webp"/>
+          <source loading="lazy" srcset="images/components@1x.webp" type="image/webp"/>
           <img alt="How it works?" src="images/components@1x.png"/>
         </picture>
       </div>
@@ -522,7 +572,7 @@
     <div class="footer__bg">
       <picture class="picture">
         <source srcset="images/stars.webp" type="image/webp"/>
-        <img alt="" src="images/stars.png"/>
+        <img loading="lazy" alt="" src="images/stars.png"/>
       </picture>
     </div>
     <div class="footer__content">
