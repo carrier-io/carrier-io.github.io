@@ -37,7 +37,7 @@
       </svg>
     </a>
     <button aria-label="Toggle menu" class="hamburger">
-      <svg class="open" height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+      <svg class="open" xmlns="http://www.w3.org/2000/svg">
         <use xlink:href="images/icons.svg#openmenu"></use>
       </svg>
       <svg class="close" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@
            href="https://join.slack.com/t/carrier-chat/shared_invite/enQtNTg3MjA5NzI4ODA3LTZkYWUxNTZkY2FlYTViM2VlYTVmYTMyODRiOTczYmUwZDM1NTg4OTRlZjVmZjI2NjgzMzc3NDA0Nzk4Nzg1NTA"
            rel="noreferrer"
            target="_blank">
-          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+          <svg height="32" width="36" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="images/icons.svg#slack"></use>
           </svg>
         </a>
@@ -89,14 +89,14 @@
         <div class="hero__bg">
           <picture class="big-platform">
             <source media="(max-width: 414px)"
-                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    srcset="images/hero_bg-mobile@2x.webp 2x, images/hero_bg-mobile@1x.webp 1x"
                     type="image/webp"/>
             <source media="(max-width: 414px)"
-                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                    srcset="images/hero_bg-mobile@2x.png 2x, images/hero_bg-mobile@1x.png 1x"/>
 
             <source media="(max-width: 1024px)"
                     srcset="images/hero_platform_tablet@2x.webp 2x, images/hero_platform_tablet@1x.webp 1x"
-                      type="image/webp"/>
+                    type="image/webp"/>
             <source media="(max-width: 1024px)"
                     srcset="images/hero_platform_tablet@2x.png 2x, images/hero_platform_tablet@1x.png 1x"/>
 
@@ -109,23 +109,89 @@
             <img alt="" src="images/hero_platform@1x.png"/>
           </picture>
           <picture class="left-platform rnd levitate">
-            <source srcset="images/left-platform@2x.webp 2x, images/left-platform@1x.webp 1x" type="image/webp"/>
-            <source srcset="images/left-platform@2x.png 2x, images/left-platform@1x.png 1x"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/left-platform-mobile@2x.webp 2x,images/left-platform-mobile@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/left-platform-mobile@2x.png 2x,images/left-platform-mobile@1x.png"/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/left-platform-tablet@2x.webp 2x, images/left-platform-tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/left-platform-tablet@2x.png 2x, images/left-platform-tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/left-platform@2x.webp 2x, images/left-platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/left-platform@2x.png 2x, images/left-platform@1x.png 1x"/>
+
             <img alt="" src="images/left-platform@1x.png"/>
           </picture>
           <picture class="bottom-platform rnd levitate">
+            <source media="(max-width: 414px)"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/bottom-platform-tablet@2x.webp 2x, images/bottom-platform-tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/bottom-platform-tablet@2x.png 2x, images/bottom-platform-tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/bottom-platform@2x.webp 2x, images/bottom-platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/bottom-platform@2x.png 2x, images/bottom-platform@1x.png 1x"/>
+
             <source srcset="images/bottom-platform@2x.webp 2x, images/bottom-platform@1x.webp 1x" type="image/webp"/>
             <source srcset="images/bottom-platform@2x.png 2x, images/bottom-platform@1x.png 1x"/>
             <img alt="" src="images/bottom-platform@1x.png"/>
           </picture>
           <picture class="middle-platform rnd levitate">
-            <source srcset="images/middle-platform@2x.webp 2x, images/middle-platform@1x.webp 1x" type="image/webp"/>
-            <source srcset="images/middle-platform@2x.png 2x, images/middle-platform@1x.png 1x"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/middle-platform-mobile@2x.webp 2x,images/middle-platform-mobile@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/middle-platform-mobile@2x.png 2x,images/middle-platform-mobile@1x.png"/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/middle-platform-tablet@2x.webp 2x, images/middle-platform-tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/middle-platform-tablet@2x.png 2x, images/middle-platform-tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/middle-platform@2x.webp 2x, images/middle-platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/middle-platform@2x.png 2x, images/middle-platform@1x.png 1x"/>
+
             <img alt="" src="images/middle-platform@1x.png"/>
           </picture>
           <picture class="small-platform rnd levitate">
-            <source srcset="images/small-platform@2x.webp 2x, images/small-platform@1x.webp 1x" type="image/webp"/>
-            <source srcset="images/small-platform@2x.png 2x, images/small-platform@1x.png 1x"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/small-platform-mobile@2x.webp 2x,images/small-platform-mobile@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 414px)"
+                    srcset="images/small-platform-mobile@2x.png 2x,images/small-platform-mobile@1x.png"/>
+
+            <source media="(max-width: 1024px)"
+                    srcset="images/small-platform-tablet@2x.webp 2x, images/small-platform-tablet@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(max-width: 1024px)"
+                    srcset="images/small-platform-tablet@2x.png 2x, images/small-platform-tablet@1x.png 1x"/>
+
+            <source media="(min-width: 1025px)"
+                    srcset="images/small-platform@2x.webp 2x, images/small-platform@1x.webp 1x"
+                    type="image/webp"/>
+            <source media="(min-width: 1025px)"
+                    srcset="images/small-platform@2x.png 2x, images/small-platform@1x.png 1x"/>
+
             <img alt="" src="images/small-platform@1x.png"/>
           </picture>
         </div>
@@ -165,8 +231,8 @@
       </div>
     </section>
     <section class="section advantages">
-      <h2 class="section__title">Shift-left for non-functional tests made easy</h2>
       <div class="section__inner">
+        <h2 class="section__title">Shift-left for non-functional tests made easy</h2>
         <section class="subsection ci">
           <div class="title__image">
             <picture class="picture rnd levitate">
@@ -188,19 +254,18 @@
               <source media="(min-width: 1025px)"
                       srcset="images/advan-ci@2x.png 2x, images/advan-ci@1x.png 1x"/>
 
-              <img alt="CI friendly design" src="images/advan-ci@1x.png"/>
+              <img loading="lazy" alt="CI friendly design" src="images/advan-ci@1x.png"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img alt=""
+              <img loading="lazy" alt=""
                    src="images/advan-platform@1x.png"
                    srcset="images/advan-platform@2x.png 2x,images/advan-platform@1x.png 1x"/>
             </picture>
           </div>
           <h3 class="subsection_title">Easy to Rollout</h3>
           <p class="subsection__text">Container based solution allows to save costs on test infrastructure</p>
-          <p class="subsection__text">Our team can help with current state analysis to identify the optimal way to
-            continuous testing</p>
+          <p class="subsection__text">Our team can help with current state analysis to identify the optimal way to continuous testing</p>
         </section>
         <section class="subsection time">
           <div class="title__image">
@@ -224,20 +289,19 @@
                       srcset="images/advan-time@2x.png 2x, images/advan-time@1x.png 1x"/>
 
               <source srcset="images/advan-time@2x.webp 2x, images/advan-time@1x.webp 1x" type="image/webp"/>
-              <img alt="Reduces time"
+              <img loading="lazy" alt="Reduces time"
                    src="images/advan-time@1x.png"
                    srcset="images/advan-time@2x.png 2x,images/advan-time@1x.png 1x"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img alt=""
+              <img loading="lazy" alt=""
                    src="images/advan-platform@1x.png"
                    srcset="images/advan-platform@2x.png 2x, images/advan-platform@1x.png 1x"/>
             </picture>
           </div>
           <h3 class="subsection__title">Easy to Jump-start</h3>
-          <p class="subsection__text">Established non-functional testing enablement processes give first results in
-            terms of days and weeks not a months</p>
+          <p class="subsection__text">Established non-functional testing enablement processes give first results in terms of days and weeks not a months</p>
           <p class="subsection__text">Out team can help to uplift existing non-functional tests to CI friendly state</p>
         </section>
         <section class="subsection metrics">
@@ -262,20 +326,19 @@
                       srcset="images/advan-metrics@2x.png 2x, images/advan-metrics@1x.png 1x"/>
 
               <source srcset="images/advan-metrics@2x.webp 2x, images/advan-metrics@1x.webp 1x" type="image/webp"/>
-              <img alt="Accurate metrics"
+              <img loading="lazy" alt="Accurate metrics"
                    src="images/advan-metrics@1x.png"
                    srcset="images/advan-metrics@2x.png 2x, images/advan-metrics@1x.png 1x"/>
             </picture>
             <picture class="platform">
               <source srcset="images/advan-platform@2x.webp 2x,images/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img alt=""
+              <img loading="lazy" alt=""
                    src="images/advan-platform@1x.png"
                    srcset="images/advan-platform@2x.png 2x, images/advan-platform@1x.png 1x"/>
             </picture>
           </div>
           <h3 class="subsection_title">Easy to Understand</h3>
-          <p class="subsection__text">Email and chat notification provide actual information on a state of application
-            performance and security</p>
+          <p class="subsection__text">Email and chat notification provide actual information on a state of application performance and security</p>
           <p class="subsection__text">Centralized dashboards show all non-functional trends in one place</p>
           <p class="subsection__text">Automated issues reporting minimize risk of problem to be forgotten</p>
         </section>
@@ -303,7 +366,7 @@
             <source media="(min-width: 1025px)"
                     srcset="images/coupled@2x.png 2x, images/coupled@1x.png 1x"/>
 
-            <img alt="Loose coupled platform" src="images/coupled@1x.png"/>
+            <img loading="lazy" alt="Loose coupled platform" src="images/coupled@1x.png"/>
           </picture>
           <div class="description">
             <h2 class="section__title">Carrier Covers</h2>
@@ -348,21 +411,21 @@
             <source media="(min-width: 1025px)"
                     srcset="images/compare@2x.png 2x, images/compare@1x.png 1x"/>
 
-            <img alt="Back to back comparison of builds" src="images/compare@1x.png"/>
+            <img loading="lazy" alt="Back to back comparison of builds" src="images/compare@1x.png"/>
           </picture>
           <div class="description">
             <h2 class="section__title">Reporting that helps</h2>
             <ul class="description__list">
               <li class="section__text">Performance results
-                <a href="https://github.com/carrier-io/carrier-io/tree/master/grafana_dashboards">aggregation
-                  dashboards</a> help to track trends in real time and over significant periods of time
+                <a href="https://github.com/carrier-io/carrier-io/tree/master/grafana_dashboards">aggregation dashboards</a>
+                help to track trends in real time and over significant periods of time
               </li>
               <li class="section__text">Security program and project reports help to keeps track on flaws outstanding
                 and ones that breaks policy compliance
               </li>
               <li class="section__text">Email and chat
-                <a href="https://github.com/carrier-io/galloper/tree/master/lambdas">notifications</a> provide actual
-                information on state of security and performance issues and trends
+                <a href="https://github.com/carrier-io/galloper/tree/master/lambdas">notifications</a>
+                provide actual information on state of security and performance issues and trends
               </li>
               <li class="section__text">Jira integration helps to avoid concerns and issues being missed</li>
             </ul>
@@ -393,15 +456,14 @@
           <source media="(min-width: 1025px)"
                   srcset="images/components@2x.png 2x, images/components@1x.png 1x"/>
 
-          <source srcset="images/components@1x.webp" type="image/webp"/>
+          <source loading="lazy" srcset="images/components@1x.webp" type="image/webp"/>
           <img alt="How it works?" src="images/components@1x.png"/>
         </picture>
       </div>
       <div class="description">
         <h2 class="section__title">Under the Hood</h2>
         <section class="subsection platform">
-          <p class="subsection__text"><strong>Platform components</strong> - used to persist, visualize and analyze
-            results</p>
+          <p class="subsection__text"><strong>Platform components</strong> - used to persist, visualize and analyze results</p>
           <div class="partial">
             <div class="rnd opacity">
               <div class="glow__box box1"></div>
@@ -416,8 +478,9 @@
           </div>
         </section>
         <section class="subsection elastic">
-          <p class="subsection__text"><strong>Elastic components</strong> - stateless units used to conduct tests,
-            gather execution results and transfer them to platform or external components for persistence
+          <p class="subsection__text">
+            <strong>Elastic components</strong>
+            &ndash; stateless units used to conduct tests, gather execution results and transfer them to platform or external components for persistence
           </p>
           <div class="partial">
             <div class="rnd opacity">
@@ -433,8 +496,10 @@
           </div>
         </section>
         <section class="subsection integration">
-          <p class="subsection__text"><strong>External integrations</strong> - systems used to initiate tests, enhance
-            results analysis, and close the feedback loop</p>
+          <p class="subsection__text">
+            <strong>External integrations</strong>
+            &ndash; systems used to initiate tests, enhance results analysis, and close the feedback loop
+          </p>
           <div class="partial">
             <div class="rnd opacity">
               <div class="glow__box box1"></div>
@@ -452,71 +517,50 @@
     </div>
   </section>
   <section class="section how" id="how">
-    <form action="" class="section__inner">
+    <div class="section__inner">
       <h2 class="section__title">How it works?</h2>
       <p class="section__text">Optimized results storage mechanism allows to back to back comparison of builds</p>
-      <!--      <div class="videos" >-->
-      <div class="videos" data-flickity='{ "wrapAround": true }'>
-        <section class="subsection">
-          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=4yek0Jb0sBg" rel="noreferrer"
-             target="_blank">
-            <span class="play">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="images/icons.svg#video-play"></use>
-              </svg>
-            </span>
-          </a>
-          <h4 class="subsection__title">Technology</h4>
-          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of
-            builds</p>
-        </section>
-        <section class="subsection">
-          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=feBF_IY-HI8" rel="noreferrer"
-             target="_blank">
-              <span class="play">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="images/icons.svg#video-play"></use>
-                </svg>
-              </span>
-          </a>
-          <h4 class="subsection__title">Management</h4>
-          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of
-            builds</p>
-        </section>
-        <section class="subsection">
-          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=EwY6doa-0Bg" rel="noreferrer"
-             target="_blank">
-            <span class="play">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="images/icons.svg#video-play"></use>
-              </svg>
-            </span>
-          </a>
-          <h4 class="subsection__title">How to use?</h4>
-          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of
-            builds</p>
-        </section>
-        <section class="subsection">
-          <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=YbWZcgOYHAc" rel="noreferrer"
-             target="_blank">
-            <span class="play">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="images/icons.svg#video-play"></use>
-              </svg>
-            </span>
-          </a>
-          <h4 class="subsection__title">How to use?</h4>
-          <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of
-            builds</p>
-        </section>
+      <div class="videos-holder">
+        <button aria-label="Previous" class="prev control" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#prev"></use>
+          </svg>
+        </button>
+        <div class="videos">
+          <section class="subsection">
+            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=4yek0Jb0sBg" rel="noreferrer" target="_blank"></a>
+            <h4 class="subsection__title">Technology</h4>
+            <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds</p>
+          </section>
+          <section class="subsection">
+            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=feBF_IY-HI8" rel="noreferrer" target="_blank"></a>
+            <h4 class="subsection__title">Management</h4>
+            <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds</p>
+          </section>
+          <section class="subsection">
+            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=EwY6doa-0Bg" rel="noreferrer" target="_blank"></a>
+            <h4 class="subsection__title">How to use?</h4>
+            <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds</p>
+          </section>
+          <section class="subsection">
+            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=YbWZcgOYHAc" rel="noreferrer" target="_blank"></a>
+            <h4 class="subsection__title">How to use?</h4>
+            <p class="subsection__text">Optimized results storage mechanism allows to back to back comparison of builds</p>
+          </section>
+        </div>
+        <button aria-label="Next" class="next control" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons.svg#next"></use>
+          </svg>
+        </button>
       </div>
-    </form>
+    </div>
+    <div class="dots"></div>
   </section>
   <section class="section plans" id="plans">
     <div class="section__inner">
       <h2 class="section__title">Our plans</h2>
-      <p class="section__text">CARRIER helps to enable shift-left testing practices into Software Development Process
-        without stress of Development Team</p>
+      <p class="section__text">CARRIER helps to enable shift-left testing practices into Software Development Process without stress of Development Team</p>
       <div class="get-button__section">
         <a class="get__button" href="https://github.com/carrier-io/carrier-io.github.io">View on Github</a>
       </div>
@@ -528,10 +572,10 @@
     <div class="footer__bg">
       <picture class="picture">
         <source srcset="images/stars.webp" type="image/webp"/>
-        <img alt="" src="images/stars.png"/>
+        <img loading="lazy" alt="" src="images/stars.png"/>
       </picture>
     </div>
-    <div class="flex-row">
+    <div class="footer__content">
       <a aria-label="Carrier" class="logo logo__footer" href="/">
         <svg height="36" width="118" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="images/icons.svg#logo"></use>
@@ -543,8 +587,6 @@
         <a href="#how">How it works?</a>
         <a href="#plans">Our plans</a>
       </nav>
-    </div>
-    <div class="flex-row">
       <div class="copyright">
         <p class="copyright__sponsored">Sponsored by EPAM Systems</p>
         <p class="copyright__text">getcarrier.io &copy; 2019 All rights reserved.</p>
@@ -559,7 +601,7 @@
            href="https://join.slack.com/t/carrier-chat/shared_invite/enQtNTg3MjA5NzI4ODA3LTZkYWUxNTZkY2FlYTViM2VlYTVmYTMyODRiOTczYmUwZDM1NTg4OTRlZjVmZjI2NjgzMzc3NDA0Nzk4Nzg1NTA"
            rel="noreferrer"
            target="_blank">
-          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+          <svg height="32" width="36" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="images/icons.svg#slack"></use>
           </svg>
         </a>

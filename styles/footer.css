@@ -1,7 +1,20 @@
 /* footer */
 .footer {
   background-image: linear-gradient(90deg, #381B8C 0%, #592FB6 100%);
-  padding: 35px 0;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .footer {
+    padding: 25px 0;
+  }
+}
+
+@media only screen and (min-width: 415px) {
+  /* tablet & desktop view */
+  .footer {
+    padding: 35px 0;
+  }
 }
 
 .footer .section__inner {
@@ -12,26 +25,42 @@
 
 .footer__bg {
   position: absolute;
+  z-index: -1;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
 }
 
-.footer .flex-row {
+.footer__content {
   display: flex;
-  height: 70px;
-  align-items: center;
-  justify-content: space-between;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .footer__content {
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (min-width: 415px) {
+  /* tablet & desktop view */
+  .footer__content {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 140px;
+  }
 }
 
 .footer .copyright p {
-  margin: 0;
   line-height: 28px;
+  margin: 0;
 }
 
 .footer .copyright .copyright__text {
@@ -40,4 +69,47 @@
 
 .footer .copyright .copyright__sponsored {
   color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .footer__content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer__content .logo {
+    order: 1;
+  }
+
+  .footer__content .nav {
+    display: none;
+  }
+
+  .footer__content .links {
+    align-items: center;
+    order: 2;
+    padding: 25px 0;
+  }
+
+  .footer__content .copyright {
+    order: 3;
+  }
+}
+
+@media only screen and (min-width: 415px) {
+  /* tablet & desktop view */
+  .footer__content .nav,
+  .footer__content .copyright {
+    min-width: 50%;
+  }
+
+  .footer__content .nav,
+  .footer__content .links {
+    margin-left: auto;
+  }
+
+  .footer__content .nav {
+    justify-content: flex-end
+  }
 }

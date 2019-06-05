@@ -2,19 +2,24 @@
 .how {
   text-align: center;
   background-color: var(--about-bg__color);
+
+  --button-size: 20px;
+  --button-margin: 22px;
+  --dot-size: 50;
+  --dot-margin: 50;
+  --dot-color: rgba(0, 0, 0, .2);
+  --dot-color-active: rgba(0, 0, 0, .5);
 }
 
-@media only screen and (min-width: 1025px) {
-  /* desktop view */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
   .how {
-    padding: 120px 0 160px;
-  }
-}
+    padding: 30px 0;
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .how {
-    padding: 50px 0;
+    --dot-size: 5px;
+    --dot-margin: 5px;
+    --video-width: 100%;
+    --video-height: 285px;
   }
 
   .how .section__inner {
@@ -22,35 +27,124 @@
   }
 }
 
-.how .section__title {
-  margin-bottom: 32px;
-}
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .how {
+    padding: 50px 0;
 
-.how .videos {
-  /*display: flex;*/
+    --dot-size: 10px;
+    --dot-margin: 10px;
+
+    --video-width: 300px;
+    --video-height: 270px;
+  }
+
+  .how .section__inner {
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
   /* desktop view */
-  .how .videos {
-    margin: 88px 0 0;
+  .how {
+    padding: 120px 0 160px;
+
+    --video-width: 380px;
+    --video-height: 300px;
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
+.how .section__title {
+  margin-bottom: 32px;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .section__title {
+    margin-bottom: 16px;
+    padding: 0 17px;
+  }
+
+  .how .section__text {
+    padding: 0 17px;
+  }
+}
+
+.how .videos-holder {
+  display: flex;
+}
+
+.how .videos {
+  flex-grow: 2;
+}
+
+.how .control {
+  display: none;
+  align-self: stretch;
+  height: var(--video-height);
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.how .control svg {
+  width: 21px;
+  height: 29px;
+  margin: auto var(--button-margin);
+  fill: rgba(124, 124, 124, .3);
+}
+
+.how .control:hover svg {
+  fill: rgba(124, 124, 124, .6);
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .videos-holder {
+    padding: 15px 0 0;
+  }
+
   .how .videos {
     overflow: hidden;
     width: 100%;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .how .videos-holder {
     padding: 45px 0 0;
+  }
+
+  .how .videos {
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .videos-holder {
+    display: flex;
+    margin: 0 calc(var(--button-margin) * -1);
+    padding: 88px 0 0;
+  }
+
+  .how .control {
+    display: flex;
   }
 }
 
 .how .subsection {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   flex-grow: 1;
-  width: 380px;
+  max-width: var(--video-width);
+  margin: 0 auto;
 }
 
 .how .subsection .subsection__title {
@@ -64,14 +158,32 @@
   text-align: left;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .subsection .subsection__title {
+    padding: 16px 10px;
+  }
+
+  .how .subsection .subsection__text {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
   /* tablet view */
   .how .subsection .subsection__title {
     padding: 8px 10px;
   }
 
   .how .subsection .subsection__text {
-    padding: 8px 10px;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .subsection {
+    margin: 0 10px;
   }
 }
 
@@ -81,11 +193,28 @@
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  width: 380px;
-  height: 300px;
+  width: var(--video-width);
+  height: var(--video-height);
   margin: 0 auto 32px;
-  background: royalblue no-repeat 50% 50%;
   background-size: cover;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .video {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .video {
+    opacity: .8;
+  }
+
+  .how .video:hover {
+    opacity: 1;
+  }
 }
 
 .how .video picture {
@@ -100,13 +229,65 @@
   display: block;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   transform: translateX(-50%) translateY(-50%);
-  fill: rgba(255, 255, 255, .45);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .33);
+  fill: rgba(255, 255, 255, .85);
 }
 
-.how .video:hover .play {
-  background-color: rgba(0, 0, 0, .3);
-  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-  fill: rgba(255, 255, 255, .85);
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .video .play {
+    fill: rgba(255, 255, 255, .5);
+  }
+
+  .how .video:hover .play {
+    background-color: rgba(0, 0, 0, .3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .33);
+    fill: rgba(255, 255, 255, .85);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* mobile & tablet view */
+  .how .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .how .dots .dot {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    margin: auto var(--dot-margin) 0;
+    border-radius: 50%;
+    background-color: var(--dot-color);
+  }
+
+  .how .dots .dot.active {
+    background-color: var(--dot-color-active);
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .how .dots {
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* mobile view */
+  .how .dots {
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .how .dots {
+    display: none;
+  }
 }
