@@ -1,0 +1,275 @@
+.components section {
+    position: static;
+  }
+  
+  .components .section__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  
+  @media only screen and (max-width: 414px) {
+    /* mobile view */
+    .components .section__inner {
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    /* tablet view */
+    .components .section__inner {
+      flex-direction: column;
+    }
+  }
+  
+  .components .picture image {
+    position: relative;
+    z-index: 0;
+  }
+  
+  .components .subsection:not(:hover) .partial {
+    display: none;
+  }
+  
+  .components .glow__box {
+    position: absolute;
+    background-image: url('../images/glow-box@1x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    /* tablet view */
+    .components .glow__box {
+      width: 100px;
+      height: 128px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* desktop view */
+    .components .glow__box {
+      width: 106px;
+      height: 132px;
+    }
+  }
+  
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .components .glow__box {
+      background-image: url('../images/glow-box@2x.png');
+    }
+  }
+  
+  @media only screen and (max-width: 414px) {
+    /* mobile view */
+    .components .partial .title {
+      display: none;
+    }
+  }
+  
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .img {
+      background-image: url('../images/glow-box@2x.png');
+    }
+  }
+  
+  /* platform */
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    /* tablet view */
+    .components .platform .title {
+      top: 218px;
+      left: 147px;
+      width: 104px;
+      height: 62px;
+    }
+  
+    .components .platform .glow__box.box1 {
+      top: 81px;
+      left: 165px;
+    }
+  
+    .components .platform .glow__box.box2 {
+      top: 24px;
+      left: 265px;
+    }
+  
+    .components .platform .glow__box.box3 {
+      top: 141px;
+      left: 268px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* desktop view */
+    .components .platform .title {
+      top: 228px;
+      left: 93px;
+      width: 102px;
+      height: 60px;
+    }
+  
+    .components .platform .glow__box.box1 {
+      top: 87px;
+      left: 110px;
+    }
+  
+    .components .platform .glow__box.box2 {
+      top: 27px;
+      left: 213px;
+    }
+  
+    .components .platform .glow__box.box3 {
+      top: 149px;
+      left: 215px;
+    }
+  }
+  
+  /* integration */
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    /* tablet view */
+    .components .integration .title {
+      top: 32px;
+      left: 466px;
+      width: 96px;
+      height: 55px;
+    }
+  
+    .components .integration .glow__box.box1 {
+      top: -25px;
+      left: 352px;
+    }
+  
+    .components .integration .glow__box.box2 {
+      top: 32px;
+      left: 455px;
+    }
+  
+    .components .integration .glow__box.box3 {
+      top: 83px;
+      left: 365px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* desktop view */
+    .components .integration .title {
+      top: 33px;
+      left: 427px;
+      width: 98px;
+      height: 58px;
+    }
+  
+    .components .integration .glow__box.box1 {
+      top: -25px;
+      left: 307px;
+    }
+  
+    .components .integration .glow__box.box2 {
+      top: 35px;
+      left: 415px;
+    }
+  
+    .components .integration .glow__box.box3 {
+      top: 89px;
+      left: 322px;
+    }
+  }
+  
+  /* elastic */
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    /* tablet view */
+    .components .elastic .title {
+      top: 320px;
+      left: 323px;
+      width: 62px;
+      height: 34px;
+    }
+  
+    .components .elastic .glow__box.box1 {
+      top: 204px;
+      left: 372px;
+    }
+  
+    .components .elastic .glow__box.box2 {
+      top: 148px;
+      left: 471px;
+    }
+  
+    .components .elastic .glow__box.box3 {
+      top: 95px;
+      left: 561px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* desktop view */
+    .components .elastic .title {
+      top: 336px;
+      left: 278px;
+      width: 61px;
+      height: 35px;
+    }
+  
+    .components .elastic .glow__box.box1 {
+      top: 212px;
+      left: 327px;
+    }
+  
+    .components .elastic .glow__box.box2 {
+      top: 153px;
+      left: 430px;
+    }
+  
+    .components .elastic .glow__box.box3 {
+      top: 98px;
+      left: 525px;
+    }
+  }
+  
+  
+  
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    /* tablet view */
+    .components .description {
+      max-width: 535px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* desktop view */
+    .components .description {
+      max-width: 420px;
+      margin-left: 100px;
+    }
+  }
+  
+  
+  
+  @media only screen and (max-width: 414px) {
+    /* mobile view */
+    .components .section__title {
+      padding: 0 20px 20px;
+    }
+  }
+  
+  .components .subsection {
+    margin: 0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  @media only screen and (max-width: 414px) {
+    /* mobile view */
+    .components .subsection {
+      padding: 10px 20px;
+    }
+  }
+  
+  .components .subsection:hover {
+    background: rgba(255, 255, 255, .14);
+  }
+  
+  .components .description .subsection__text {
+    margin: 0
+  }

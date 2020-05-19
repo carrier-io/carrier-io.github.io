@@ -47,9 +47,9 @@
     <div class="menu">
       <nav class="nav nav__header">
         <a class="current" href="#about">About</a>
-        <a href="#components">Components</a>
-        <a href="#how">How it works?</a>
-        <a href="#documentation">Documentation</a>
+        <a href="#components">Adoption</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#how">Videos and Docs</a>
       </nav>
       <div class="links links__header">
         <h2 class="links__title">Our community</h2>
@@ -197,10 +197,11 @@
         </div>
         <div class="about__description">
           <h1 class="about__title">Continuous testing toolkit</h1>
-          <p class="section__text">Set of tools and practices to integrate non-functional tests into delivery pipeline
-            and organize effective feedback loop</p>
+          <p class="section__text">The best fitted for people aiming to shift performance and security tests execution left, 
+            save time and effort on framework setup, test results analysis, 
+            as well as receive timed and accurate results and metrics reporting</p>
           <div class="get-button__section">
-            <a class="get__button" href="https://github.com/carrier-io/carrier-io.github.io">Get carrier</a>
+            <a class="get__button" target="_blank" href="https://github.com/carrier-io/carrier-io">Get carrier</a>
           </div>
           <div class="os__availability">
             <p class="os__icons-label">Available for:</p>
@@ -372,7 +373,7 @@
             <h2 class="section__title">Carrier Covers</h2>
             <ul class="description__list">
               <li class="section__text">Static Application Security Testing with
-                <a href="https://hub.docker.com/r/getcarrier/sast">SAST container</a>
+                <a href="https://hub.docker.com/r/getcarrier/dusty">SAST container</a>
               </li>
               <li class="section__text">Backend Performance Testing with
                 <a href="https://hub.docker.com/r/getcarrier/perfmeter">jMeter</a> and
@@ -382,12 +383,11 @@
                 <a href="https://hub.docker.com/r/getcarrier/perf-ui">PerfUI container</a>
               </li>
               <li class="section__text">Dynamic Application Security Testing with
-                <a href="https://hub.docker.com/r/getcarrier/dast">DAST container</a>
+                <a href="https://hub.docker.com/r/getcarrier/dusty">DAST container</a>
               </li>
-              <li class="section__text">UI Synthetic Monitoring covered by
-                <a href="https://hub.docker.com/r/getcarrier/perf-ui">PerfUI container</a>
+              <li class="section__text">UI Performance testing covered by
+                <a href="https://hub.docker.com/r/getcarrier/observer">Observer container</a>
               </li>
-              <li class="section__text">API Synthetic Monitoring covered by APIMon container</li>
             </ul>
           </div>
         </div>
@@ -436,90 +436,43 @@
   </section>
   <section class="section components" id="components">
     <div class="section__inner">
-      <div class="picture">
-        <picture class="back">
-          <source media="(max-width: 414px)"
-                  srcset="images/components_mobile@2x.webp 2x, images/components_mobile@1x.webp 1x"
-                  type="image/webp"/>
-          <source media="(max-width: 414px)"
-                  srcset="images/components_mobile@2x.png 2x, images/components_mobile@1x.png 1x"/>
-
-          <source media="(max-width: 1024px)"
-                  srcset="images/components_tablet@2x.webp 2x, images/components_tablet@1x.webp 1x"
-                  type="image/webp"/>
-          <source media="(max-width: 1024px)"
-                  srcset="images/components_tablet@2x.png 2x, images/components_tablet@1x.png 1x"/>
-
-          <source media="(min-width: 1025px)"
-                  srcset="images/components@2x.webp 2x, images/components@1x.webp 1x"
-                  type="image/webp"/>
-          <source media="(min-width: 1025px)"
-                  srcset="images/components@2x.png 2x, images/components@1x.png 1x"/>
-
-          <source loading="lazy" srcset="images/components@1x.webp" type="image/webp"/>
-          <img alt="How it works?" src="images/components@1x.png"/>
+      <div class="subsection">
+        <div class="description">
+          <h2 class="section__title">Carrier Adoption Flow</h2>
+        </div>
+        <picture class="picture">
+          <img src="images/Adoption_Flow.png" width="80%" height="80%"/>
         </picture>
       </div>
-      <div class="description">
-        <h2 class="section__title">Under the Hood</h2>
-        <section class="subsection platform">
-          <p class="subsection__text"><strong>Platform components</strong> - used to persist, visualize and analyze results</p>
-          <div class="partial">
-            <div class="rnd opacity">
-              <div class="glow__box box1"></div>
-              <div class="glow__box box2"></div>
-              <div class="glow__box box3"></div>
-            </div>
-            <div class="title">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="images/icons.svg#platforms-title"></use>
-              </svg>
-            </div>
-          </div>
-        </section>
-        <section class="subsection elastic">
-          <p class="subsection__text">
-            <strong>Elastic components</strong>
-            &ndash; stateless units used to conduct tests, gather execution results and transfer them to platform or external components for persistence
-          </p>
-          <div class="partial">
-            <div class="rnd opacity">
-              <div class="glow__box box1"></div>
-              <div class="glow__box box2"></div>
-              <div class="glow__box box3"></div>
-            </div>
-            <div class="title">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="images/icons.svg#elastic-title"></use>
-              </svg>
-            </div>
-          </div>
-        </section>
-        <section class="subsection integration">
-          <p class="subsection__text">
-            <strong>External integrations</strong>
-            &ndash; systems used to initiate tests, enhance results analysis, and close the feedback loop
-          </p>
-          <div class="partial">
-            <div class="rnd opacity">
-              <div class="glow__box box1"></div>
-              <div class="glow__box box2"></div>
-              <div class="glow__box box3"></div>
-            </div>
-            <div class="title">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="images/icons.svg#integration-title"></use>
-              </svg>
-            </div>
-          </div>
-        </section>
-      </div>
+    </div>
+  </section>
+  <section class="section plans" id="architecture">
+    <div class="section__inner">
+      <picture class="picture">
+        <img src="images/TransparentArch.png" width="100%" height="100%"/>
+      </picture>
+      <section class="subsection">
+          <h2 class="section__title">Architecture</h2>
+          <p class="subsection__text">Most of all user interactions happening throght Galloper - Carrier's web interface, 
+            which is UWSGI Python Flask application. Galloper exposes RestAPI and WebUI. 
+            Authentication is handled through auth-proxy over KeyCloak</p>
+            <p class="subsection__text">Tests can be configured in either directly in Galloper or in Control-Tower - CI integration container</p>
+            <p class="subsection__text">Code of tests can be stored in Min.io - Amazon S3 compatible object storage and secrets for tests better to be stored in Hashicorp Vault, both abstracted by Galloper RestAPI</p>
+            <p class="subsection__text">Tests Scheduling (Performance, Security) happens through destributed job queue - Celery</p>
+            <p class="subsection__text">During the execution tests respors results into InfluxDB directly and to PostgreSQL througn Galloper RestAPI</p>
+            <p class="subsection__text">Resorts of tests tools may be stored in Min.io S3 comparible storage, abstracted by Galloper APIs</p>
+            <p class="subsection__text">Analysis of tests results is done by Tasks - siplified implementation of FaaS comparible with all leading FaaS provides such as Amazon Lambda, Google Functions, etc.</p>
+            <p class="subsection__text">FaaS tasks provide analytical email and chat notifications after tests exection if configured</p>
+            <p class="subsection__text">Control-Tower can pull threshold analysis results as a quality gates</p>
+      </section>
     </div>
   </section>
   <section class="section how" id="how">
     <div class="section__inner">
-      <h2 class="section__title">How it works?</h2>
-      <p class="section__text">Optimized results storage mechanism allows to back to back comparison of builds</p>
+      <h2 class="section__title">Videos and Documentation</h2>
+      <div class="get-button__section">
+        <a class="get__button" target="_blank" href="https://github.com/carrier-io/carrier-io/wiki">Documentation on Github</a>
+      </div>
       <div class="videos-holder">
         <button aria-label="Previous" class="prev control" type="button">
           <svg xmlns="http://www.w3.org/2000/svg">
@@ -537,6 +490,11 @@
             <h4 class="subsection__title">jMeter tests execution</h4>
             <p class="subsection__text">Instruction on how to configure carrier for jmeter tests execution</p>
           </section>
+          <section class="subsection">
+            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=KfIl_O1HIus" rel="noreferrer" target="_blank"></a>
+            <h4 class="subsection__title">jMeter tests execution</h4>
+            <p class="subsection__text">Instruction on how to configure carrier for jmeter tests execution</p>
+          </section>
         </div>
         <button aria-label="Next" class="next control" type="button">
           <svg xmlns="http://www.w3.org/2000/svg">
@@ -546,15 +504,6 @@
       </div>
     </div>
     <div class="dots"></div>
-  </section>
-  <section class="section plans" id="documentation">
-    <div class="section__inner">
-      <h2 class="section__title">Documentation</h2>
-      <p class="section__text">CARRIER helps to enable shift-left testing practices into Software Development Process without stress of Development Team</p>
-      <div class="get-button__section">
-        <a class="get__button" target="_blank" href="https://github.com/carrier-io/carrier-io/wiki">View on Github Wiki</a>
-      </div>
-    </div>
   </section>
 </main>
 <footer class="footer">
@@ -573,13 +522,13 @@
       </a>
       <nav class="nav nav__footer">
         <a class="current" href="#about">About</a>
-        <a href="#components">Components</a>
-        <a href="#how">How it works?</a>
-        <a href="#documentation">Documentation</a>
+        <a href="#components">Adoption</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#how">Videos and Docs</a>        
       </nav>
       <div class="copyright">
         <p class="copyright__sponsored">Sponsored by EPAM Systems</p>
-        <p class="copyright__text">getcarrier.io &copy; 2019 All rights reserved.</p>
+        <p class="copyright__text">getcarrier.io &copy; 2020 All rights reserved.</p>
       </div>
       <div class="links links__footer">
         <a aria-label="Telegram" class="icon" href="https://t.me/getcarrierio" rel="noreferrer" target="_blank">
