@@ -453,13 +453,13 @@
       </picture>
       <section class="subsection">
           <h2 class="section__title">Architecture</h2>
-          <p class="subsection__text">Most of all user interactions happening throght Galloper - Carrier's web interface, 
+          <p class="subsection__text">Most of all user interactions happening through Galloper - Carrier's web interface, 
             which is UWSGI Python Flask application. Galloper exposes RestAPI and WebUI. 
             Authentication is handled through auth-proxy over KeyCloak</p>
             <p class="subsection__text">Tests can be configured in either directly in Galloper or in Control-Tower - CI integration container</p>
             <p class="subsection__text">Code of tests can be stored in Min.io - Amazon S3 compatible object storage and secrets for tests better to be stored in Hashicorp Vault, both abstracted by Galloper RestAPI</p>
-            <p class="subsection__text">Tests Scheduling (Performance, Security) happens through destributed job queue - Celery</p>
-            <p class="subsection__text">During the execution tests respors results into InfluxDB directly and to PostgreSQL througn Galloper RestAPI</p>
+            <p class="subsection__text">Tests Scheduling (Performance, Security) happens through distributed job queue - Celery</p>
+            <p class="subsection__text">During the execution tests report results into InfluxDB directly and to PostgreSQL through Galloper RestAPI</p>
             <p class="subsection__text">Reports of tests tools may be stored in Min.IO</p>
             <p class="subsection__text">Analysis of tests results is done by Tasks - simplified implementation of FaaS compatible with all leading FaaS provides such as Amazon Lambda, Google Functions, etc.</p>
             <p class="subsection__text">FaaS tasks provide analytical email and chat notifications after tests exection if configured</p>
