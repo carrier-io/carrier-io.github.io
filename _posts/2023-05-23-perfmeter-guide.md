@@ -1,6 +1,6 @@
 ---
 title: Perfmeter Guidelines
-author: Karen
+author: User
 date: 2023-05-23 12:00:00 +0800
 categories: [Performance, Tutorial]
 tags: [performance, jmeter, distribution, report, Docker]

@@ -6,11 +6,10 @@
 #   url: {homepage_of_author}
 # -------------------------------------
 
-Vika:
-  name: Vika B
+Developer:
+  name: developer
   url: https://github.com/carrier-io/carrier-io.github.io
 
-Karen:
-  name: Karen F
-  twitter: alokocha
-  url: https://github.com/KarenFlorykian
+User:
+  name: user
+  url: https://github.com/carrier-io/carrier-io.github.io
