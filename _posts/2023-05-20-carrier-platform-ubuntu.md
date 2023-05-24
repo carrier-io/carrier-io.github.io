@@ -140,9 +140,9 @@ $ cp config/pylon-example.yml config/pylon.yml
 ```bash
 $ docker-compose up -d
 ```
-Output:
+    Output:
 
-```console
+    ```console
 Status: Downloaded newer image for grafana/grafana:latest
 Pulling pylon (getcarrier/pylon:latest)...
 latest: Pulling from getcarrier/pylon
@@ -184,9 +184,9 @@ Creating carrier-pylon                ... done
 $ docker logs -f carrier-pylon-auth
 ```
 
-**Output:**
+    Output:
 
-```console
+    ```console
 INFO - pylon.core.tools.process - Stored in directory: /root/.cache/pip/wheels/e3/76/6f/c25be6a9e6cc9985b96e8c95997d46790242c6426ef68e754c
 INFO - pylon.core.tools.process - Successfully built jsonpath_rw
 INFO - pylon.core.tools.process - Installing collected packages: ply, decorator, jsonpath_rw
