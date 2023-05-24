@@ -140,7 +140,7 @@ $ cp config/pylon-example.yml config/pylon.yml
 ```bash
 $ docker-compose up -d
 ```
-**Output:**
+Output:
 
 ```console
 Status: Downloaded newer image for grafana/grafana:latest
@@ -178,27 +178,6 @@ Creating carrier-pylon-worker         ... done
 Creating carrier-pylon-auth           ... done
 Creating carrier-pylon                ... done
 ```
-
-#!/bin/bash -xe
-echo "Hello from user-data!"
-export AGENT_ALLOW_RUNASROOT="1"
-sudo apt update
-sudo apt install docker.io -y
-sudo apt install docker-compose -y
-sudo usermod -aG docker ${USER}
-cd /opt
-git clone https://github.com/carrier-io/centry.git -b next
-cd centry
-CURRENT_IP=$(host myip.opendns.com resolver1.opendns.com | grep 'address ' | cut -d ' ' -f 4)
-sed -i -e "s/\$DEV_IP/$CURRENT_IP/g" .env
-echo https://$CURRENT_IP/auth/realms/carrier/protocol/openid-connect/auth
-cp config/pylon-example.yml config/pylon.yml
-docker-compose up -d
-docker logs carrier-pylon-auth
-
-echo https://$CURRENT_IP/auth/realms/carrier/protocol/openid-connect/auth
-curl https://$CURRENT_IP/auth/realms/carrier/protocol/openid-connect/auth
-
 > Installation process takes ~5-10 minutes
 
 ```bash
