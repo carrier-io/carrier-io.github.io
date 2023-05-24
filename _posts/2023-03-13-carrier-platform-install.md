@@ -33,8 +33,10 @@ system_requirements, hardware, installation
 
 | Prerequisites                  |                                                                    |
 |--------------------------------|--------------------------------------------------------------------|
-| Instance launched with         | Hardware requirements with root permissions.                      |
-| Inbound ports                  | http – 80, ssh - 22, tcp - 3100, 5672, 8086                         |
+| Instance launched with         | Hardware requirements with root permissions.                       |
+| Inbound ports                  |  * http – 80                                                       |  
+|                                |  * ssh - 22                                                        |
+|                                |  * tcp - 3100, 5672, 8086                                          |
 | Daily updates                  | All daily updates that might trigger docker restart or termination should be disabled. |
 
 | Carrier instance requirements: |                    |
