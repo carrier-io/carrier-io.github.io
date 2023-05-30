@@ -1,0 +1,126 @@
+/* plans */
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .plans {
+    padding: 40px 0 60px;
+  }
+
+  .plans .section__text {
+    margin: 16px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .plans {
+    padding: 45px 0 75px;
+  }
+
+  .plans .section__text {
+    max-width: 580px;
+    margin: 32px auto 48px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .plans {
+    padding: 85px 0 115px;
+    background: url('../img/lside-bg.png') no-repeat 0 60px,
+    url('../img/rside-bg.png') no-repeat 100% calc(100% - 60px);
+  }
+
+  .plans .section__text {
+    max-width: 580px;
+    margin: 32px auto 48px;
+  }
+}
+
+.plans section {
+  position: static;
+}
+
+.plans .section__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.plans .picture image {
+  position: relative;
+  z-index: 0;
+}
+
+.plans .subsection:not(:hover) .partial {
+  display: none;
+}
+
+.plans .subsection {
+  margin: 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .components .section__inner {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .components .section__inner {
+    flex-direction: column;
+  }
+}
+
+.components .picture image {
+  position: relative;
+  z-index: 0;
+}
+
+.components .subsection:not(:hover) .partial {
+  display: none;
+}
+
+.components .glow__box {
+  position: absolute;
+  background-image: url('../img/glow-box@1x.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  /* tablet view */
+  .plans .description {
+    max-width: 535px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* desktop view */
+  .plans .description {
+    max-width: 420px;
+    margin-left: 100px;
+  }
+}
+
+
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .plans .section__title {
+    padding: 0 20px 20px;
+  }
+}
+
+
+@media only screen and (max-width: 414px) {
+  /* mobile view */
+  .plans .subsection {
+    padding: 10px 20px;
+  }
+}
