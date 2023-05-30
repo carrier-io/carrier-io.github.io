@@ -6,4 +6,5 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Improvements
 
+* **head.html:** added google analytics
 * **assets:** added Carreir favicons (2023-05-29)

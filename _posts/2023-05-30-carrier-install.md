@@ -118,7 +118,7 @@ $ sudo apt install make -y
 $ sudo apt install net-tools -y
 ```
 
-## Ubuntu Steps
+## Ubuntu and Debian Steps
 1. Using root user clone the carrier-io [centry](https://github.com/carrier-io/centry/blob/beta-1.0/Makefile) repository to the `/opt` directory:
 ```bash
 $ cd /opt
