@@ -21,7 +21,7 @@ timezone: "Eastern Time"
 
 title: Carrier                          # the main title
 
-tagline: Sponsored by EPAM   # it will display as the sub-title
+tagline: Sponsored by EPAM Systems   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
     Continuous Test Automation Framework helps to enable shift-left testing practices into Software Development Process without stress of Development Team
