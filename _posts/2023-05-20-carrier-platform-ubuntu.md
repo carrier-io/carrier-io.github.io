@@ -6,13 +6,13 @@ categories: [Performance, Tutorial]
 tags: [performance, installation, ubuntu]
 render_with_liquid: false
 ---
- 
-## Installation
-This guide provides step-by-step instructions for installing Carrier on Ubuntu operating systems. 
-Carrier is a powerful platform for performance and security testing.  
 
-> **INFO** Please find hardware requirement and prereqyisites by the link [install](/{{ site.baseurl }}/posts/carrier-install/)
->
+## Installation
+This guide provides step-by-step instructions for installing Carrier on Ubuntu operating systems.
+Carrier is a powerful platform for performance and security testing.
+
+> **INFO** Please find the hardware requirements and prerequisites by following the [link](http://getcarrier.io/posts/carrier-install/#prerequisites).
+>>
 
 ### Steps
 1. Using root user clone the carrier-io [centry](https://github.com/carrier-io/centry/blob/beta-1.0/Makefile) repository to the `/opt` directory:
@@ -35,18 +35,18 @@ $ CURRENT_IP=$(host myip.opendns.com resolver1.opendns.com | grep 'address ' | c
 
 4. Set parameters in `.env` and `Makefile` file
 
-    
+
     10.1 Set IP (change `DEV_IP` and `DIRECT_IP` to `CURRENT_IP`):
-        
+
         $ sed -i -e "s/\#DIRECT_IP=FORCE_SET_IP_HERE/DIRECT_IP=$CURRENT_IP/g" Makefile
         $ sed -i -e "s/\$DEV_IP/$CURRENT_IP/g" .env
-        
+
 
 
     10.2 Set installation path in for `CARRIER_PATH` and `VOLUMES_PATH` in `.env`:
-        
-        $ vi .env 
-        ....    
+
+        $ vi .env
+        ....
         CARRIER_PATH=/opt/centry
         VOLUMES_PATH=/opt/centry/volumes
         ....
@@ -100,7 +100,7 @@ $ make up
     Creating carrier-pylon-auth           ... done
     Creating carrier-pylon                ... done
     ```
-    Verify that main container is started: 
+    Verify that main container is started:
     > Packages downloading process takes ~5-10 minutes
 
 
@@ -124,10 +124,10 @@ $ make up
     INFO - werkzeug -  * Debugger PIN: 686-802-926
     ```
 
-    Verify that no Docker containers have been restarted: 
+    Verify that no Docker containers have been restarted:
 
     ```bash
-    $ docker ps -a 
+    $ docker ps -a
     ```
 
 7. Once the installation is finished, open the following URL in a browser: `http://<public DNS or IP>`
@@ -136,4 +136,4 @@ $ make up
 
     ![Carrier login form](/assets/posts_img/login_screen.png)
 
-    > You're all set, then! Excellent Work! 
+    > You're all set, then! Excellent Work!
