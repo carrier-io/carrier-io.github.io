@@ -55,7 +55,7 @@ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/dock
 
 4. Install Docker:
 ```bash
-sudo yum install docker-ce
+sudo yum install docker-ce -y
 ```
 
 5. Start and enable Docker service:
@@ -155,10 +155,29 @@ git clone https://github.com/carrier-io/centry.git -b beta-1.0
 cd /opt/centry
 ```
 3. Get the `public IP` of your system and set the `CURRENT_IP` variable to the defined value:
-For example, using next cmd:
-```bash
-CURRENT_IP=$(host myip.opendns.com resolver1.opendns.com | grep 'address ' | cut -d ' ' -f 4)
-```
+
+    3.1 To get the public IP address of your CentOS system and set it to the `CURRENT_IP` variable, you can use the following commands:
+
+    ```bash
+    sudo yum install bind-utils -y
+    CURRENT_IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+    ```
+
+    The first command installs the `bind-utils` package, which provides the `dig` command for DNS lookups. The second command uses `dig` to retrieve the public IP address and assigns it to the `CURRENT_IP` variable.
+
+    After running these commands, the public IP address of your CentOS system will be stored in the `CURRENT_IP` variable for further use in your scripts or commands.
+
+    ```bash
+    echo $CURRENT_IP
+    ```
+
+    Verify public IP address of your CentOS system:
+    ```bash
+    curl ifconfig.me
+    ```
+
+    This command will make a request to the ifconfig.me service, which will return your public IP address.
+
 
 4. Set parameters in `.env` and `Makefile` file
 

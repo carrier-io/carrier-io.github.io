@@ -1,7 +1,7 @@
 ---
 title: Create a Project in Carrier
 author: User
-date: 2023-05-30 12:00:00 +0800
+date: 2023-05-31 12:00:00 +0800
 categories: [Performance, Tutorial]
 tags: [performance, project, configuration]
 render_with_liquid: false
@@ -9,48 +9,106 @@ render_with_liquid: false
 
 ## Overview
 
-This guide provides step-by-step instructions on how to create a project in Carrier.
-It includes screenshots to help you navigate through the process and highlights key steps to follow.
+This guide will walk you through the process of creating a project in Carrier. Follow the steps below to get started.
 
-## How to Create a Project in Carrier
+### Step 1: Log in to Carrier
 
-1. Once you log in to Carrier, you will see a page indicating that there are no projects created yet.
+Once you have accessed the Carrier platform, you will be greeted with a page indicating that no projects have been created yet.
 
-    ![Carrier after login](/assets/posts_img/main_page.png)
+![Carrier Login Page](/assets/posts_img/main_page.png)
 
-2. Click on the person logo in the top right corner and select "Administration" to switch to Administration mode and create your first project.
+### Step 2: Add a Project
 
-    ![Carrier select admin](/assets/posts_img/select_admin.png)
+Click on the plus sign icon to add a new project. In the dialog box that appears, enter the name of your project and click "Create".
 
-3. Click on the plus sign to add the project. Set the name of your project and click "Create".
+![Add Project](/assets/posts_img/plus_project.png)
 
-    ![Carrier plus btn](/assets/posts_img/plus_project.png)
+Set a name for your project and provide an email address for the new user (e.g., `noreply@noreply.com`). Then, click "Create" to proceed.
 
-    Set the name for your project in the dialog box and click "Create".
+![Set Project Name](/assets/posts_img/set_name_prj_new.png)
 
-    ![Carrier set name](/assets/posts_img/set_name_prj_new.png)
+### Step 3: Project Creation
 
-4. Your project will be created. It might take around 1 minute. You can track the process of project creation in the carrier-pylon logs to ensure that there are no errors. Open a terminal and run the following command:
+Wait for the project creation process to complete.
 
-    ```bash
-    $ docker logs -f carrier-pylon
-    ```
+![Project Creation](/assets/posts_img/created_test.png)
 
-5. Once the project is created, you can switch back to Project mode.
+> To check for any errors during the creation process, monitor the `carrier-pylon` logs.
+{: .prompt-info }
 
-    ![Carrier project mode](/assets/posts_img/project_mode.png)
+```bash
+$ docker logs -f carrier-pylon
+```
 
-    You will be redirected to the Project configuration page.
+### Step 4: Log Out
 
-    ![Carrier demo](/assets/posts_img/demo_prj.png)
+Once the project has been successfully created, you can log out of the current session. Click on the user icon and select "Logout".
 
-6. To start configuring tests, navigate to the required sections, either Performance or Security, using the left menu dropdown list.
+![Logout](/assets/posts_img/logout_admin.png)
 
-    ![Carrier menu](/assets/posts_img/dropdown.png)
+### Step 5: Log in with New User Credentials
 
-    In the Performance section, you can configure performance tests.
+Log in again using the email address specified during project creation (e.g., `noreply@noreply.com`) and the temporary password `11111111`.
 
-    ![Carrier performance](/assets/posts_img/perf_screen.png)
+### Step 6: Set New Password
 
----
+Set a new password for the user account. Enter the desired password and click "Submit".
+
+![Set New Password](/assets/posts_img/set_pwd.png)
+
+### Step 7: Select the Project
+
+After logging in, select the desired project from the dropdown menu and click "Go!".
+
+![Select Project](/assets/posts_img/select_prj.png)
+
+### Step 8: Project Configuration
+
+Once you have selected the project, you will be redirected to the project configuration page. Here, you can access various settings and configurations for your project.
+
+![Project Configuration](/assets/posts_img/home_page.png)
+
+### Step 9: Navigate to Performance
+
+To start configuring performance tests, navigate to the "Performance" tab.
+
+![Navigate to Performance](/assets/posts_img/select_performance.png)
+
+### Step 10: Performance Test Runs
+
+In the performance section, you will see the latest test runs and performance metrics.
+
+![Performance Test Runs](/assets/posts_img/performance_screen.png)
+
+### Step 11: Add a New Test
+
+To add a new test, select the "Backend" tab.
+
+![Add New Test](/assets/posts_img/backend_view.png)
+
+> Congratulations! You have successfully created a project in Carrier and can now begin configuring and running tests.
+{: .prompt-info }
+
+## Next Step: Changing the Default Passwords
+
+Follow the guide on [how to change default Admin passwords in Carrier and Keycloak](http://getcarrier.io/posts/change-passwords/) to get started.
+
+### Additional: Creating a Project for Carrier Admin User
+
+1. Log in as the "admin" user.
+2. Create a new project and set the email
+
+ as "admin@centry.user" (the default admin email).
+
+   ![Create Admin Project](/assets/posts_img/created_admin_project.png)
+
+   ![Admin Project](/assets/posts_img/craeted_admin_2.png)
+
+3. Once the project is created, switch to "Project" mode.
+
+   ![Switch to Project Mode](/assets/posts_img/admin_select_prj.png)
+
+4. You will be redirected to the project configuration page.
+
+   ![Admin Project Configuration](/assets/posts_img/demo_prj.png)
 
