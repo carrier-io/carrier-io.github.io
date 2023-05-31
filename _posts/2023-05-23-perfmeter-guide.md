@@ -2,7 +2,7 @@
 title: Perfmeter Guidelines
 author: User
 date: 2023-05-23 12:00:00 +0800
-categories: [Performance, Tutorial]
+categories: [Performance, Toolset]
 tags: [performance, jmeter, distribution, report, Docker]
 render_with_liquid: false
 ---
@@ -39,7 +39,7 @@ docker run --rm -u 0:0 \
        -e "loki_host={{ http://loki }}" # loki host or IP
        -e "loki_port=3100" # optional, default 3100
        getcarrier/perfmeter:1.0 \
-       -n -t /mnt/jmeter/<test_name> 
+       -n -t /mnt/jmeter/<test_name>
        -q /mnt/jmeter/<properties_file> \    #optional
        -j /tmp/reports/jmeter_$(date +%s).log \   #optional
        -l /tmp/reports/jmeter_$(date +%s).jtl -e \  # optional
