@@ -2,7 +2,7 @@
 title: Carrier Installation Guide
 author: User
 date: 2023-05-30 12:00:00 +0800
-categories: [Performance, Tutorial]
+categories: [Performance, Installation Tutorial]
 tags: [performance, installation, ubuntu, centos]
 render_with_liquid: false
 pin: true
@@ -106,7 +106,7 @@ For detailed instructions on installing Carrier on CentOS, refer to the [CentOS 
 
 ## Install on Fedora
 
-For detailed instructions on installing Carrier on CentOS, refer to the [CentOS Installation Steps](/carrier-io.github.io/posts/carrier-platform-fedora/).
+For detailed instructions on installing Carrier on CentOS, refer to the [Fedora Installation Steps](/carrier-io.github.io/posts/carrier-platform-fedora/).
 
 
 ### How to mount disks

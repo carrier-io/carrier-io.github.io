@@ -2,7 +2,7 @@
 title: Create a Project in Carrier
 author: User
 date: 2023-05-31 12:00:00 +0800
-categories: [Performance, Tutorial]
+categories: [Performance, Installation Tutorial]
 tags: [performance, project, configuration]
 render_with_liquid: false
 ---
@@ -91,7 +91,9 @@ To add a new test, select the "Backend" tab.
 
 ## Next Step: Changing the Default Passwords
 
-Follow the guide on [how to change default Admin passwords in Carrier and Keycloak](http://getcarrier.io/posts/change-passwords/) to get started.
+Follow the guide on [how to change default Admin passwords in Carrier and Keycloak](https://getcarrier.io/posts/change-passwords/) to get started.
+Follow the guide on [how to configure backend performance test](https://getcarrier.io/posts/backend-test-configuration/) to get started.
+
 
 ### Additional: Creating a Project for Carrier Admin User
 
