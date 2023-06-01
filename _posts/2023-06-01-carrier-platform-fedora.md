@@ -2,7 +2,7 @@
 title: Carrier Installation on Fedora
 author: User
 date: 2023-06-01 12:00:00 +0800
-categories: [Performance, Tutorial]
+categories: [Performance, Installation Tutorial]
 tags: [performance, installation, Fedora]
 render_with_liquid: false
 ---

@@ -2,7 +2,7 @@
 title: Ubuntu Installation Steps
 author: User
 date: 2023-05-20 12:00:00 +0800
-categories: [Performance, Tutorial]
+categories: [Performance, Installation Tutorial]
 tags: [performance, installation, ubuntu]
 render_with_liquid: false
 ---

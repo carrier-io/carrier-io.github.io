@@ -2,7 +2,7 @@
 title: Changing the default passwords
 author: User
 date: 2023-05-31 12:00:00 +0800
-categories: [Performance, Tutorial]
+categories: [Performance, Installation Tutorial]
 tags: [performance, project, configuration]
 render_with_liquid: false
 ---
