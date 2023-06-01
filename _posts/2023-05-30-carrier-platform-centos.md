@@ -7,7 +7,7 @@ tags: [performance, installation, centos]
 render_with_liquid: false
 ---
 
-## Centos Installation Steps
+## Overview
 
 This guide provides step-by-step instructions for installing Carrier on CentOS operating systems. Carrier is a powerful platform for performance and security testing.
 
@@ -156,28 +156,9 @@ cd /opt/centry
 ```
 3. Get the `public IP` of your system and set the `CURRENT_IP` variable to the defined value:
 
-    3.1 To get the public IP address of your CentOS system and set it to the `CURRENT_IP` variable, you can use the following commands:
-
-    ```bash
-    sudo yum install bind-utils -y
-    CURRENT_IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
-    ```
-
-    The first command installs the `bind-utils` package, which provides the `dig` command for DNS lookups. The second command uses `dig` to retrieve the public IP address and assigns it to the `CURRENT_IP` variable.
-
-    After running these commands, the public IP address of your CentOS system will be stored in the `CURRENT_IP` variable for further use in your scripts or commands.
-
-    ```bash
-    echo $CURRENT_IP
-    ```
-
-    Verify public IP address of your CentOS system:
-    ```bash
-    curl ifconfig.me
-    ```
-
-    This command will make a request to the ifconfig.me service, which will return your public IP address.
-
+```bash
+export CURRENT_IP=$(curl -s ifconfig.me)
+```
 
 4. Set parameters in `.env` and `Makefile` file
 
@@ -194,9 +175,8 @@ cd /opt/centry
         VOLUMES_PATH=/opt/centry/volumes
         ....
 
-5. Review list of default plugins in config file and update rabbitmq container version:
+5. Review list of default plugins in config file:
 ```bash
-sed -i -e "s/\image: rabbitmq:3.7-management/image: rabbitmq:3.9-management/g" docker-compose.yaml
 cat config/pylon.yml
 ```
 

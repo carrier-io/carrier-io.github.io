@@ -7,7 +7,7 @@ tags: [performance, installation, ubuntu]
 render_with_liquid: false
 ---
 
-## Installation
+## Overview
 This guide provides step-by-step instructions for installing Carrier on Ubuntu operating systems.
 
 > Please find the hardware requirements by following the [link](http://getcarrier.io/posts/carrier-install/#prerequisites).
@@ -69,7 +69,7 @@ cd /opt/centry
 3. Get the `public IP` of your system and set the `CURRENT_IP` variable to the defined value:
 For example, using next cmd:
 ```bash
-CURRENT_IP=$(host myip.opendns.com resolver1.opendns.com | grep 'address ' | cut -d ' ' -f 4)
+export CURRENT_IP=$(curl -s ifconfig.me)
 ```
 
 4. Set parameters in `.env` and `Makefile` file

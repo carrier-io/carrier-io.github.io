@@ -104,6 +104,11 @@ For detailed instructions on installing Carrier on Ubuntu, refer to the [Ubuntu 
 For detailed instructions on installing Carrier on CentOS, refer to the [CentOS Installation Steps](/carrier-io.github.io/posts/carrier-platform-centos/).
 
 
+## Install on Fedora
+
+For detailed instructions on installing Carrier on CentOS, refer to the [CentOS Installation Steps](/carrier-io.github.io/posts/carrier-platform-fedora/).
+
+
 ### How to mount disks
 1. Get the list of all available partitions on your system with the following command:
     ```bash
