@@ -130,7 +130,6 @@ After installing Carrier, you may want to perform the following post-installatio
 - Change default user passwords
 - Enable HTTPS for secure communication with the Carrier web interface.
 - Configure firewall rules to restrict access to Carrier ports.
-- Follow best practices for securing your Debian 11 server.
 
 #### 3. Set Up Projects and Tests
 
