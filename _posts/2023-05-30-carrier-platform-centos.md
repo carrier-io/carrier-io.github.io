@@ -146,8 +146,7 @@ Make sure to execute these additional steps before proceeding with the Carrier i
 
 1. Using root user clone the carrier-io centry repository to the `/opt` directory:
 ```bash
-cd /opt
-git clone https://github.com/carrier-io/centry.git -b beta-1.0
+git clone https://github.com/carrier-io/centry.git -b beta-1.0 /opt/centry
 ```
 
 2. Navigate to the downloaded folder:
@@ -263,6 +262,29 @@ make up
 
     > You're all set, then! Excellent Work!
     {: .prompt-info }
+
+### Post-Installation Steps
+> It is highly recommended to change the default password after logging in.
+{: .prompt-tip }
+>
+After installing Carrier, you may want to perform the following post-installation steps:
+
+#### 1. Configure Carrier project
+
+- Set up user accounts, roles, and permissions.
+- Configure email notifications, integrations, and other settings.
+
+#### 2. Secure Carrier
+
+- Change default user passwords
+- Enable HTTPS for secure communication with the Carrier web interface.
+- Configure firewall rules to restrict access to Carrier ports.
+- Follow best practices for securing your Debian 11 server.
+
+#### 3. Set Up Projects and Tests
+
+- Create projects in Carrier to organize your tests.
+- Configure and run performance tests using the Carrier web interface.
 
 ## Next Step: Create a Project in Carrier
 

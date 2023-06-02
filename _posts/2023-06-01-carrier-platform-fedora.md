@@ -1,5 +1,5 @@
 ---
-title: Carrier Installation on Fedora
+title: Fedora Installation Steps
 author: User
 date: 2023-06-01 12:00:00 +0800
 categories: [Performance, Installation Tutorial]

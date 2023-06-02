@@ -55,8 +55,7 @@ After completing these steps, you have successfully installed Docker, Docker Com
 ### Carrier Installation Steps
 1. Using root user clone the carrier-io [centry](https://github.com/carrier-io/centry/blob/beta-1.0/Makefile) repository to the `/opt` directory:
 ```bash
-cd /opt
-git clone https://github.com/carrier-io/centry.git -b beta-1.0
+git clone https://github.com/carrier-io/centry.git -b beta-1.0 /opt/centry
 ```
 
 2. Navigate to the downloaded folder:
@@ -125,7 +124,6 @@ make up
     Creating carrier-postgres ... done
     Creating carrier-redis    ... done
     Creating carrier-loki     ... done
-    Creating carrier-mongo    ... done
     Creating carrier-minio    ... done
     Creating carrier-grafana  ... done
     Creating carrier-vault    ... done
@@ -134,7 +132,6 @@ make up
     Creating carrier-keycloak             ... done
     Creating carrier-interceptor          ... done
     Creating carrier-interceptor_internal ... done
-    Creating carrier-pylon-worker         ... done
     Creating carrier-pylon-auth           ... done
     Creating carrier-pylon                ... done
     ```
