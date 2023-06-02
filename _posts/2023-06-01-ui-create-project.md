@@ -91,7 +91,11 @@ Follow the steps below to configure a UI performance test in Carrier:
 > You can also schedule the test to run at specific intervals or on a recurring basis by using the scheduling options provided in the Carrier web interface.
 {: .prompt-tip }
 
-![Run Test](/assets/posts_img/in_progress_ui_test.png)
+![Run Test](/assets/posts_img/in_progress_ui_test_1.png)
+
+
+![Run Test](/assets/posts_img/in_progress_ui_test_2.png)
+
 
 #### Step 8: Select the Test in the "Results" Table
 
@@ -100,11 +104,11 @@ Follow the steps below to configure a UI performance test in Carrier:
 
 
 
-      2.1 1 iteration
-      ![Test Results Table](/assets/posts_img/one_iteration_ui_test.png)
+      2.1 1 Charts
+      ![Test Results Table](/assets/posts_img/charts.png)
 
-      2.2 2 iterations
-      ![Test Results Table](/assets/posts_img/two_iter_ui.png)
+      2.2 2 Summary
+      ![Test Results Table](/assets/posts_img/summary_ui.png)
 
 #### Step 9: Open the Lighthouse Report
 
