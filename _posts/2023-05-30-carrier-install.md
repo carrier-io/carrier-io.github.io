@@ -97,17 +97,45 @@ For Carrier installation on GCP, you can use Compute Engine instances that meet 
 
 ## Install on Ubuntu
 
-For detailed instructions on installing Carrier on Ubuntu, refer to the [Ubuntu Installation Steps](/carrier-io.github.io/posts/carrier-platform-ubuntu/).
+For detailed instructions on installing Carrier on Ubuntu, refer to the [Ubuntu Installation Steps](https://carrier-io.github.io/posts/carrier-platform-ubuntu/).
 
 ## Install on CentOS
 
-For detailed instructions on installing Carrier on CentOS, refer to the [CentOS Installation Steps](/carrier-io.github.io/posts/carrier-platform-centos/).
+For detailed instructions on installing Carrier on CentOS, refer to the [CentOS Installation Steps](https://carrier-iogithub.io/posts/carrier-platform-centos/).
 
 
 ## Install on Fedora
 
-For detailed instructions on installing Carrier on CentOS, refer to the [Fedora Installation Steps](/carrier-io.github.io/posts/carrier-platform-fedora/).
+For detailed instructions on installing Carrier on Fedora, refer to the [Fedora Installation Steps](https://carrier-iogithub.io/posts/carrier-platform-fedora/).
 
+
+## Install on Debian
+
+For detailed instructions on installing Carrier on Debian, refer to the [Debian Installation Steps](https://carrier-iogithub.io/posts/carrier-platform-debian/).
+
+
+### Post-Installation Steps
+> It is strongly advised to change the default Carrier admin user password and Keycloak user after installation.
+{: .prompt-tip }
+
+After installing Carrier, you may want to perform the following post-installation steps:
+
+#### 1. Configure Carrier project
+
+- Set up user accounts, roles, and permissions.
+- Configure email notifications, integrations, and other settings.
+
+#### 2. Secure Carrier
+
+- Change default user passwords
+- Enable HTTPS for secure communication with the Carrier web interface.
+- Configure firewall rules to restrict access to Carrier ports.
+- Follow best practices for securing your Debian 11 server.
+
+#### 3. Set Up Projects and Tests
+
+- Create projects in Carrier to organize your tests.
+- Configure and run performance tests using the Carrier web interface.
 
 ### How to mount disks
 1. Get the list of all available partitions on your system with the following command:
