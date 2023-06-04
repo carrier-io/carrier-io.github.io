@@ -101,17 +101,17 @@ For detailed instructions on installing Carrier on Ubuntu, refer to the [Ubuntu 
 
 ## Install on CentOS
 
-For detailed instructions on installing Carrier on CentOS, refer to the [CentOS Installation Steps](https://carrier-iogithub.io/posts/carrier-platform-centos/).
+For detailed instructions on installing Carrier on CentOS, refer to the [CentOS Installation Steps](https://carrier-io.github.io/posts/carrier-platform-centos/).
 
 
 ## Install on Fedora
 
-For detailed instructions on installing Carrier on Fedora, refer to the [Fedora Installation Steps](https://carrier-iogithub.io/posts/carrier-platform-fedora/).
+For detailed instructions on installing Carrier on Fedora, refer to the [Fedora Installation Steps](https://carrier-io.github.io/posts/carrier-platform-fedora/).
 
 
 ## Install on Debian
 
-For detailed instructions on installing Carrier on Debian, refer to the [Debian Installation Steps](https://carrier-iogithub.io/posts/carrier-platform-debian/).
+For detailed instructions on installing Carrier on Debian, refer to the [Debian Installation Steps](https://carrier-io.github.io/posts/carrier-platform-debian/).
 
 
 ### Post-Installation Steps

@@ -15,7 +15,7 @@ This guide provides step-by-step instructions for installing Carrier on Ubuntu o
 
 ### Prerequisites
 
-Before installing Carrier, you need to ensure that the following tools are installed on your CentOS system:
+Before installing Carrier, you need to ensure that the following tools are installed on your Ubuntu system:
 
 - [Docker](https://docs.docker.com/desktop/install/ubuntu/) 4.19.0+
 - [Docker Compose](https://docs.docker.com/compose/install/)
