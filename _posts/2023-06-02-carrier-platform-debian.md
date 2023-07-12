@@ -102,7 +102,7 @@ export CURRENT_IP=$(curl -s ifconfig.me)
     4.1 Set IP (change `DEV_IP` and `DIRECT_IP` to `CURRENT_IP`):
 
         sed -i -e "s/\#DIRECT_IP=YOUR_IP_HERE/DIRECT_IP=$CURRENT_IP/g" Makefile
-        sed -i -e "s/\$DEV_IP/$CURRENT_IP/g" .env
+        sed -i -e "s/\$APP_IP/$CURRENT_IP/g" .env
 
 
 
