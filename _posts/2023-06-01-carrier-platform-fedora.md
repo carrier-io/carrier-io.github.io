@@ -118,7 +118,7 @@ export CURRENT_IP=$(curl -s ifconfig.me)
 
 4. Set the IP parameters in the `.env` and `Makefile` files:
 ```bash
-sudo sed -i -e "s/\$DEV_IP/$CURRENT_IP/g" .env
+sudo sed -i -e "s/\$APP_IP/$CURRENT_IP/g" .env
 sudo sed -i -e "s/\#DIRECT_IP=YOUR_IP_HERE/DIRECT_IP=$CURRENT_IP/g" Makefile
 ```
 
