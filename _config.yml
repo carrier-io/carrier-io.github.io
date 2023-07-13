@@ -12,7 +12,7 @@ baseurl: ""
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
-
+include: [".well-known"]
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: "Eastern Time"
 
