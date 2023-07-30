@@ -170,30 +170,23 @@ By following these steps and configuring thresholds and baselines, you can easil
 
 1. Click on the "Update And Start" button at the top of the page to start the test run again.
 2. Validate results 
-   ![Updated thresholds](/assets/posts_img/updated_thresholds.png)
-
-
-### Step 10: Start the Test Run Again
-
-1. Click on the "Update And Start" button at the top of the page to start the test run again.
-2. Validate results 
    ![Updated thresholds](/assets/posts_img/validated_results.png)
 
-### Step 11: Update Deviation
+### Step 10: Update Error Deviation
 
 1. Open "DemoWithTransactions" test "Settings"
 2. Expand the PROCESSING -> ADVANCED SETTINGS section.
 3. Set "Check error rate"the deviation value to 5
    ![Add Backend Test](/assets/posts_img/enable_comparison.png)
 
-### Step 12: Start the Test Run Again
+### Step 11: Start the Test Run Again
 
 1. Click on the "Update And Start" button at the top of the page to start the test run again.
 2. Validate results 
    ![Updated thresholds](/assets/posts_img/updated_thresholds.png)
 
 
-### Step 13: Check the Test Result
+### Step 12: Check the Test Result
 
 1. Once the test is finished, check the test result in the Carrier UI.
 2. Verify the status in the UI and the status in the letter to assess if the test meets the configured thresholds and baseline expectations.
