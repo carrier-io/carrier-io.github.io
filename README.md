@@ -17,3 +17,12 @@ Carrier is a Continuous Test Automation Framework designed to seamlessly integra
 - **Automated Issues Reporting:** Avoid missed bugs in production with our automated issue reporting feature. This feature ensures that any detected bugs are promptly reported and addressed.
 
 Carrier is developed with the aim of reducing stress on the development team while delivering consistent and reliable performance. It's more than just a tool - it's a pathway to more efficient, effective, and economical software testing.
+
+#  Locally build Pages
+
+```bash
+$ bundle install --path vendor/bundle 
+$ bundle exec jekyll build
+$ bundle exec jekyll serve
+$ open http://127.0.0.1:4000/
+```
