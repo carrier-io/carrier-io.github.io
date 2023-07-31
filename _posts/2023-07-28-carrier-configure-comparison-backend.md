@@ -24,18 +24,17 @@ Based on configured SLAs, the build status is available inside the backend tests
 
 1. All test `Error rate` threshold < 10 
 
-> Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
-{: .prompt-info }
-
+    > Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
+    {: .prompt-info }
 2. Individual `Response Time` threshold value to be less than 3 
 
-> Note: Every request's response time should be less than 3 seconds. If it exceeds 3 seconds + deviation, the build will fail.
-{: .prompt-info }
+    > Note: Every request's response time should be less than 3 seconds. If it exceeds 3 seconds + deviation, the build will fail.
+    {: .prompt-info }
 
 3. All test `Throughput` > 3 requests per second 
 
-> Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
-{: .prompt-info }
+    > Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
+    {: .prompt-info }
 
 - **Baseline**: Setting baselines allows you to compare test results against a predefined performance standard. Choose the appropriate baseline for your test to assess deviations from expected performance.
 
@@ -106,9 +105,7 @@ By following these steps and configuring thresholds and baselines, you can easil
    - **Target**: Choose the target metric - Throughput.
    - **Aggregation**: Set the aggregation method - Maximum.
    - **Comparison**: Choose the comparison operator (e.g., >=)
-   - **Threshold Value**: Set the threshold value for the target metric (e.g. 1
-
-).
+   - **Threshold Value**: Set the threshold value for the target metric (e.g. 1).
    ![Throughput Threshold](/assets/posts_img/throughput_threshold.png)
 4. Fill in the data for the "Response Time" threshold:
    - **Test**: Enter the test name (e.g., "DemoWithTransactions").
@@ -140,19 +137,15 @@ By following these steps and configuring thresholds and baselines, you can easil
 ### Step 8: Update Thresholds
 
 1. Set the "Response Time" threshold value to be less than 3 
-
-> Note: Every request's response time should be less than 3 seconds. If it exceeds 3 seconds + deviation, the build will fail.
-{: .prompt-info }
+    > Note: Every request's response time should be less than 3 seconds. If it exceeds 3 seconds + deviation, the build will fail.
+    {: .prompt-info }
 
 2. Set the "Error rate" threshold < 10 
-
-> Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
-{: .prompt-info }
-
+    > Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
+    {: .prompt-info }
 3. Set the "Throughput" > 3 requests per second 
-
-> Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
-{: .prompt-info }
+    > Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
+    {: .prompt-info }
 
    ![Updated Thresholds](/assets/posts_img/updated_thresholds.png)
 
@@ -172,8 +165,6 @@ By following these steps and configuring thresholds and baselines, you can easil
 ### Step 11: Start the Test Run Again
 
 1. Click on the "Update And Start" button at the top of the page to start the test run again.
-2. Validate results 
-   ![Updated Thresholds](/assets/posts_img/updated_thresholds.png)
 
 ### Step 12: Check the Test Result
 
@@ -184,5 +175,5 @@ By following these steps and configuring thresholds and baselines, you can easil
    - **Build Status**
    ![Build Status](/assets/posts_img/success_builds.png)
 
-> Congratulations! You have successfully configured comparison. It will help you effectively compare test results with baselines and thresholds, ensuring your application meets the desired performance standards and SLAs.
+> Congratulations! You have successfully configured the comparison. It will help you effectively compare test results with baselines and thresholds, ensuring your application meets the desired performance standards and SLAs.
 {: .prompt-info }
