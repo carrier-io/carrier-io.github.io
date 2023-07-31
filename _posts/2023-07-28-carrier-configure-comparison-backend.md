@@ -22,17 +22,17 @@ To efficiently configure performance thresholds and baselines in Carrier for you
 
 1. All test `Error rate` threshold < 10 
 
-> Note: Total error rate should be less than 10%. If more than 10 percent + deviation than build will fail.
+> Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
 {: .prompt-info }
 
 2. Individual `Response Time` threshold value to be less than 3 
 
-> Note: Every request's response time should be less than 3 seconds. If more than 3 seconds + deviation than build will fail.
+> Note: Every request's response time should be less than 3 seconds. If it exceeds 3 seconds + deviation, the build will fail.
 {: .prompt-info }
 
 3. All test `Throughput` > 3 requests per second 
 
-> Note: Total throughput should be more than 3 requests per second. If less than 3 requests + deviation than build will fail.
+> Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
 {: .prompt-info }
 
 - **Baseline**: Setting baselines allows you to compare test results against a predefined performance standard. Choose the appropriate baseline for your test to assess deviations from expected performance.
@@ -43,16 +43,16 @@ By following these steps and configuring thresholds and baselines, you can easil
 
 1. Open your test "Settings" with the desired name (e.g., "DemoWithTransactions").
 2. Set or collect the following test parameters:
-   - Test Type: Choose the appropriate test type (e.g., Validation).
-   - Environment: Specify the environment for the test (e.g., Testing).
+   - **Test Type**: Choose the appropriate test type (e.g., Validation).
+   - **Environment**: Specify the environment for the test (e.g., Testing).
    ![Add Backend Test](/assets/posts_img/test_types_config.png)
-   - VUSERS: Set the number of virtual users for the test.
-   - EMAIL: Set the email REPORTERS -> Email -> Recipients addresses for the test
+   - **VUSERS**: Set the number of virtual users for the test.
+   - **EMAIL**: Set the email recipients' addresses for the test.
    ![Add Backend Test](/assets/posts_img/emial_recipients.png)
 
-### Step 1: Set the baseline for comparison
+### Step 1: Set the Baseline for Comparison
 
-1. Run "DemoWithTransactions" tests with parameters from "Step 0: Open Test Parameters".
+1. Run the "DemoWithTransactions" tests with parameters from "Step 0: Open Test Parameters".
 2. Set the test run as a "Baseline".
    ![Set Baseline](/assets/posts_img/Set_baseline.png)
    ![Baseline](/assets/posts_img/baseline_1.png)
@@ -83,14 +83,14 @@ By following these steps and configuring thresholds and baselines, you can easil
 ### Step 4: Get Test Metrics
 
 1. After the test run is completed, you will receive an email with the following test metrics comparison to the Baseline:
-   - Ttl (total requests)
-   - Thrghpt (throughput total), req/sec
-   - Error rate, %
-   - Pct95 (response by 95th percentile max), seconds
+   - **Ttl** (total requests)
+   - **Thrghpt** (throughput total), req/sec
+   - **Error rate**, %
+   - **Pct95** (response by 95th percentile max), seconds
    ![Summary Comparison](/assets/posts_img/summary_comparison.png)
 2. Inside the email, review the next metrics in comparison to the Baseline:
-   - Success Rate
-   - RPS/TPS Rate (throughput)
+   - **Success Rate**
+   - **RPS/TPS Rate (throughput)**
    ![Chart Email](/assets/posts_img/chart_email.png)
 
 ### Step 5: Configure Thresholds
@@ -98,22 +98,24 @@ By following these steps and configuring thresholds and baselines, you can easil
 1. Navigate to the "Thresholds" panel in the Backend tab.
 2. Click the "+" button to add a new threshold.
 3. Fill in the data for the "Throughput" threshold:
-   - Test: Enter the test name (e.g., "DemoWithTransactions").
-   - Test Environment: Specify the environment (e.g., Testing).
-   - Scope: Choose "All" to apply the threshold to all virtual users.
-   - Target: Choose the target metric - Throughput.
-   - Aggregation: Set the aggregation method - Maximum.
-   - Comparison: Choose the comparison operator (e.g., >=)
-   - Threshold Value: Set the threshold value for the target metric (e.g. 1).
+   - **Test**: Enter the test name (e.g., "DemoWithTransactions").
+   - **Test Environment**: Specify the environment (e.g., Testing).
+   - **Scope**: Choose "All" to apply the threshold to all virtual users.
+   - **Target**: Choose the target metric - Throughput.
+   - **Aggregation**: Set the aggregation method - Maximum.
+   - **Comparison**: Choose the comparison operator (e.g., >=)
+   - **Threshold Value**: Set the threshold value for the target metric (e.g. 1
+
+).
    ![Throughput Threshold](/assets/posts_img/throughput_threshold.png)
 4. Fill in the data for the "Response Time" threshold:
-   - Test: Enter the test name (e.g., "DemoWithTransactions").
-   - Test Environment: Specify the environment (e.g., Testing).
-   - Scope: Choose "Every" to apply the threshold to all virtual users.
-   - Target: Choose the target metric - Response Time.
-   - Aggregation: Set the aggregation method - "Percentile 95"
-   - Comparison: Choose the comparison operator (e.g., <=).
-   - Threshold Value: Set the threshold value for the target metric (e.g. 0.5).
+   - **Test**: Enter the test name (e.g., "DemoWithTransactions").
+   - **Test Environment**: Specify the environment (e.g., Testing).
+   - **Scope**: Choose "Every" to apply the threshold to all virtual users.
+   - **Target**: Choose the target metric - Response Time.
+   - **Aggregation**: Set the aggregation method - "Percentile 95"
+   - **Comparison**: Choose the comparison operator (e.g., <=).
+   - **Threshold Value**: Set the threshold value for the target metric (e.g. 0.5).
    ![Response Time Threshold](/assets/posts_img/response_time_threshold.png)
 5. Click the Save button.
    ![Thresholds](/assets/posts_img/thresholds.png)
@@ -126,28 +128,28 @@ By following these steps and configuring thresholds and baselines, you can easil
 
 1. Once the test is finished, check the test result in the Carrier UI.
 2. Verify the status in the UI and the status in the letter to assess if the test meets the configured thresholds and baseline expectations.
-   - Email Summary
+   - **Email Summary**
    ![Email Summary](/assets/posts_img/email_summary_1.png)
-   - Build Status
+   - **Build Status**
    ![Build Status](/assets/posts_img/success_builds.png)
-   - Report Status
+   - **Report Status**
    ![Report Status](/assets/posts_img/success_report.png)
 
 ### Step 8: Update Thresholds
 
 1. Set the "Response Time" threshold value to be less than 3 
 
-> Note: Every request's response time should be less than 3 seconds.  If more than 3 seconds + deviation than the build will fail.
+> Note: Every request's response time should be less than 3 seconds. If it exceeds 3 seconds + deviation, the build will fail.
 {: .prompt-info }
 
 2. Set the "Error rate" threshold < 10 
 
-> Note: Total error rate should be less than 10%. If more than 10 percent + deviation than the build will fail.
+> Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
 {: .prompt-info }
 
 3. Set the "Throughput" > 3 requests per second 
 
-> Note: Total throughput should be more than 3 requests per second. If less than 3 requests + deviation than the build will fail.
+> Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
 {: .prompt-info }
 
    ![Updated Thresholds](/assets/posts_img/updated_thresholds.png)
@@ -175,7 +177,10 @@ By following these steps and configuring thresholds and baselines, you can easil
 
 1. Once the test is finished, check the test result in the Carrier UI.
 2. Verify the status in the UI and the status in the letter to assess if the test meets the configured thresholds and baseline expectations.
-   - Report Status
+   - **Report Status**
    ![Report Status](/assets/posts_img/success_report.png)
-   - Build Status
+   - **Build Status**
    ![Build Status](/assets/posts_img/success_builds.png)
+
+> Congratulations! You have successfully configured comparison. It will help you effectively compare test results with baselines and thresholds, ensuring your application meets the desired performance standards and SLAs.
+{: .prompt-info }
