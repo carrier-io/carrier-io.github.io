@@ -8,8 +8,10 @@ render_with_liquid: false
 ---
 
 ## Configuring Performance Thresholds and Baselines in Carrier - Step-by-Step Guide
-
-To efficiently configure performance thresholds and baselines in Carrier for your performance tests, follow these easy-to-use steps. This will help reduce the time of analysis by getting email notifications with comparisons to baselines and thresholds. The build status is available inside the backend tests table in the Carrier UI.
+ 
+This user-friendly guide aims to help you efficiently configure performance thresholds and baselines in Carrier for your performance tests, resulting in reduced analysis time.
+By following these steps, you can easily receive email notifications with comparisons to baselines and thresholds, ensuring increased visibility and transparency. 
+Based on configured SLAs, the build status is available inside the backend tests table in the Carrier UI after the tests.
 
 > Note: You need to configure Email integration inside the project first. Carrier has default templates for email notifications that can be overridden. You can upload your own inside Carrier "Email" integrations.
 {: .prompt-info }
