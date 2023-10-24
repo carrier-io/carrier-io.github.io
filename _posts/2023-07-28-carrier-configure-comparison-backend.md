@@ -22,7 +22,7 @@ Based on configured SLAs, the build status is available inside the backend tests
 
 ![Updated thresholds](/assets/posts_img/updated_thresholds.png)
 
-1. All test `Error rate` threshold > 10 
+1. All test `Error rate` threshold > 10 (%)
 
     > Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
     {: .prompt-info }
@@ -116,7 +116,11 @@ By following these steps and configuring thresholds and baselines, you can easil
 4. Fill in the data for the "Response Time" threshold:
    - **Test**: Enter the test name (e.g., "DemoWithTransactions").
    - **Test Environment**: Specify the environment (e.g., Testing).
-   - **Scope**: Choose "Every" to apply the threshold to all virtual users.
+   - **Scope**: Choose "Every" to apply the threshold to every transaction in test
+
+   > Note: The option "Every" in Scope is applicable only for the **"Response Time"** threshold.
+    {: .prompt-info }
+
    - **Target**: Choose the target metric - Response Time.
    - **Aggregation**: Set the aggregation method - "Percentile 95"
    - **Comparison**: Choose the comparison operator (e.g., >=).
@@ -147,7 +151,7 @@ By following these steps and configuring thresholds and baselines, you can easil
 ### Step 8: Update Thresholds
 
 
-1. Set the "Error rate" threshold > 10 
+1. Set the "Error rate" threshold > 10 (%)
     > Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
     {: .prompt-info }
 
@@ -155,7 +159,7 @@ By following these steps and configuring thresholds and baselines, you can easil
     > Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
     {: .prompt-info }
 
-3. Set the "Response Time" threshold value to be more than 3000 
+3. Set the "Response Time" threshold value to be more than 3000 (milliseconds)
     > Note: Every request's response time should be less than 3000 milliseconds (3 seconds). If it exceeds 3000 milliseconds + deviation, the build will fail.
     {: .prompt-info }
 
