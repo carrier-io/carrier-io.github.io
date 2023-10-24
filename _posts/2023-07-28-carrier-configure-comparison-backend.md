@@ -22,18 +22,19 @@ Based on configured SLAs, the build status is available inside the backend tests
 
 ![Updated thresholds](/assets/posts_img/updated_thresholds.png)
 
-1. All test `Error rate` threshold < 10 
+1. All test `Error rate` threshold > 10 (%)
 
     > Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
     {: .prompt-info }
-2. Individual `Response Time` threshold value to be less than 3 
 
-    > Note: Every request's response time should be less than 3 seconds. If it exceeds 3 seconds + deviation, the build will fail.
-    {: .prompt-info }
-
-3. All test `Throughput` > 3 requests per second 
+2. All test `Throughput` < 3 requests per second 
 
     > Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
+    {: .prompt-info }
+
+3. Individual `Response Time` > 3000 milliseconds (3 seconds)
+
+    > Note: Every request's response time should be less than 3000 milliseconds. If it exceeds 3000 milliseconds + deviation, the build will fail.
     {: .prompt-info }
 
 - **Baseline**: Setting baselines allows you to compare test results against a predefined performance standard. Choose the appropriate baseline for your test to assess deviations from expected performance.
@@ -98,24 +99,37 @@ By following these steps and configuring thresholds and baselines, you can easil
 
 1. Navigate to the "Thresholds" panel in the Backend tab.
 2. Click the "+" button to add a new threshold.
+![Threshold button](/assets/posts_img/create_thresholds_button.png)
 3. Fill in the data for the "Throughput" threshold:
    - **Test**: Enter the test name (e.g., "DemoWithTransactions").
    - **Test Environment**: Specify the environment (e.g., Testing).
    - **Scope**: Choose "All" to apply the threshold to all virtual users.
    - **Target**: Choose the target metric - Throughput.
    - **Aggregation**: Set the aggregation method - Maximum.
-   - **Comparison**: Choose the comparison operator (e.g., >=)
+   - **Comparison**: Choose the comparison operator (e.g., <=)
    - **Threshold Value**: Set the threshold value for the target metric (e.g. 1).
    ![Throughput Threshold](/assets/posts_img/throughput_threshold.png)
+
+   > Note: Using this configuration, maximum throughput should be more than 1 requests per second. If it is less than 1 request, the build will fail.
+    {: .prompt-info }
+
 4. Fill in the data for the "Response Time" threshold:
    - **Test**: Enter the test name (e.g., "DemoWithTransactions").
    - **Test Environment**: Specify the environment (e.g., Testing).
-   - **Scope**: Choose "Every" to apply the threshold to all virtual users.
+   - **Scope**: Choose "Every" to apply the threshold to every transaction in test
+
+   > Note: The option "Every" in Scope is applicable only for the **"Response Time"** threshold.
+    {: .prompt-info }
+
    - **Target**: Choose the target metric - Response Time.
    - **Aggregation**: Set the aggregation method - "Percentile 95"
-   - **Comparison**: Choose the comparison operator (e.g., <=).
-   - **Threshold Value**: Set the threshold value for the target metric (e.g. 0.5).
+   - **Comparison**: Choose the comparison operator (e.g., >=).
+   - **Threshold Value**: Set the threshold value for the target metric (e.g. 500 ms).
    ![Response Time Threshold](/assets/posts_img/response_time_threshold.png)
+
+   > Note: Using this configuration, every request's response time should be less than 500 milliseconds (0.5 seconds). If it exceeds 500 milliseconds + deviation, the build will fail.
+      {: .prompt-info }
+
 5. Click the Save button.
    ![Thresholds](/assets/posts_img/thresholds.png)
 
@@ -136,16 +150,19 @@ By following these steps and configuring thresholds and baselines, you can easil
 
 ### Step 8: Update Thresholds
 
-1. Set the "Response Time" threshold value to be less than 3 
-    > Note: Every request's response time should be less than 3 seconds. If it exceeds 3 seconds + deviation, the build will fail.
-    {: .prompt-info }
 
-2. Set the "Error rate" threshold < 10 
+1. Set the "Error rate" threshold > 10 (%)
     > Note: The total error rate should be less than 10%. If it exceeds 10 percent + deviation, the build will fail.
     {: .prompt-info }
-3. Set the "Throughput" > 3 requests per second 
+
+2. Set the "Throughput" < 3 requests per second 
     > Note: The total throughput should be more than 3 requests per second. If it is less than 3 requests + deviation, the build will fail.
     {: .prompt-info }
+
+3. Set the "Response Time" threshold value to be more than 3000 (milliseconds)
+    > Note: Every request's response time should be less than 3000 milliseconds (3 seconds). If it exceeds 3000 milliseconds + deviation, the build will fail.
+    {: .prompt-info }
+
 
    ![Updated Thresholds](/assets/posts_img/updated_thresholds.png)
 
