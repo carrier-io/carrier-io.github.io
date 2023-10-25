@@ -58,6 +58,7 @@ Follow the steps below to configure a UI performance test in Carrier:
    - **Environment**: Specify the environment name to group related tests.
    - **Test Runner**: Select the tool to use for running the script.
      - **Lighthouse-Nodejs**: Uses Lighthouse with Node.js as the test runner.
+     - **Lighthouse-NPM**: Uses Lighthouse NPM as the test runner.
      - **Sitespeed (browsertime)**: Uses Sitespeed with browsertime as the test runner.
      - **Lighthouse local**: Uses Lighthouse installed locally in Carrier box as the test runner.
      - **Sitespeed local**: Uses Sitespeed.io installed locally in Carrier box as the test runner.
