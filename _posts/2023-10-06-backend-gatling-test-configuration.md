@@ -59,7 +59,7 @@ Follow the steps below to configure a Gatling Backend test in Carrier:
    - **Test Name**: Enter the name of the Backend test. The test name should describe its purpose.
    - **Test Type**: Specify the type to group similar tests.
    - **Test Environment**: Specify the environment name to group related tests.
-   - **Test Runner**: Select the tool to use for load generation. For example Gatling maven-3.7.
+   - **Test Runner**: Select the tool to use for load generation. For example Gatling maven-3.7 or Gatling v3.7.
    - **Custom CMD**: Configure additional parameters for the test run if required. For example, Gatling simulation (-D variables).
    - **Load Configuration**: Specify the engine region and load profile. By default, the test will run on the Carrier host. CPU cores and memory are distributed for each parallel runner.
    - **Test Parameters**: Create additional parameters that can be changed in subsequent test runs. For example, the number of virtual users, duration, and ramp-up period.
@@ -73,7 +73,7 @@ Follow the steps below to configure a Gatling Backend test in Carrier:
 
     ![Backend Test Parameters](/assets/posts_img/test_params_backend_gatling.png)
 
-2. Adjust these parameters based on your specific test scenario and system under test requirements.
+2. Adjust these parameters based on your specific test scenario and system under test requirements. Examples of test configurations under different test runners can be found in paragraph [Demo configurations examples](#demo-configurations-examples)
 
     ![Menu Configuration Backend](/assets/posts_img/menu_config_backend.png)
 
@@ -109,6 +109,42 @@ Follow the steps below to configure a Gatling Backend test in Carrier:
     > Congratulations! You have successfully configured and run the Backend test in Carrier. You can now run and monitor the test to measure the performance of your backend services.
     {: .prompt-info }
 
+### Demo configurations examples
+
+#### Configuration with **Gatling v3.7** test runner:
+
+   - **Test Name**: `Todos_Demo`
+   - **Test Type**: `demo`
+   - **Test Environment**: `demo`
+   - **Test Runner**: `Gatling v3.7`
+   - **Git Repo with Tests**: **HTTPS** `https://github.com/carrier-io/gatling_demo_scripts.git`
+   - **Git Branch**: `java_v_3_7`
+   - **Entrypoint**: `carrier.FloodIoJava`
+![Gatling 3.7 config](/assets/posts_img/gatling_3_7_config.png)
+Test parameters:
+   - **apiUrl**: `https://training.flooded.io`
+   - **ramp_users**: `5`
+   - **ramp_duration**: `30`
+   - **duration**: `35`
+![Gatling 3.7 test parameters](/assets/posts_img/gatling_3_7_test_parameters.png)
+
+
+#### Configuration with **Gatling maven-3.7** test runner:
+
+   - **Test Name**: `Demo_Gatling_maven`
+   - **Test Type**: `demo`
+   - **Test Environment**: `demo`
+   - **Test Runner**: `Gatling maven-3.7`
+   - **Git Repo with Tests**: **HTTPS** `https://github.com/carrier-io/gatling_demo_scripts.git`
+   - **Git Branch**: `mvn`
+   - **Entrypoint**: `carrier.FloodIoMvn`
+![Gatling 3.7 config](/assets/posts_img/gatling_mvn_3_7_config.png)
+Test parameters:
+   - **environment**: `https://training.flooded.io`
+   - **ramp_users**: `5`
+   - **ramp_duration**: `30`
+   - **duration**: `35`
+![Gatling 3.7 test parameters](/assets/posts_img/gatling_3_7_mvn_test_parameters.png)
 ## Next Steps
 
 Once you have configured and executed your Gatling Backend test in Carrier, you may want to explore other testing capabilities and features offered by Carrier, such as Frontend testing, Security testing, and advanced reporting and analysis options.
