@@ -67,13 +67,23 @@ By following these steps and configuring thresholds and baselines, you can easil
 3. Activate the Baseline checkbox.
 4. Expand the PROCESSING -> ADVANCED SETTINGS section.
 5. Activate the "Summary results" checkbox.
+   There are three more checkboxes:
+- Check response time (in milliseconds)
+- Check error rate (% of all errors)
+- Check throughput (req/sec rate from all requests)
 6. Activate the "Per request results" checkbox.
+   There are three checkboxes and two fields:
+- Check response time (in milliseconds)
+- Check error rate (% of errors for each request)
+- Check throughput (req/sec rate from each request)
+- Percentage of failed requests (% of all errors)
+- Comparison metric (You can chose from: Maximum, Minimum, Average, Percentie 95 and Percentie 50)
 7. Set the "Check throughput" deviation value (e.g., 5).
    ![Enable Comparison](/assets/posts_img/enable_comparison.png)
 
-> Note: Deviation boxes are used to specify the acceptable level of differences to not fail the build.
+> Note: Deviation boxes are used to specify the acceptable level of differences to not fail the build. (In example below, threshold for fail rate is 3 with 0.25 diviation, so the first bild is success and the last one failed)
 {: .prompt-info }
-
+   ![Diviation example](/assets/posts_img/diviation_exmpl.png)
 ### Step 3: Start the Test Run
 
 1. Click on the "Update And Start" button at the top of the page to start the test run.
