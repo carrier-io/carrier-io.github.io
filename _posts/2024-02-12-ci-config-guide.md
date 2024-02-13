@@ -1,5 +1,5 @@
 ---
-title:  Carrier Configure CI
+title:  Backend tests integration CI
 author: User
 date: 2024-02-12 12:00:00 +0800
 categories: [Performance, Tutorial, CI]
@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ## Overview
 
-This guide provides step-by-step instructions on how to configire CI for execution tests in Carrier. By running your test in CI you can check performance of your application and identify any improvements or regressions.
+This guide provides step-by-step instructions on how to configure CI for execution tests in Carrier. By running your test in CI you can check the performance of your application and identify any improvements or regressions.
 
 ### Prerequisites
 
@@ -27,25 +27,25 @@ Follow the steps below to run tests in CI using Carrier:
 1. Open a web browser and enter the URL of your Carrier installation.
 2. Log in to the Carrier web interface using your credentials.
 
-> Note: Make sure you have logged in using the appropriate user account that has access to the project where you want to configure the CI.
+> Note: Make sure you have logged in using the appropriate user account with access to the project where you want to configure the CI.
 {: .prompt-info }
 
 #### Step 2: Select the Project
 
-1. From the project dropdown menu, select the desired project for which you want to configure the CI.
+1. From the project dropdown menu, select the project you want to configure the CI for.
 2. Click "Go!" to navigate to the project's configuration page.
 ![Select Project](/assets/posts_img/select_prj.png)
 
 #### Step 3: Navigate to the "Performance" Tab
 
-1. In the project configuration page, click on the "Performance" tab located in the left menu.
+1. On the project configuration page, click on the "Performance" tab located in the left menu.
 ![Performance Dropdown](/assets/posts_img/performance_dropdown.png)
-2. Select test type tab (`Backend` or `UI`, depends on which test you configured before).
+2. Select the test type tab (`Backend` or `UI`, depending on which test you configured before).
 ![Navigate to Performance](/assets/posts_img/backend_and_ui_tab.png)
 
 #### Step 4: Click on the more options button
 
-1. In your configurated test, click on the more options button (3 dots menu) tab located in the right of the test section.
+1. In your configurated test, click on the More options button (3 dots menu) tab located on the right of the test section.
 ![3 Dots Menu](/assets/posts_img/3_dots_menu.png)
 
 #### Step 5: Click on the Docker command button
