@@ -74,5 +74,30 @@ docker run -d --rm -v /var/run/docker.sock:/var/run/docker.sock \
 ![Tasks RQC](/assets/posts_img/tasks_rqc.png)
 2. Run the "rabbit_queue_checker" task.
 ![Run RQC](/assets/posts_img/run_rqc.png)
+
+ > Please be patient Rabbit Queue Checker Task can take from 3-5 minutes to make new pool avaliable.
+{: .prompt-info }
  
+### Step 4: Select Load configuration in a test
+1. In the project configuration page, click on the "Performance" tab located in the left menu.
+![Performance Dropdown](/assets/posts_img/performance_dropdown_rqc.png)
+2. Select test type tab (`Backend` or `UI`, depends on which test you configured before).
+![Navigate to Performance](/assets/posts_img/backend_and_ui_tab.png)
+3. Open Test settings by clicking on the More options button (3 dots menu).
+![Settings Button](/assets/posts_img/settings_button.png)
+4. Scroll down to the Load configuration section and click on Engine location dropdown.
+![Load Config](/assets/posts_img/load_config.png)
+4. Select Project pool with name `${QUEUE_NAME}` from Docker command in [Step 2](https://getcarrier.io/posts/add-interceptor/#step-2-run-the-interceptor-docker-container)
+![New Queue](/assets/posts_img/new_queue.png)
+5. Click on Update And Start button.
+![Update Queue](/assets/posts_img/update_queue.png)
+
+During the test execution you can run another Docker command:
+```bash
+docker ps
+```
+In order to see 2 Docker containers, one for interceptor and another for test execution.
+![Docker Ps Output](/assets/posts_img/docker_ps_output.png)
+
+
 By following these simple steps, you can seamlessly integrate the interceptor into your Carrier platform, enhancing your performance testing capabilities with advanced monitoring and interception features.
