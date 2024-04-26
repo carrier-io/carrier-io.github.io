@@ -1,584 +1,314 @@
----
-
----
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>{{ site.title }} </title>
-  <meta
-    content="{{ site.description }}"
-    name="Description">
-
-  <link href="{{ site.baseurl }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-  <link href="{{ site.baseurl }}/assets/img/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-  <link href="{{ site.baseurl }}/assets/img/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-  <link href="{{ site.baseurl }}/assets/img/favicons/site.webmanifest" rel="manifest">
-  <link color="#5bbad5" href="./safari-pinned-tab.svg" rel="mask-icon">
-  <meta content="#da532c" name="msapplication-TileColor">
-  <meta content="#ffffff" name="theme-color">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-
-  <link as="script" href="{{ site.baseurl }}/assets/intersection-observer.min.js" rel="preload">
-  <script src="{{ site.baseurl }}/assets/intersection-observer.min.js"></script>
-
-  <link as="script" href="{{ site.baseurl }}/assets/siema.min.js" rel="preload">
-  <script src="{{ site.baseurl }}/assets/siema.min.js"></script>
-
-  <link as="style" href="{{ site.baseurl }}/assets/styles.css" rel="preload">
-  <link href="{{ site.baseurl }}/assets/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{{ site.baseurl }}/assets/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/reset.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/mobile.css">
+    <title>Carrier</title>
 </head>
-
 <body>
-<div class="blanket"></div>
-<header>
-  <div class="section__inner">
-    <a aria-label="Carrier" class="logo logo__header" href="/">
-      <svg height="36" width="118" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#logo"></use>
-      </svg>
-    </a>
-    <button aria-label="Toggle menu" class="hamburger">
-      <svg class="open" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#openmenu"></use>
-      </svg>
-      <svg class="close" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#closemenu"></use>
-      </svg>
-    </button>
-    <div class="menu">
-      <nav class="nav nav__header">
-        <a class="current" href="#about">About</a>
-        <a href="#components">Adoption</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#how">Videos and Docs</a>
-      </nav>
-      <div class="links links__header">
-        <a aria-label="MailUs" class="icon" href="mailto:artem.rozumenko@gmail.com?subject=Question regarding Carrier" rel="noreferrer" target="_blank">
-          <svg height="28" width="28" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#mail"></use>
-          </svg>
-        </a>
-        <a aria-label="Docker" class="icon" href="https://hub.docker.com/u/getcarrier" rel="noreferrer" target="_blank">
-          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#docker"></use>
-          </svg>
-        </a>
-        <a aria-label="GitHub" class="icon" href="https://github.com/carrier-io/" rel="noreferrer"
-           target="_blank">
-          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#github"></use>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <!-- <a href="//github.com/carrier-io/carrier-io.github.io" class="fork">Fork me on Github</a> -->
-  </div>
-</header>
-<main class="main">
-  <section id="about">
-    <section class="section hero">
-      <div class="section__inner">
-        <div class="hero__bg">
-          <picture class="big-platform">
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/hero_bg-mobile@2x.webp 2x, {{ site.baseurl }}/assets/img/hero_bg-mobile@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/hero_bg-mobile@2x.png 2x, {{ site.baseurl }}/assets/img/hero_bg-mobile@1x.png 1x"/>
-
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/hero_platform_tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/hero_platform_tablet@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/hero_platform_tablet@2x.png 2x, {{ site.baseurl }}/assets/img/hero_platform_tablet@1x.png 1x"/>
-
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/hero_platform@2x.webp 2x, {{ site.baseurl }}/assets/img/hero_platform@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/hero_platform@2x.png 2x, {{ site.baseurl }}/assets/img/hero_platform@1x.png 1x"/>
-
-            <img alt="" src="{{ site.baseurl }}/assets/img/hero_platform@1x.png"/>
-          </picture>
-          <picture class="left-platform rnd levitate">
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/left-platform-mobile@2x.webp 2x,{{ site.baseurl }}/assets/img/left-platform-mobile@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/left-platform-mobile@2x.png 2x,{{ site.baseurl }}/assets/img/left-platform-mobile@1x.png"/>
-
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/left-platform-tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/left-platform-tablet@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/left-platform-tablet@2x.png 2x, {{ site.baseurl }}/assets/img/left-platform-tablet@1x.png 1x"/>
-
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/left-platform@2x.webp 2x, {{ site.baseurl }}/assets/img/left-platform@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/left-platform@2x.png 2x, {{ site.baseurl }}/assets/img/left-platform@1x.png 1x"/>
-
-            <img alt="" src="{{ site.baseurl }}/assets/img/left-platform@1x.png"/>
-          </picture>
-          <picture class="bottom-platform rnd levitate">
-            <source media="(max-width: 414px)"
-                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    type="image/webp"/>
-            <source media="(max-width: 414px)"
-                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/bottom-platform-tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/bottom-platform-tablet@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/bottom-platform-tablet@2x.png 2x, {{ site.baseurl }}/assets/img/bottom-platform-tablet@1x.png 1x"/>
-
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/bottom-platform@2x.webp 2x, {{ site.baseurl }}/assets/img/bottom-platform@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/bottom-platform@2x.png 2x, {{ site.baseurl }}/assets/img/bottom-platform@1x.png 1x"/>
-
-            <source srcset="{{ site.baseurl }}/assets/img/bottom-platform@2x.webp 2x, {{ site.baseurl }}/assets/img/bottom-platform@1x.webp 1x" type="image/webp"/>
-            <source srcset="{{ site.baseurl }}/assets/img/bottom-platform@2x.png 2x, {{ site.baseurl }}/assets/img/bottom-platform@1x.png 1x"/>
-            <img alt="" src="{{ site.baseurl }}/assets/img/bottom-platform@1x.png"/>
-          </picture>
-          <picture class="middle-platform rnd levitate">
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/middle-platform-mobile@2x.webp 2x,{{ site.baseurl }}/assets/img/middle-platform-mobile@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/middle-platform-mobile@2x.png 2x,{{ site.baseurl }}/assets/img/middle-platform-mobile@1x.png"/>
-
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/middle-platform-tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/middle-platform-tablet@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/middle-platform-tablet@2x.png 2x, {{ site.baseurl }}/assets/img/middle-platform-tablet@1x.png 1x"/>
-
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/middle-platform@2x.webp 2x, {{ site.baseurl }}/assets/img/middle-platform@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/middle-platform@2x.png 2x, {{ site.baseurl }}/assets/img/middle-platform@1x.png 1x"/>
-
-            <img alt="" src="{{ site.baseurl }}/assets/img/middle-platform@1x.png"/>
-          </picture>
-          <picture class="small-platform rnd levitate">
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/small-platform-mobile@2x.webp 2x,{{ site.baseurl }}/assets/img/small-platform-mobile@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/small-platform-mobile@2x.png 2x,{{ site.baseurl }}/assets/img/small-platform-mobile@1x.png"/>
-
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/small-platform-tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/small-platform-tablet@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/small-platform-tablet@2x.png 2x, {{ site.baseurl }}/assets/img/small-platform-tablet@1x.png 1x"/>
-
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/small-platform@2x.webp 2x, {{ site.baseurl }}/assets/img/small-platform@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/small-platform@2x.png 2x, {{ site.baseurl }}/assets/img/small-platform@1x.png 1x"/>
-
-            <img alt="" src="{{ site.baseurl }}/assets/img/small-platform@1x.png"/>
-          </picture>
+    <main>
+        <header class="header d-flex justify-content-between">
+            <a href="index.html" class="d-flex align-items-center gap-2">
+                <img src="assets/images/logo.svg" alt="">
+                <p>CARRIER</p>
+            </a>
+            <nav class="desktop_menu">
+                <div class="d-flex gap-8 align-items-center">
+                    <a href="index.html">About</a>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Solution
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="service.html">Service</a></li>
+                            <li><a class="dropdown-item" href="performance.html">Performance Testing</a></li>
+                            <li><a class="dropdown-item" href="performance.html">Backend Performance Testing</a></li>
+                            <li><a class="dropdown-item" href="performance.html">Frontend Performance Testing</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Support
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Solution</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="ml-4">Pricing</a>
+                </div>
+            </nav>
+            <button class="button_primary" id="logIn">
+                <span class="button_primary-text">Log in</span>
+            </button>
+            <button class="cmn-toggle-switch cmn-toggle-switch__htx">
+                <span></span>
+            </button>
+            <div class="mobile_menu d-none">
+                <div>
+                    <nav>
+                        <ul class="mobile_nav">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Solution</a></li>
+                            <ul class="sub_nav">
+                                <li><a href="#">Service</a></li>
+                                <li><a href="#">Performance Testing</a></li>
+                                <li><a href="#">Backend Performance Testing</a></li>
+                                <li><a href="#">Frontend Performance Testing</a></li>
+                                <li><a href="#">Security Testing</a></li>
+                            </ul>
+                            <li><a href="#">Support</a></li>
+                            <ul class="sub_nav">
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Changelog</a></li>
+                                <li><a href="#">Status</a></li>
+                            </ul>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                        <button class="button_primary">
+                            <span class="button_primary-text">Log in</span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="d-flex align-items-center gap-4 hero">
+            <div class="w-50">
+                <h1 class="mb-4">Testing with Carrier</h1>
+                <p class="mb-4">Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus. Etiam eu turpis molestie, dictum est a, mattis tellus.</p>
+                <div class="d-flex gap-4">
+                    <button class="button_secondary">
+                        <a href="contact.html">Ask for service</a>
+                    </button>
+                    <button class="button_primary">
+                        <span class="button_primary-text">
+                            <a href="service.html">Explore</a>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <img src="assets/images/Illustration.png" alt="" class="w-50">
         </div>
-        <div class="about__description">
-          <h1 class="about__title">Non Functional Testing Toolkit</h1>
-          <p class="section__text">The best fitted for people aiming to shift performance and security tests execution left,
-            save time and effort on framework setup, test results analysis,
-            as well as receive timed and accurate results and metrics reporting</p>
-          <div class="get-button__section">
-            <a class="get__button" target="_blank" href="{{ site.baseurl }}/posts/carrier-install/">Get carrier</a>
-          </div>
-          <div class="os__availability">
-            <p class="os__icons-label">Available for:</p>
-            <ul class="os__icons">
-              <li aria-label="Ubuntu" class="ubuntu">
-                <svg class="os__icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#ubuntu"></use>
-                </svg>
-              </li>
-              <li aria-label="CentOS" class="centos">
-                <svg class="os__icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#centos"></use>
-                </svg>
-              </li>
-              <li aria-label="Windows" class="windows">
-                <svg class="os__icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#windows"></use>
-                </svg>
-              </li>
-              <li aria-label="Mac OS" class="macos">
-                <svg class="os__icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#macos"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
+        <div class="platform">
+            <h2 class="m-auto">Best platform advantages</h2>
+            <p class="text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+            <div class="platform_grid container_grid_3_1">
+                <div class="platform_card">
+                    <h3>Time-to-value focused</h3>
+                    <span class="line__silver"></span>
+                    <p>We focuse on what’s important for your business and leave complex hardware manipulation and maintanance to our platform.</p>
+                </div>
+                <div class="platform_card">
+                    <h3>Open-source based</h3>
+                    <span class="line__silver"></span>
+                    <p>We offer your businesses the ability to meet your specific needs without being limited by proprietary software.</p>
+                </div>
+                <div class="platform_card">
+                    <h3>Shift-left ready</h3>
+                    <span class="line__silver"></span>
+                    <p>Continuous delivery-friendly design enables to get performance feedback at the early stages of software development.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <section class="section advantages">
-      <div class="section__inner">
-        <h2 class="section__title">Shift-left for non-functional tests made easy</h2>
-        <section class="subsection ci">
-          <div class="title__image">
-            <picture class="picture rnd levitate">
-              <source media="(max-width: 414px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_ci_mobile@2x.webp 2x, {{ site.baseurl }}/assets/img/advan_ci_mobile@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(max-width: 414px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_ci_mobile@2x.png 2x, {{ site.baseurl }}/assets/img/advan_ci_mobile@1x.png 1x"/>
-
-              <source media="(max-width: 1024px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_ci_tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/advan_ci_tablet@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(max-width: 1024px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_ci_tablet@2x.png 2x, {{ site.baseurl }}/assets/img/advan_ci_tablet@1x.png 1x"/>
-
-              <source media="(min-width: 1025px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan-ci@2x.webp 2x, {{ site.baseurl }}/assets/img/advan-ci@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(min-width: 1025px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan-ci@2x.png 2x, {{ site.baseurl }}/assets/img/advan-ci@1x.png 1x"/>
-
-              <img loading="lazy" alt="CI friendly design" src="{{ site.baseurl }}/assets/img/advan-ci@1x.png"/>
-            </picture>
-            <picture class="platform">
-              <source srcset="{{ site.baseurl }}/assets/img/advan-platform@2x.webp 2x,{{ site.baseurl }}/assets/img/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img loading="lazy" alt=""
-                   src="{{ site.baseurl }}/assets/img/advan-platform@1x.png"
-                   srcset="{{ site.baseurl }}/assets/img/advan-platform@2x.png 2x,{{ site.baseurl }}/assets/img/advan-platform@1x.png 1x"/>
-            </picture>
-          </div>
-          <h3 class="subsection_title">Easy to Rollout.</h3>
-          <p class="subsection__text">Container based solution allows to save costs on test infrastructure</p>
-          <p class="subsection__text">Our team can help with current state analysis to identify the optimal way to continuous testing</p>
-        </section>
-        <section class="subsection time">
-          <div class="title__image">
-            <picture class="picture rnd levitate">
-              <source media="(max-width: 414px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_time_mobile@2x.webp 2x, {{ site.baseurl }}/assets/img/advan_time_mobile@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(max-width: 414px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_time_mobile@2x.png 2x, {{ site.baseurl }}/assets/img/advan_time_mobile@1x.png 1x"/>
-
-              <source media="(max-width: 1024px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_time_tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/advan_time_tablet@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(max-width: 1024px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_time_tablet@2x.png 2x, {{ site.baseurl }}/assets/img/advan_time_tablet@1x.png 1x"/>
-
-              <source media="(min-width: 1025px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan-time@2x.webp 2x, {{ site.baseurl }}/assets/img/advan-time@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(min-width: 1025px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan-time@2x.png 2x, {{ site.baseurl }}/assets/img/advan-time@1x.png 1x"/>
-
-              <source srcset="{{ site.baseurl }}/assets/img/advan-time@2x.webp 2x, {{ site.baseurl }}/assets/img/advan-time@1x.webp 1x" type="image/webp"/>
-              <img loading="lazy" alt="Reduces time"
-                   src="{{ site.baseurl }}/assets/img/advan-time@1x.png"
-                   srcset="{{ site.baseurl }}/assets/img/advan-time@2x.png 2x,{{ site.baseurl }}/assets/img/advan-time@1x.png 1x"/>
-            </picture>
-            <picture class="platform">
-              <source srcset="{{ site.baseurl }}/assets/img/advan-platform@2x.webp 2x,{{ site.baseurl }}/assets/img/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img loading="lazy" alt=""
-                   src="{{ site.baseurl }}/assets/img/advan-platform@1x.png"
-                   srcset="{{ site.baseurl }}/assets/img/advan-platform@2x.png 2x, {{ site.baseurl }}/assets/img/advan-platform@1x.png 1x"/>
-            </picture>
-          </div>
-          <h3 class="subsection__title">Easy to Jump-start</h3>
-          <p class="subsection__text">Established non-functional testing enablement processes give first results in terms of days and weeks not a months</p>
-          <p class="subsection__text">Out team can help to uplift existing non-functional tests to CI friendly state</p>
-        </section>
-        <section class="subsection metrics">
-          <div class="title__image">
-            <picture class="picture rnd levitate">
-              <source media="(max-width: 414px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_metrics_mobile@2x.webp 2x, {{ site.baseurl }}/assets/img/advan_metrics_mobile@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(max-width: 414px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_metrics_mobile@2x.png 2x, {{ site.baseurl }}/assets/img/advan_metrics_mobile@1x.png 1x"/>
-
-              <source media="(max-width: 1024px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_metrics_tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/advan_metrics_tablet@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(max-width: 1024px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan_metrics_tablet@2x.png 2x, {{ site.baseurl }}/assets/img/advan_metrics_tablet@1x.png 1x"/>
-
-              <source media="(min-width: 1025px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan-metrics@2x.webp 2x, {{ site.baseurl }}/assets/img/advan-metrics@1x.webp 1x"
-                      type="image/webp"/>
-              <source media="(min-width: 1025px)"
-                      srcset="{{ site.baseurl }}/assets/img/advan-metrics@2x.png 2x, {{ site.baseurl }}/assets/img/advan-metrics@1x.png 1x"/>
-
-              <source srcset="{{ site.baseurl }}/assets/img/advan-metrics@2x.webp 2x, {{ site.baseurl }}/assets/img/advan-metrics@1x.webp 1x" type="image/webp"/>
-              <img loading="lazy" alt="Accurate metrics"
-                   src="{{ site.baseurl }}/assets/img/advan-metrics@1x.png"
-                   srcset="{{ site.baseurl }}/assets/img/advan-metrics@2x.png 2x, {{ site.baseurl }}/assets/img/advan-metrics@1x.png 1x"/>
-            </picture>
-            <picture class="platform">
-              <source srcset="{{ site.baseurl }}/assets/img/advan-platform@2x.webp 2x,{{ site.baseurl }}/assets/img/advan-platform@1x.webp 1x" type="image/webp"/>
-              <img loading="lazy" alt=""
-                   src="{{ site.baseurl }}/assets/img/advan-platform@1x.png"
-                   srcset="{{ site.baseurl }}/assets/img/advan-platform@2x.png 2x, {{ site.baseurl }}/assets/img/advan-platform@1x.png 1x"/>
-            </picture>
-          </div>
-          <h3 class="subsection_title">Easy to Understand</h3>
-          <p class="subsection__text">Email and chat notification provide actual information on a state of application performance and security</p>
-          <p class="subsection__text">Centralized dashboards show all non-functional trends in one place</p>
-          <p class="subsection__text">Automated issues reporting minimize risk of problem to be forgotten</p>
-        </section>
-      </div>
-    </section>
-    <section class="section features">
-      <div class="section__inner">
-        <div class="subsection coupled">
-          <picture class="picture">
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/coupled_mobile@2x.webp 2x, {{ site.baseurl }}/assets/img/coupled_mobile@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/coupled_mobile@2x.png 2x, {{ site.baseurl }}/assets/img/coupled_mobile@1x.png 1x"/>
-
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/coupled_tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/coupled_tablet@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/coupled_tablet@2x.png 2x, {{ site.baseurl }}/assets/img/coupled_tablet@1x.png 1x"/>
-
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/coupled@2x.webp 2x, {{ site.baseurl }}/assets/img/coupled@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/coupled@2x.png 2x, {{ site.baseurl }}/assets/img/coupled@1x.png 1x"/>
-
-            <img loading="lazy" alt="Loose coupled platform" src="{{ site.baseurl }}/assets/img/coupled@1x.png"/>
-          </picture>
-          <div class="description">
-            <h2 class="section__title">Carrier Covers</h2>
-            <ul class="description__list">
-              <li class="section__text">Static Application Security Testing with
-                <a href="https://hub.docker.com/r/getcarrier/sast">SAST container</a>
-              </li>
-              <li class="section__text">Backend Performance Testing with
-                <a href="https://hub.docker.com/r/getcarrier/perfmeter">jMeter</a> and
-                <a href="https://hub.docker.com/r/getcarrier/perfgun">Gatling</a> containers
-              </li>
-              <li class="section__text">Frontend Performance Testing with zero coding using
-                <a href="https://hub.docker.com/r/getcarrier/perf-ui">PerfUI container</a>
-              </li>
-              <li class="section__text">Dynamic Application Security Testing with
-                <a href="https://hub.docker.com/r/getcarrier/dast">DAST container</a>
-              </li>
-              <li class="section__text">UI Performance testing covered by
-                <a href="https://hub.docker.com/r/getcarrier/observer">Observer container</a>
-              </li>
-            </ul>
-          </div>
+        <div class="solution_container container_grid_2_1">
+            <div class="solution_card">
+                <p class="solutions_text">solutions</p>
+                <h1 class="mt-4">Be ensure that your systems are stable, scalable, and reliable</h1>
+                <p class="mt-4">Carrier will help to deliver a seamless user experience and avoid costly downtime and reputational damage.</p>
+            </div>
+            <div class="solution_card solution_card__blue">
+                <img src="assets/images/icon_performance_testing.svg" alt="">
+                <h3 class="text-start mt-4">Performance Testing</h3>
+                <p class="mt-4">Frontend performance testing with the Carrier provides comprehensive insights into website performance and helps identify and address issues that may be impacting user experience. Utilizing the power of Sitespeed.io and user-flow based Lighthouse tools you can get comprehensive, page-specific reports, and invaluable suggestions for optimization.</p>
+                <p class="text-end">
+                    <a href="performance.html" class="explore_link">Explore &nbsp;
+                        <img class="grey_arrow" src="assets/images/icon_arrow-left.svg" alt="">
+                        <img class="blue_arrow d-none" src="assets/images/icon_arrow-left__blue.svg" alt="">
+                    </a>
+                </p>
+            </div>
         </div>
-        <div class="subsection compare">
-          <picture class="picture">
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/compare_mobile@2x.webp 2x, {{ site.baseurl }}/assets/img/compare_mobile@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 414px)"
-                    srcset="{{ site.baseurl }}/assets/img/compare_mobile@2x.png 2x, {{ site.baseurl }}/assets/img/compare_mobile@1x.png 1x"/>
-
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/compare_tablet@2x.webp 2x, {{ site.baseurl }}/assets/img/compare_tablet@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(max-width: 1024px)"
-                    srcset="{{ site.baseurl }}/assets/img/compare_tablet@2x.png 2x, {{ site.baseurl }}/assets/img/compare_tablet@1x.png 1x"/>
-
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/compare@2x.webp 2x, {{ site.baseurl }}/assets/img/compare@1x.webp 1x"
-                    type="image/webp"/>
-            <source media="(min-width: 1025px)"
-                    srcset="{{ site.baseurl }}/assets/img/compare@2x.png 2x, {{ site.baseurl }}/assets/img/compare@1x.png 1x"/>
-
-            <img loading="lazy" alt="Back to back comparison of builds" src="{{ site.baseurl }}/assets/img/compare@1x.png"/>
-          </picture>
-          <div class="description">
-            <h2 class="section__title">Reporting that helps</h2>
-            <ul class="description__list">
-              <li class="section__text">Performance results
-                <a href="https://github.com/carrier-io/carrier-io/tree/master/grafana_dashboards">aggregation dashboards</a>
-                help to track trends in real time and over significant periods of time
-              </li>
-              <li class="section__text">Security program and project reports help to keeps track on flaws outstanding
-                and ones that breaks policy compliance
-              </li>
-              <li class="section__text">Email and chat
-                <a href="https://github.com/carrier-io/galloper/tree/master/lambdas">notifications</a>
-                provide actual information on state of security and performance issues and trends
-              </li>
-              <li class="section__text">Jira integration helps to avoid concerns and issues being missed</li>
-            </ul>
-          </div>
+        <div class="platform">
+            <h2 class="m-auto">Best platform features</h2>
+            <p class="text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+            <div class="platform_grid container_grid_3_2_1">
+                <div class="platform_card d-flex flex-column align-items-center">
+                    <img src="assets/images/icon_report.svg" alt="" width="24" height="24">
+                    <span class="line__blue mt-3"></span>
+                    <h3 class="mt-4">Time-to-value focused</h3>
+                    <p class="mt-3">We focuse on what’s important for your business and leave complex hardware manipulation and maintanance to our platform.</p>
+                </div>
+                <div class="platform_card d-flex flex-column align-items-center">
+                    <img src="assets/images/icon_cloud.svg" alt="" width="24" height="24">
+                    <span class="line__blue mt-3"></span>
+                    <h3 class="mt-4">Cloud Integration</h3>
+                    <p class="mt-3">Simply run your performance tests at any scale using the power of leading cloud providers without the necessity to manage infrastructure by yourself.</p>
+                </div>
+                <div class="platform_card d-flex flex-column align-items-center">
+                    <img src="assets/images/icon_bell.svg" alt="" width="24" height="24">
+                    <span class="line__blue mt-3"></span>
+                    <h3 class="mt-4">Focused Notifications</h3>
+                    <p class="mt-3">Receive real-time notifications via email or chat applications when your tests end, providing you with an accurate account of any performance issues</p>
+                </div>
+                <div class="platform_card d-flex flex-column align-items-center">
+                    <img src="assets/images/icon_analysis.svg" alt="" width="24" height="24">
+                    <span class="line__blue mt-3"></span>
+                    <h3 class="mt-4">Inteligent Analysis</h3>
+                    <p class="mt-3">With a variety of advanced features, our application makes it easier to monitor, identify and address performance issues.</p>
+                </div>
+                <div class="platform_card d-flex flex-column align-items-center">
+                    <img src="assets/images/icon_test.svg" alt="" width="24" height="24">
+                    <span class="line__blue mt-3"></span>
+                    <h3 class="mt-4">Easy Test Management</h3>
+                    <p class="mt-3">Simplify your testing process with Carrier's user-friendly interface and efficient test management.</p>
+                </div>
+                <div class="platform_card d-flex flex-column align-items-center">
+                    <img src="assets/images/icon_desktop.svg" alt="" width="24" height="24">
+                    <span class="line__blue mt-3"></span>
+                    <h3 class="mt-4">Easy to Use</h3>
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-  </section>
-  <section class="section components" id="components">
-    <div class="section__inner">
-      <div class="subsection">
-        <div class="description">
-          <h2 class="section__title">Carrier Adoption Flow</h2>
+        <div class="d-flex align-items-center gap-4 solution_container solution_container__img">
+            <div class="w-50">
+                <p class="solutions_text">solutions</p>
+                <h1 class="mb-4 mt-4">Professional services for your business are here</h1>
+                <p class="mb-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
+                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                <div class="d-flex gap-4">
+                    <button class="button_secondary">
+                        <a href="contact.html">Ask for service</a>
+                    </button>
+                    <button class="button_primary">
+                        <span class="button_primary-text">
+                            <a href="service.html">Explore</a>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <img src="assets/images/Performance.png" class="w-50">
         </div>
-        <picture class="picture">
-          <img src="{{ site.baseurl }}/assets/img/Adoption_Flow.png" width="80%" height="80%"/>
-        </picture>
-      </div>
-    </div>
-  </section>
-  <section class="section plans" id="architecture">
-    <div class="section__inner">
-      <picture class="picture">
-        <img src="{{ site.baseurl }}/assets/img/transparent-arch.png" width="100%" height="100%"/>
-      </picture>
-      <section class="subsection">
-          <h2 class="section__title">Architecture</h2>
-          <p class="subsection__text">Most of all user interactions happening through Galloper - Carrier's web interface,
-            which is UWSGI Python Flask application. Galloper exposes RestAPI and WebUI.
-            Authentication is handled through auth-proxy over KeyCloak</p>
-            <p class="subsection__text">Tests can be configured in either directly in Galloper or in Control-Tower - CI integration container</p>
-            <p class="subsection__text">Code of tests can be stored in Min.io - Amazon S3 compatible object storage and secrets for tests better to be stored in Hashicorp Vault, both abstracted by Galloper RestAPI</p>
-            <p class="subsection__text">Tests Scheduling (Performance, Security) happens through distributed job queue - Celery</p>
-            <p class="subsection__text">During the execution tests report results into InfluxDB directly and to PostgreSQL through Galloper RestAPI</p>
-            <p class="subsection__text">Reports of tests tools may be stored in Min.IO</p>
-            <p class="subsection__text">Analysis of tests results is done by Tasks - simplified implementation of FaaS compatible with all leading FaaS provides such as Amazon Lambda, Google Functions, etc.</p>
-            <p class="subsection__text">FaaS tasks provide analytical email and chat notifications after tests exection if configured</p>
-            <p class="subsection__text">Control-Tower can pull threshold analysis results as a quality gates</p>
-      </section>
-    </div>
-  </section>
-  <section class="section how" id="how">
-    <div class="section__inner">
-      <h2 class="section__title">Videos and Documentation</h2>
-      <div class="get-button__section">
-        <a class="get__button" target="_blank" href="{{ site.baseurl }}/categories/#core-wrapper">Documentation</a>
-      </div>
-      <div class="videos-holder">
-        <button aria-label="Previous" class="prev control" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#prev"></use>
-          </svg>
-        </button>
-
-        <div class="videos">
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=medCUX1LCPo" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">How to create and run backend test in Carrier</h4>
-            <p class="subsection__text">Instruction on how to create and run backend test in Carrier</p>
-          </section>
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=nQEyXfct2Vo" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">How to create and run UI test in Carrier</h4>
-            <p class="subsection__text">Instruction on how to create and run UI test in Carrier</p>
-          </section>
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=L_lhZeaGTcU" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">How to analyze backend performance test results</h4>
-            <p class="subsection__text">Instruction on how to analyze backend performance test results</p>
-          </section>
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=spOW2BmMwqo" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">How to analyze backend performance test results</h4>
-            <p class="subsection__text">Instruction on how to analyze UI performance test results Lighthouse, Sitespeed</p>
-          </section>
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=TK6NVIKK3f4" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">Thresholds and quality gates</h4>
-            <p class="subsection__text">Instruction on how to use thresholds and quality gates</p>
-          </section>
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=NUeEGpih5vs" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">How to analyze backend performance test results</h4>
-            <p class="subsection__text">Instruction on how to analyze backend performance test results</p>
-          </section>
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=D5gOj4g4LuI" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">Integration in CI with quality gates</h4>
-            <p class="subsection__text">Instruction on how to integrate in CI and failed pipeline with quality gates</p>
-          </section>
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=RBWZ0mLy5Xk" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">How to setup load generator in Carrier</h4>
-            <p class="subsection__text">Instruction to setup load generator in Carrier</p>
-          </section>
-          <section class="subsection">
-            <a aria-label="Play" class="video" href="https://www.youtube.com/watch?v=urICZWqSqqM&t=4s" rel="noreferrer" target="_blank"></a>
-            <h4 class="subsection__title">How to set baseline test in Carrier</h4>
-            <p class="subsection__text">Instruction on how to analyze backend performance test results</p>
-          </section>
-
+        <div class="container_grid__2 container_grid_2_1">
+            <div class="d-flex gap-4 align-items-start w-100">
+                <img src="assets/images/icon_backend.svg">
+                <div>
+                    <h3 class="text-start mb-2">Backend Performance Testing</h3>
+                    <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+                </div>
+            </div>
+            <div class="d-flex gap-4 align-items-start w-100">
+                <img src="assets/images/icon_support.svg">
+                <div>
+                    <h3 class="text-start mb-2">Backend Performance Testing</h3>
+                    <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+                </div>
+            </div>
+            <div class="d-flex gap-4 align-items-start w-100">
+                <img src="assets/images/icon_frontend.svg">
+                <div>
+                    <h3 class="text-start mb-2">Frontend Performance Testing</h3>
+                    <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+                </div>
+            </div>
+            <div class="d-flex gap-4 align-items-start w-100">
+                <img src="assets/images/icon_education.svg">
+                <div>
+                    <h3 class="text-start mb-2">Handover and Education</h3>
+                    <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+                </div>
+            </div>
+            <div class="d-flex gap-4 align-items-start w-100">
+                <img src="assets/images/icon_testing.svg">
+                <div>
+                    <h3 class="text-start mb-2">Test Data Preparation</h3>
+                    <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+                </div>
+            </div>
+            <div class="d-flex gap-4 align-items-start w-100">
+                <img src="assets/images/icon_hypercare.svg">
+                <div>
+                    <h3 class="text-start mb-2">Hypercare</h3>
+                    <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+                </div>
+            </div>
         </div>
-        <button aria-label="Next" class="next control" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#next"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div class="dots"></div>
-  </section>
-</main>
-<footer class="footer">
-  <div class="section__inner">
-    <div class="footer__bg">
-      <picture class="picture">
-        <source srcset="{{ site.baseurl }}/assets/img/stars.webp" type="image/webp"/>
-        <img loading="lazy" alt="" src="{{ site.baseurl }}/assets/img/stars.png"/>
-      </picture>
-    </div>
-    <div class="footer__content">
-      <a aria-label="Carrier" class="logo logo__footer" href="/">
-        <svg height="36" width="118" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#logo"></use>
-        </svg>
-      </a>
-      <nav class="nav nav__footer">
-        <a class="current" href="#about">About</a>
-        <a href="#components">Adoption</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#how">Videos and Docs</a>
-      </nav>
-      <div class="copyright">
-        <p class="copyright__sponsored">Sponsored by EPAM Systems</p>
-        <p class="copyright__text">getcarrier.io &copy; 2023 All rights reserved.</p>
-      </div>
-      <div class="links links__footer">
-        <a aria-label="MailUs" class="icon" href="mailto:artem.rozumenko@gmail.com?subject=Question regarding Carrier" rel="noreferrer" target="_blank">
-          <svg height="28" width="28" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#mail"></use>
-          </svg>
-        </a>
-        <a aria-label="Docker" class="icon" href="https://hub.docker.com/u/getcarrier" rel="noreferrer" target="_blank">
-          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#docker"></use>
-          </svg>
-        </a>
-        <a aria-label="GitHub" class="icon" href="https://github.com/carrier-io/" rel="noreferrer"
-           target="_blank">
-          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="{{ site.baseurl }}/assets/img/icons.svg#github"></use>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="app.js"></script>
+        <div class="container_grid__1">
+            <h2 class="m-auto">All your favourite integrations</h2>
+            <p class="text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+            <div class="d-flex gap-4 justify-content-center my-4 flex-wrap">
+                <span class="sponsor_card d-flex gap-3">
+                    <img src="assets/images/icon_jira.svg" alt="">
+                    <p>Jira</p>
+                </span>
+                <span class="sponsor_card d-flex gap-3">
+                    <img src="assets/images/icon_google-cloud.svg" alt="">
+                    <p>Google Cloud</p>
+                </span>
+                <span class="sponsor_card d-flex gap-3">
+                    <img src="assets/images/icon_amazon.svg" alt="">
+                    <p>Amazon Web Services</p>
+                </span>
+                <span class="sponsor_card d-flex gap-3">
+                    <img src="assets/images/icon_digitalocean.svg" alt="">
+                    <p>Amazon Web Services</p>
+                </span>
+                <span class="sponsor_card d-flex gap-3">
+                    <img src="assets/images/icon_azure.svg" alt="">
+                    <p>Microsoft Azure</p>
+                </span>
+            </div>
+        </div>
+    </main>
+    <footer class="footer d-flex gap-4 justify-content-between">
+        <div class="d-flex flex-column justify-content-between">
+            <div class="d-flex align-items-center gap-2">
+                <img src="assets/images/logo.svg" alt="">
+                <p class="text-white">CARRIER</p>
+            </div>
+            <div class="desktop_copyrigth">
+                <p class="text-white">Sponsored by EPAM Systems</p>
+                <p class="copyright_text">© 2019 getcarrier.com. All rights reserved.</p>
+            </div>
+        </div>
+        <div>
+            <h4><a href="">ABOUT</a></h4>
+        </div>
+        <div>
+            <h4 class="mb-2"><a href="service.html">SOLUTION</a></h4>
+            <h5 class="mb-1"><a href="performance.html">Performance Testing</a></h5>
+            <h5 class="mb-1"><a href="service.html">Backend Performance Testing</a></h5>
+            <h5 class="mb-1"><a href="service.html">Frontend Performance Testing</a></h5>
+            <h5 class="mb-1"><a href="#">Security Testing</a></h5>
+        </div>
+        <div>
+            <h4 class="mb-2"><a href="contact.html">SUPPORT</a></h4>
+            <h5 class="mb-1"><a href="#">Documentation</a></h5>
+            <h5 class="mb-1"><a href="#">Changelog</a></h5>
+            <h5 class="mb-1"><a href="#">Status</a></h5>
+        </div>
+        <div>
+            <h4 class="mb-2"><a href="#">PRICING</a></h4>
+        </div>
+        <div>
+            <h4 class="mb-2"><a href="contact.html">CONTACT US</a></h4>
+            <h5 class="mb-1"><a href="https://github.com/carrier-io" target="_blank">Git</a></h5>
+            <h5 class="mb-1"><a href="https://hub.docker.com/u/getcarrier" target="_blank">Docker</a></h5>
+            <h5 class="mb-1"><a href="#">Email</a></h5>
+        </div>
+        <div class="mobile_copyrigth d-none">
+            <p class="text-white">Sponsored by EPAM Systems</p>
+            <p class="copyright_text">© 2019 getcarrier.com. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
