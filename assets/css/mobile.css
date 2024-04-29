@@ -15,7 +15,7 @@
     font-size: 14px;
     overflow: scroll;
     display: block;
-    height: calc(100vh - 60px);
+    /*height: calc(100vh - 60px);*/
 }
 
 .mobile_nav > li {
@@ -91,7 +91,7 @@
 /*  Rotating hamburger icon (rot),  */
 
 .cmn-toggle-switch__htx {
-    background-color: #0E152B;
+    background-color: #171C2B;
 }
 
 .cmn-toggle-switch__htx span {

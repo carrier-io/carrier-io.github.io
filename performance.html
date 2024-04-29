@@ -7,9 +7,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
   <title>Performance</title>
 </head>
 <body>
@@ -18,21 +18,21 @@
   </div>
   <header class="header d-flex justify-content-between">
     <a href="index.html" class="d-flex align-items-center gap-2">
-      <img src="images/logo.svg" alt="">
-      <p>CARRIER</p>
+      <img src="assets/images/logo.svg" alt="">
+      <img src="assets/images/logo-title.svg" alt="">
     </a>
     <nav class="desktop_menu">
       <div class="d-flex gap-8 align-items-center">
         <a href="index.html">About</a>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Solution
+            Services
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="service.html">Service</a></li>
-            <li><a class="dropdown-item" href="performance.html">Performance Testing</a></li>
-            <li><a class="dropdown-item" href="performance.html">Backend Performance Testing</a></li>
-            <li><a class="dropdown-item" href="performance.html">Frontend Performance Testing</a></li>
+            <li><a class="dropdown-item" href="#">Backend Performance Testing</a></li>
+            <li><a class="dropdown-item" href="#">Frontend Performance Testing</a></li>
+            <li><a class="dropdown-item" href="#">Handover and Education</a></li>
+            <li><a class="dropdown-item" href="#">Hypercare</a></li>
           </ul>
         </div>
         <div class="dropdown">
@@ -40,14 +40,16 @@
             Support
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Solution</a></li>
+            <li><a class="dropdown-item" href="https://getcarrier.io/categories/#l_0">Documentation</a></li>
+            <li><a class="dropdown-item" href="#">Changelog</a></li>
+            <li><a class="dropdown-item" href="#">Status</a></li>
           </ul>
         </div>
         <a href="#" class="ml-4">Pricing</a>
       </div>
     </nav>
     <button class="button_primary" id="logIn">
-      <span class="button_primary-text">Log in</span>
+      <span class="button_primary-text"><span>Log in</span></span>
     </button>
     <button class="cmn-toggle-switch cmn-toggle-switch__htx">
       <span></span>
@@ -57,13 +59,12 @@
         <nav>
           <ul class="mobile_nav">
             <li><a href="#">About</a></li>
-            <li><a href="#">Solution</a></li>
+            <li><a href="#">Services</a></li>
             <ul class="sub_nav">
-              <li><a href="#">Service</a></li>
-              <li><a href="#">Performance Testing</a></li>
               <li><a href="#">Backend Performance Testing</a></li>
               <li><a href="#">Frontend Performance Testing</a></li>
-              <li><a href="#">Security Testing</a></li>
+              <li><a href="#">Handover and Education</a></li>
+              <li><a href="#">Hypercare</a></li>
             </ul>
             <li><a href="#">Support</a></li>
             <ul class="sub_nav">
@@ -74,7 +75,7 @@
             <li><a href="#">Pricing</a></li>
           </ul>
           <button class="button_primary">
-            <span class="button_primary-text">Log in</span>
+            <span class="button_primary-text"><span>Log in</span></span>
           </button>
         </nav>
       </div>
@@ -82,103 +83,86 @@
   </header>
   <div class="container">
     <div class="row">
-      <div class="d-flex align-items-center flex-column col col-lg-6" style="margin: 100px auto;">
-          <h1 class="mb-4">Performance Testing</h1>
-          <p class="mb-4 text-center">With our team of experienced performance analysts and our proven approaches, we offer tailored performance testing and consulting services to meet every client’s needs.</p>
-          <button class="button_primary">
-            <span class="button_primary-text">Ask for service</span>
-          </button>
+      <div class="d-flex align-items-center flex-column col col-lg-6" style="margin: 100px auto 0px auto;">
+        <h1 class="mb-4 text-white">Performance Testing</h1>
+        <p class="mb-4 text-center">With our team of experienced performance analysts and our proven approaches, we offer tailored performance testing and consulting services to meet every client’s needs.</p>
+        <button class="button_primary">
+          <span class="button_primary-text">
+            <a href="contact.html" class="d-inline-block">Ask for service</a>
+          </span>
+        </button>
       </div>
-    </div>
-  </div>
-  <div class="solution_container container_grid_2_1">
-    <div class="solution_card solution_card__blue">
-      <img src="images/icon_performance_testing.svg" alt="">
-      <h3 class="text-start mt-4">Backend Performance Testing</h3>
-      <p class="mt-4">Frontend performance testing with the Carrier provides comprehensive insights into website performance and helps identify and address issues that may be impacting user experience. Utilizing the power of Sitespeed.io and user-flow based Lighthouse tools you can get comprehensive, page-specific reports, and invaluable suggestions for optimization.</p>
-    </div>
-    <div class="solution_card solution_card__blue">
-      <img src="images/icon_performance_testing.svg" alt="">
-      <h3 class="text-start mt-4">Frontend Performance Testing</h3>
-      <p class="mt-4">Frontend performance testing with the Carrier provides comprehensive insights into website performance and helps identify and address issues that may be impacting user experience. Utilizing the power of Sitespeed.io and user-flow based Lighthouse tools you can get comprehensive, page-specific reports, and invaluable suggestions for optimization.</p>
-      <p class="text-end">Explore  <img src="images/icon_arrow-left.svg" alt=""></p>
     </div>
   </div>
   <div class="platform container_grid__1">
-    <h2 class="m-auto">Best platform features</h2>
-    <p class="text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+    <h2 class="m-auto">Explore Carrier Platform's Top Features</h2>
+    <p class="text-center mt-3">Experience unmatched efficiency with Carrier's real-time performance reporting, customizable thresholds for any request, and comprehensive application performance comparisons.</p>
     <div class="container_grid_3_2_1 platform_grid">
       <div class="platform_card d-flex flex-column align-items-center">
-        <img src="images/icon_report.svg" alt="" width="24" height="24">
+        <img src="assets/images/icon_report.svg" alt="" width="24" height="24">
         <span class="line__blue mt-3"></span>
         <h3 class="mt-4">Time-to-value focused</h3>
-        <p class="mt-3">We focuse on what’s important for your business and leave complex hardware manipulation and maintanance to our platform.</p>
+        <p class="mt-3">Streamlining your business priorities with minimal setup, letting Carrier handle the intricacies of performance tuning.</p>
       </div>
       <div class="platform_card d-flex flex-column align-items-center">
-        <img src="images/icon_cloud.svg" alt="" width="24" height="24">
+        <img src="assets/images/icon_cloud.svg" alt="" width="24" height="24">
         <span class="line__blue mt-3"></span>
-        <h3 class="mt-4">Cloud Integration</h3>
-        <p class="mt-3">Simply run your performance tests at any scale using the power of leading cloud providers without the necessity to manage infrastructure by yourself.</p>
+        <h3 class="mt-4">Seamless Cloud Integration</h3>
+        <p class="mt-3">Flexible deployment options that fit your infrastructure needs, ensuring data security and compliance.</p>
       </div>
       <div class="platform_card d-flex flex-column align-items-center">
-        <img src="images/icon_bell.svg" alt="" width="24" height="24">
+        <img src="assets/images/icon_bell.svg" alt="" width="24" height="24">
         <span class="line__blue mt-3"></span>
         <h3 class="mt-4">Focused Notifications</h3>
-        <p class="mt-3">Receive real-time notifications via email or chat applications when your tests end, providing you with an accurate account of any performance issues</p>
+        <p class="mt-3">Receive real-time notifications via email when your tests end, providing you with an accurate account of any performance issues.</p>
       </div>
       <div class="platform_card d-flex flex-column align-items-center">
-        <img src="images/icon_analysis.svg" alt="" width="24" height="24">
+        <img src="assets/images/icon_analysis.svg" alt="" width="24" height="24">
         <span class="line__blue mt-3"></span>
-        <h3 class="mt-4">Inteligent Analysis</h3>
-        <p class="mt-3">With a variety of advanced features, our application makes it easier to monitor, identify and address performance issues.</p>
+        <h3 class="mt-4">Advanced Intelligent Analysis</h3>
+        <p class="mt-3">Dive deep into performance data with Carrier's intelligent analysis tools, identifying and resolving issues swiftly.</p>
       </div>
       <div class="platform_card d-flex flex-column align-items-center">
-        <img src="images/icon_test.svg" alt="" width="24" height="24">
+        <img src="assets/images/icon_test.svg" alt="" width="24" height="24">
         <span class="line__blue mt-3"></span>
-        <h3 class="mt-4">Easy Test Management</h3>
-        <p class="mt-3">Simplify your testing process with Carrier's user-friendly interface and efficient test management.</p>
+        <h3 class="mt-4">Simplified Test Management</h3>
+        <p class="mt-3">Carrier's intuitive interface and comprehensive test management features streamline your testing workflow.</p>
       </div>
       <div class="platform_card d-flex flex-column align-items-center">
-        <img src="images/icon_desktop.svg" alt="" width="24" height="24">
+        <img src="assets/images/icon_desktop.svg" alt="" width="24" height="24">
         <span class="line__blue mt-3"></span>
         <h3 class="mt-4">Easy to Use</h3>
-        <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+        <p class="mt-3">Designed for simplicity and efficiency, Carrier's interface ensures that performance testing is accessible for teams of all skill levels, enabling quick setup and easy management of comprehensive tests.</p>
       </div>
     </div>
   </div>
-  <div class="service_container d-flex solution_container__img">
-    <div class="w-50">
-      <h1 class="mt-4">Monitore issues with analysis tools</h1>
-      <p class="my-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
-        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-      </p>
+  <div class="service_container container_grid_7_5 solution_container__img">
+    <div class="d-flex flex-column justify-content-center">
+      <h1 class="mt-4">Empowering Open-Source Community</h1>
+      <p class="my-4">Carrier's open-source platform invites you to customize and extend functionalities, ensuring your needs are met with community-supported solutions.</p>
     </div>
-    <img class="w-50" src="images/mock_image.png" alt="">
+    <img class="w-100 rounded-4" src="assets/images/open-source.png" alt="">
   </div>
-  <div class="service_container d-flex solution_container__img">
-    <img class="w-50" src="images/mock_image.png" alt="">
-    <div class="w-50">
-      <h1 class="mt-4">Monitore and address issues with analysis tools</h1>
-      <p class="my-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
-        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-      </p>
+  <div class="service_container container_grid_5_7 solution_container__img">
+    <img class="rounded-4 w-100" src="assets/images/board.png" alt="">
+    <div class="d-flex flex-column justify-content-center">
+      <h1 class="mt-4">Proactive Team Management</h1>
+      <p class="my-4">You can manage your projects inside the Carrier platform using Carrier's engagements and board with tickets capabilities. What will help you achieve your goals while maximizing efficiency and minimizing risks.
     </div>
   </div>
-  <div class="service_container d-flex solution_container__img">
-    <div class="w-50">
-      <h1 class="mt-4">Monitore issues with analysis tools</h1>
-      <p class="my-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
-        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+  <div class="service_container container_grid_7_5 solution_container__img">
+    <div class="d-flex flex-column justify-content-center">
+      <h1 class="mt-4">Real Time Reporting and Results Analysis</h1>
+      <p class="my-4">Carrier provides you with real time results reporting and several tools for results analysis. Our platform is designed to ensure that achieving and maintaining optimal performance is straightforward and effective.</p>
       </p>
     </div>
-    <img class="w-50" src="images/mock_image.png" alt="">
+    <img class="w-100 rounded-4" src="assets/images/test_results.png" alt="">
   </div>
-  <div class="service_container d-flex solution_container__img">
-    <img class="w-50" src="images/mock_image.png" alt="">
-    <div class="w-50">
-      <h1 class="mt-4">Monitore and address issues with analysis tools</h1>
-      <p class="my-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
-        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+  <div class="service_container container_grid_5_7 solution_container__img">
+    <img class="w-100 rounded-4" src="assets/images/integrations.png" alt="">
+    <div class="d-flex flex-column justify-content-center">
+      <h1 class="mt-4">Integrations</h1>
+      <p class="my-4">Carrier has many integrations for running tests in Cloud or Kubernetes, as well as for reporting results to various tools like JIRA, Report Portal, etc. There is also integration with SMTP to receive notifications about test results or project status.
       </p>
     </div>
   </div>
@@ -186,7 +170,7 @@
 <footer class="footer d-flex gap-4 justify-content-between">
   <div class="d-flex flex-column justify-content-between">
     <div class="d-flex align-items-center gap-2">
-      <img src="images/logo.svg" alt="">
+      <img src="assets/images/logo.svg" alt="">
       <p class="text-white">CARRIER</p>
     </div>
     <div class="desktop_copyrigth">

@@ -7,9 +7,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
   <title>Service</title>
 </head>
 <body>
@@ -18,21 +18,21 @@
   </div>
   <header class="header d-flex justify-content-between">
     <a href="index.html" class="d-flex align-items-center gap-2">
-      <img src="images/logo.svg" alt="">
-      <p>CARRIER</p>
+      <img src="assets/images/logo.svg" alt="">
+      <img src="assets/images/logo-title.svg" alt="">
     </a>
     <nav class="desktop_menu">
       <div class="d-flex gap-8 align-items-center">
         <a href="index.html">About</a>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Solution
+            Services
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="service.html">Service</a></li>
-            <li><a class="dropdown-item" href="performance.html">Performance Testing</a></li>
-            <li><a class="dropdown-item" href="performance.html">Backend Performance Testing</a></li>
-            <li><a class="dropdown-item" href="performance.html">Frontend Performance Testing</a></li>
+            <li><a class="dropdown-item" href="#">Backend Performance Testing</a></li>
+            <li><a class="dropdown-item" href="#">Frontend Performance Testing</a></li>
+            <li><a class="dropdown-item" href="#">Handover and Education</a></li>
+            <li><a class="dropdown-item" href="#">Hypercare</a></li>
           </ul>
         </div>
         <div class="dropdown">
@@ -40,14 +40,16 @@
             Support
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Solution</a></li>
+            <li><a class="dropdown-item" href="https://getcarrier.io/categories/#l_0">Documentation</a></li>
+            <li><a class="dropdown-item" href="#">Changelog</a></li>
+            <li><a class="dropdown-item" href="#">Status</a></li>
           </ul>
         </div>
         <a href="#" class="ml-4">Pricing</a>
       </div>
     </nav>
     <button class="button_primary" id="logIn">
-      <span class="button_primary-text">Log in</span>
+      <span class="button_primary-text"><span>Log in</span></span>
     </button>
     <button class="cmn-toggle-switch cmn-toggle-switch__htx">
       <span></span>
@@ -57,13 +59,12 @@
         <nav>
           <ul class="mobile_nav">
             <li><a href="#">About</a></li>
-            <li><a href="#">Solution</a></li>
+            <li><a href="#">Services</a></li>
             <ul class="sub_nav">
-              <li><a href="#">Service</a></li>
-              <li><a href="#">Performance Testing</a></li>
               <li><a href="#">Backend Performance Testing</a></li>
               <li><a href="#">Frontend Performance Testing</a></li>
-              <li><a href="#">Security Testing</a></li>
+              <li><a href="#">Handover and Education</a></li>
+              <li><a href="#">Hypercare</a></li>
             </ul>
             <li><a href="#">Support</a></li>
             <ul class="sub_nav">
@@ -74,7 +75,7 @@
             <li><a href="#">Pricing</a></li>
           </ul>
           <button class="button_primary">
-            <span class="button_primary-text">Log in</span>
+            <span class="button_primary-text"><span>Log in</span></span>
           </button>
         </nav>
       </div>
@@ -93,49 +94,49 @@
   </div>
   <div class="container_grid__2 container__blue container_grid_2_1 gap-4">
     <div class="d-flex gap-4 align-items-start w-100">
-      <img src="images/icon_backend.svg">
-      <div>
-        <h3 class="text-start mb-2">Improve time to market</h3>
-        <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
-      </div>
-    </div>
-    <div class="d-flex gap-4 align-items-start w-100">
-      <img src="images/icon_support.svg">
+      <img src="assets/images/icon_support.svg">
       <div>
         <h3 class="text-start mb-2">Backend Performance Testing</h3>
-        <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+        <p>Identify and mitigate backend bottlenecks to ensure your applications run smoothly under various loads.</p>
       </div>
     </div>
     <div class="d-flex gap-4 align-items-start w-100">
-      <img src="images/icon_frontend.svg">
+      <img src="assets/images/icon_frontend.svg">
       <div>
         <h3 class="text-start mb-2">Frontend Performance Testing</h3>
-        <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+        <p>Optimize user experience with detailed analysis of your application's frontend, enhancing responsiveness and user satisfaction.</p>
       </div>
     </div>
     <div class="d-flex gap-4 align-items-start w-100">
-      <img src="images/icon_education.svg">
+      <img src="assets/images/icon_education.svg">
       <div>
         <h3 class="text-start mb-2">Handover and Education</h3>
-        <p>A powerful and effective way for organizations to monitor and improve the performance of their applications</p>
+        <p>Empower your team with the skills and knowledge to maintain and extend performance testings frameworks through our expert-led training sessions.</p>
+      </div>
+    </div>
+    <div class="d-flex gap-4 align-items-start w-100">
+      <img src="assets/images/icon_hypercare.svg">
+      <div>
+        <h3 class="text-start mb-2">Hypercare</h3>
+        <p>With our Hypercare service, the delivery team can conduct tests for new builds on their own, ensuring continuous performance monitoring.</p>
       </div>
     </div>
   </div>
-  <div class="service_container d-flex solution_container__img">
+  <div class="service_container d-flex solution_container__img gap-8 align-items-center">
     <div class="w-50">
       <p class="solutions_text">service</p>
       <h1 class="mt-4">Backend performance testing service</h1>
-      <p class="my-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
-        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+      <p class="my-4"> Our performance testing specialists are committed to elevating your application's backend efficiency, ensuring robustness under peak load conditions.
+        <br>Through our comprehensive testing methodologies, we pinpoint bottlenecks, optimize resource utilization, and significantly reduce potential risks, securing a seamless user experience.</p>
       </p>
       <span class="link_text">
-        <a href="">Ask for service &nbsp;&nbsp;<img src="images/icon_arrow-left__blue.svg" alt=""></a>
+        <a href="">Ask for service &nbsp;&nbsp;<img src="assets/images/icon_arrow-left__blue.svg" alt=""></a>
       </span>
     </div>
-    <img src="images/testing.png" alt="">
+    <img src="assets/images/testing.png" alt="" class="w-50">
   </div>
-  <div class="service_container d-flex solution_container__img">
-    <img src="images/Configuration.png" alt="">
+  <div class="service_container d-flex solution_container__img gap-8 align-items-center">
+    <img src="assets/images/Analysis.png" alt="" class="w-50">
     <div class="w-50">
       <p class="solutions_text">service</p>
       <h1 class="mt-4">Frontened performance testing service</h1>
@@ -143,54 +144,49 @@
         <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
       </p>
       <span class="link_text">
-        <a href="contact.html">Ask for service &nbsp;&nbsp;<img src="images/icon_arrow-left__blue.svg" alt=""></a>
+        <a href="contact.html">Ask for service &nbsp;&nbsp;<img src="assets/images/icon_arrow-left__blue.svg" alt=""></a>
       </span>
     </div>
   </div>
-  <div class="service_container d-flex solution_container__img">
+  <div class="service_container d-flex solution_container__img gap-8 align-items-center">
     <div class="w-50">
       <p class="solutions_text">service</p>
-      <h1 class="mt-4">Backend performance testing service</h1>
-      <p class="my-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
-        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+      <h1 class="mt-4">Handover and Education</h1>
+      <p class="my-4">Our commitment extends beyond testing to ensure your team is fully equipped to maintain and extend the performance optimizations we implement.
+        <br>Through targeted educational sessions and comprehensive handover documentation, we empower your staff with the knowledge and tools needed to sustain peak application performance. This education initiative is designed to help your team understand performance metrics, recognize potential issues, and apply best practices in performance testing and optimization.</p>
       </p>
       <span class="link_text">
-        <a href="contact.html">Ask for service &nbsp;&nbsp;<img src="images/icon_arrow-left__blue.svg" alt=""></a>
+        <a href="contact.html">Ask for service &nbsp;&nbsp;<img src="assets/images/icon_arrow-left__blue.svg" alt=""></a>
       </span>
     </div>
-    <img src="images/Performance_2.png" alt="">
+    <img src="assets/images/Analysis.png" alt="" class="w-50">
   </div>
-  <div class="service_container d-flex solution_container__img">
-    <img src="images/Analysis.png" alt="">
+  <div class="service_container d-flex solution_container__img gap-8 align-items-center">
+    <img src="assets/images/Performance_2.png" alt="" class="w-50">
     <div class="w-50">
       <p class="solutions_text">service</p>
-      <h1 class="mt-4">Frontened performance testing service</h1>
-      <p class="my-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
-        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+      <h1 class="mt-4">Hypercare</h1>
+      <p class="my-4">Our Hypercare Testing Service is designed to provide comprehensive support to your development team. We consult developers to onboard them in performance testing expertise and assist in tests execution. Our sessions with the product team are focused on answering questions and assisting them to independently manage performance testing activities within their team. This service is part of our commitment to ensure the reliability, stability, and performance of your application under varying load conditions.
       </p>
       <span class="link_text">
-        <a href="contact.html">Ask for service &nbsp;&nbsp;<img src="images/icon_arrow-left__blue.svg" alt=""></a>
+        <a href="contact.html">Ask for service &nbsp;&nbsp;<img src="assets/images/icon_arrow-left__blue.svg" alt=""></a>
       </span>
     </div>
   </div>
-  <div class="service_container d-flex solution_container__img">
-    <div class="w-50">
-      <p class="solutions_text">service</p>
-      <h1 class="mt-4">Backend performance testing service</h1>
-      <p class="my-4">As experts in performance testing, our team is dedicated to helping achieve your goals, while maximizing efficiency and minimizing risks.
-        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-      </p>
+  <section class="contact-cta platform">
+    <div class="container text-center">
+      <h2>Ready to Test Your Application's Performance?</h2>
+      <p class="mt-3 mb-4">Contact us today to learn how Carrier can transform your testing process.</p>
       <span class="link_text">
-        <a href="contact.html">Ask for service &nbsp;&nbsp;<img src="images/icon_arrow-left__blue.svg" alt=""></a>
+        <a href="contact.html">Ask for service &nbsp;&nbsp;<img src="assets/images/icon_arrow-left__blue.svg" alt=""></a>
       </span>
     </div>
-    <img src="images/testing.png" alt="">
-  </div>
+  </section>
 </main>
 <footer class="footer d-flex gap-4 justify-content-between">
   <div class="d-flex flex-column justify-content-between">
     <div class="d-flex align-items-center gap-2">
-      <img src="images/logo.svg" alt="">
+      <img src="assets/images/logo.svg" alt="">
       <p class="text-white">CARRIER</p>
     </div>
     <div class="desktop_copyrigth">
