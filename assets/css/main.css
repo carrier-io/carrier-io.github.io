@@ -430,10 +430,9 @@ a {
   main {
     padding: 0 20px;
   }
-  .footer {
+  .footer_container {
     background: #242938;
     padding: 30px 30px;
-    margin-top: 100px;
     flex-direction: column;
   }
   .mobile_copyrigth {
