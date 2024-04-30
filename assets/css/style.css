@@ -25,9 +25,15 @@ main {
   position: sticky;
 }
 .footer {
-  background: #242938;
-  padding: 50px 100px;
   margin-top: 100px;
+  background: #242938;
+}
+
+.footer_container {
+  padding: 50px 100px;
+  max-width: 1376px;
+  width: 100%;
+  margin: 0px auto 0 auto;
 }
 .button_simple {
   border: solid 1px transparent;

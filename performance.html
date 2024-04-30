@@ -29,10 +29,10 @@
             Services
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Backend Performance Testing</a></li>
-            <li><a class="dropdown-item" href="#">Frontend Performance Testing</a></li>
-            <li><a class="dropdown-item" href="#">Handover and Education</a></li>
-            <li><a class="dropdown-item" href="#">Hypercare</a></li>
+            <li><a class="dropdown-item" href="service.html#backend">Backend Performance Testing</a></li>
+            <li><a class="dropdown-item" href="service.html#frontend">Frontend Performance Testing</a></li>
+            <li><a class="dropdown-item" href="service.html#education">Handover and Education</a></li>
+            <li><a class="dropdown-item" href="service.html#hypercare">Hypercare</a></li>
           </ul>
         </div>
         <div class="dropdown">
@@ -40,16 +40,16 @@
             Support
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://getcarrier.io/categories/#l_0">Documentation</a></li>
-            <li><a class="dropdown-item" href="#">Changelog</a></li>
-            <li><a class="dropdown-item" href="#">Status</a></li>
+            <li><a class="dropdown-item" href="https://getcarrier.io/categories">Documentation</a></li>
+            <li><a class="dropdown-item" href="https://getcarrier.io/categories">Changelog</a></li>
           </ul>
         </div>
-        <a href="#" class="ml-4">Pricing</a>
       </div>
     </nav>
     <button class="button_primary" id="logIn">
-      <span class="button_primary-text"><span>Log in</span></span>
+      <span class="button_primary-text">
+        <a href="https://platform.getcarrier.io/">Log in</a>
+      </span>
     </button>
     <button class="cmn-toggle-switch cmn-toggle-switch__htx">
       <span></span>
@@ -61,21 +61,21 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <ul class="sub_nav">
-              <li><a href="#">Backend Performance Testing</a></li>
-              <li><a href="#">Frontend Performance Testing</a></li>
-              <li><a href="#">Handover and Education</a></li>
-              <li><a href="#">Hypercare</a></li>
+              <li><a href="service.html#backend">Backend Performance Testing</a></li>
+              <li><a href="service.html#frontend">Frontend Performance Testing</a></li>
+              <li><a href="service.html#education">Handover and Education</a></li>
+              <li><a href="service.html#hypercare">Hypercare</a></li>
             </ul>
             <li><a href="#">Support</a></li>
             <ul class="sub_nav">
-              <li><a href="#">Documentation</a></li>
-              <li><a href="#">Changelog</a></li>
-              <li><a href="#">Status</a></li>
+              <li><a class="dropdown-item" href="https://getcarrier.io/categories">Documentation</a></li>
+              <li><a class="dropdown-item" href="https://getcarrier.io/categories">Changelog</a></li>
             </ul>
-            <li><a href="#">Pricing</a></li>
           </ul>
-          <button class="button_primary">
-            <span class="button_primary-text"><span>Log in</span></span>
+          <button class="button_primary mt-4">
+            <span class="button_primary-text">
+              <a href="https://platform.getcarrier.io/">Log in</a>
+            </span>
           </button>
         </nav>
       </div>
@@ -167,45 +167,42 @@
     </div>
   </div>
 </main>
-<footer class="footer d-flex gap-4 justify-content-between">
-  <div class="d-flex flex-column justify-content-between">
-    <div class="d-flex align-items-center gap-2">
-      <img src="assets/images/logo.svg" alt="">
-      <p class="text-white">CARRIER</p>
+<footer class="footer">
+  <div class="d-flex gap-4 justify-content-between footer_container">
+    <div class="d-flex flex-column justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/logo.svg" alt="">
+        <p class="text-white">CARRIER</p>
+      </div>
+      <div class="desktop_copyrigth">
+        <p class="text-white">Sponsored by EPAM Systems</p>
+        <p class="copyright_text">© 2019 getcarrier.com. All rights reserved.</p>
+      </div>
     </div>
-    <div class="desktop_copyrigth">
+    <div>
+      <h4><a href="index.html">ABOUT</a></h4>
+    </div>
+    <div>
+      <h4 class="mb-2"><a href="service.html">SOLUTION</a></h4>
+      <h5 class="mb-1"><a href="service.html#frontend">Backend Performance Testing</a></h5>
+      <h5 class="mb-1"><a href="service.html#frontend">Frontend Performance Testing</a></h5>
+      <h5 class="mb-1"><a href="service.html#education">Handover and Education</a></h5>
+      <h5 class="mb-1"><a href="service.html#hypercare">Hypercare</a></h5>
+    </div>
+    <div>
+      <h4 class="mb-2"><a href="contact.html">SUPPORT</a></h4>
+      <h5 class="mb-1"><a href="https://getcarrier.io/categories">Documentation</a></h5>
+      <h5 class="mb-1"><a href="https://getcarrier.io/categories">Changelog</a></h5>
+    </div>
+    <div>
+      <h4 class="mb-2"><a href="contact.html">CONTACT US</a></h4>
+      <h5 class="mb-1"><a href="https://github.com/carrier-io" target="_blank">Git</a></h5>
+      <h5 class="mb-1"><a href="https://hub.docker.com/u/getcarrier" target="_blank">Docker</a></h5>
+    </div>
+    <div class="mobile_copyrigth d-none">
       <p class="text-white">Sponsored by EPAM Systems</p>
       <p class="copyright_text">© 2019 getcarrier.com. All rights reserved.</p>
     </div>
-  </div>
-  <div>
-    <h4><a href="">ABOUT</a></h4>
-  </div>
-  <div>
-    <h4 class="mb-2"><a href="service.html">SOLUTION</a></h4>
-    <h5 class="mb-1"><a href="performance.html">Performance Testing</a></h5>
-    <h5 class="mb-1"><a href="service.html">Backend Performance Testing</a></h5>
-    <h5 class="mb-1"><a href="service.html">Frontend Performance Testing</a></h5>
-    <h5 class="mb-1"><a href="#">Security Testing</a></h5>
-  </div>
-  <div>
-    <h4 class="mb-2"><a href="contact.html">SUPPORT</a></h4>
-    <h5 class="mb-1"><a href="#">Documentation</a></h5>
-    <h5 class="mb-1"><a href="#">Changelog</a></h5>
-    <h5 class="mb-1"><a href="#">Status</a></h5>
-  </div>
-  <div>
-    <h4 class="mb-2"><a href="#">PRICING</a></h4>
-  </div>
-  <div>
-    <h4 class="mb-2"><a href="contact.html">CONTACT US</a></h4>
-    <h5 class="mb-1"><a href="https://github.com/carrier-io" target="_blank">Git</a></h5>
-    <h5 class="mb-1"><a href="https://hub.docker.com/u/getcarrier" target="_blank">Docker</a></h5>
-    <h5 class="mb-1"><a href="#">Email</a></h5>
-  </div>
-  <div class="mobile_copyrigth d-none">
-    <p class="text-white">Sponsored by EPAM Systems</p>
-    <p class="copyright_text">© 2019 getcarrier.com. All rights reserved.</p>
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
