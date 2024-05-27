@@ -8,5 +8,14 @@ mobileButton.addEventListener('click', () => {
     } else {
         mobileButton.classList.add('active');
         mobileMenu.classList.remove('d-none');
+        const menuItems = document.querySelectorAll('.sub-dropdown-item');
+        menuItems.forEach(item => {
+          console.log(item)
+          item.addEventListener('click', () => {
+            console.log(1)
+            mobileButton.classList.remove('active');
+            mobileMenu.classList.add('d-none');
+          })
+        })
     }
 });
