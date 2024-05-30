@@ -18,10 +18,10 @@ This guide provides step-by-step instructions for installing Carrier on CentOS o
 
 Before installing Carrier, you need to ensure that the following tools are installed on your CentOS system:
 
-- Docker
-- Docker Compose
-- Git
-- Make
+- [Docker](https://docs.docker.com/desktop/install/ubuntu/) 4.19.0+
+- [Docker Compose](https://docs.docker.com/compose/install/) 1.29.2+
+- [Git](https://git-scm.com/downloads) 2.40.1+
+- [Make](https://wiki.ubuntu.com/ubuntu-make)
 
 > After executing the installation commands, it is important to ensure that there are no errors. Please verify that the installation process completed successfully without encountering any issues.
 {: .prompt-tip }
