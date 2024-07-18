@@ -39,7 +39,7 @@ Follow the steps below to configure AWS integration in Carrier:
 #### Step 4: Fill in Required Fields and Update
 1. Fill in the required fields such as `Access Key`, `Secret Access Key`, and `Region`.
 2. Click ‘Update’.
-3. Note: An orange status of “Check Connection” is acceptable if you specified the correct ‘Secret Access Key’ in the Secrets and ‘Access Key’.
+> Note: An orange status of “Check Connection” is acceptable if you specified the correct ‘Secret Access Key’ in the Secrets and ‘Access Key’.
 
 ![Check Connection](/assets/posts_img/aws_check_connection.png)
 
@@ -73,7 +73,7 @@ Follow the steps below to configure AWS integration in Carrier:
 ![Test Plan Settings](/assets/posts_img/test_plan_settings.png)
 
 #### Step 6: Configure Load Settings
-1. In the ‘Load configuration’ block, select ‘Engine location’, ‘Type’, and ‘Instance type’.
+1. In the **Load configuration** block, select `Engine location`, `Type`, and `Instance type`.
 2. Check other parameters of the test plan.
 3. Click ‘Update’ or ‘Update And Start’.
 
