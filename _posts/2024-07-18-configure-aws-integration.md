@@ -14,7 +14,7 @@ This guide provides step-by-step instructions for configuring AWS integration in
 Before you begin configuring AWS integration in Carrier, ensure that you have completed the following:
 - [Installed and set up Carrier](https://getcarrier.io/posts/carrier-install) successfully or you have a Carrier account with the necessary permissions
 - [Created a project in Carrier](https://getcarrier.io/posts/carrier-create-project)
-- Have valid AWS access keys (direct link to the relevant section of the AWS documentation: [Creating Access Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)
+- Have valid AWS access keys (direct link to the relevant section of the AWS documentation: [Creating Access Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey))
 > Note. Access keys consist of two parts: an `Access Key ID` (for example, AKIAIOSFODNN7EXAMPLE) and a `Secret Access Key` (for example, wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY). Below you must use both the Access Key ID and Secret Access Key together to authenticate your requests.
 
 ### Steps
@@ -40,7 +40,7 @@ Follow the steps below to configure AWS integration in Carrier:
 #### Step 4: Fill in Required Fields and Update
 1. Fill in the required fields such as
    - **`Access Key`** (insert `Access Key ID`),
-   - **`Secret Access Key`** (insert secret with the name `<aws_secret_access_key>` wich was created in step 2),
+   - **`Secret Access Key`** (insert secret with the name `<aws_secret_access_key>` wich was created in Step 2),
    - **`Region`** (see below AWS Codes for Major Regions).
 3. Click ‘Update’.
 > Note: An orange status of “Check Connection” is acceptable if you specified the correct ‘Secret Access Key’ in the Secrets and ‘Access Key’.
