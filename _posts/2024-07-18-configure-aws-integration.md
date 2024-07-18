@@ -77,7 +77,7 @@ Follow the steps below to configure AWS integration in Carrier:
 2. Check other parameters of the test plan.
 3. Click ‘Update’ or ‘Update And Start’.
 
-![Load Configuration](/assets/posts_img/load_configuration.png)
+![Load Configuration](/assets/posts_img/aws_load_configuration.png)
 
 #### Step 7: Verify Settings in Debug Mode
 1. Check in debug mode using control-tower to ensure all settings are correct.
