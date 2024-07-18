@@ -23,23 +23,25 @@ Follow the steps below to configure AWS integration in Carrier:
 1. Open a web browser and enter the URL of your Carrier installation.
 2. Log in to the Carrier web interface using your credentials.
 > Note: Make sure you have logged in using the appropriate user account that has access to the project where you want to configure AWS integration.
-{: .prompt-info }
 
 #### Step 2: Create AWS Secret Access Key in Secrets Section
 1. Navigate to **Configuration** > **Secrets**.
 2. Create a new secret with the name `<aws_secret_access_key>` and provide the necessary AWS secret access key.
+
 ![Create AWS Secret](/assets/posts_img/aws_secret.png)
 
 #### Step 3: Integrate with Amazon in the Clouds Block
 1. Navigate to **Integrations** > **Clouds**.
 2. Select integration with Amazon.
-![Amazon Integration](/assets/posts_img/amazon_integration.png)
+
+![Amazon Integration](/assets/posts_img/aws_integration.png)
 
 #### Step 4: Fill in Required Fields and Update
 1. Fill in the required fields such as `Access Key`, `Secret Access Key`, and `Region`.
 2. Click ‘Update’.
 3. Note: An orange status of “Check Connection” is acceptable if you specified the correct ‘Secret Access Key’ in the Secrets and ‘Access Key’.
-![Check Connection](/assets/posts_img/check_connection.png)
+
+![Check Connection](/assets/posts_img/aws_check_connection.png)
 
 #### AWS Codes for Major Regions
 - US East (N. Virginia): us-east-1
@@ -61,26 +63,34 @@ Follow the steps below to configure AWS integration in Carrier:
 - Middle East (Bahrain): me-south-1
 - South America (Sao Paulo): sa-east-1
 > Note: If no security group is specified, the instance will automatically be assigned a default security group.
-{: .prompt-info }
+
+![Connection Created](/assets/posts_img/aws_connection_created.png)
 
 #### Step 5: Create or Use Existing Test Plan
 1. Create a new test plan or use an existing one.
 2. Open the test plan settings.
+
 ![Test Plan Settings](/assets/posts_img/test_plan_settings.png)
 
 #### Step 6: Configure Load Settings
 1. In the ‘Load configuration’ block, select ‘Engine location’, ‘Type’, and ‘Instance type’.
 2. Check other parameters of the test plan.
 3. Click ‘Update’ or ‘Update And Start’.
+
 ![Load Configuration](/assets/posts_img/load_configuration.png)
 
 #### Step 7: Verify Settings in Debug Mode
 1. Check in debug mode using control-tower to ensure all settings are correct.
 2. Copy the execution config and run it from a local Linux machine with Docker installed.
-![Debug Mode](/assets/posts_img/debug_mode.png)
+
+![Docker Command](/assets/posts_img/docker_command_btn.png)
+
+![Docker Command](/assets/posts_img/docker_command.png)
+
 A link to the running test will appear in the results panel.
 > Note: Verify that all settings have been made correctly to avoid any issues during the test run.
-{: .prompt-info }
+
+![Test Results Link](/assets/posts_img/test_results_link.png)
 
 ## Next Steps
 Once you have configured AWS integration in Carrier, you can proceed to create and run your performance tests leveraging AWS resources. Follow the guide on [how to create and run performance tests in Carrier](http://getcarrier.io/posts/performance-test-configuration/) to get started.
