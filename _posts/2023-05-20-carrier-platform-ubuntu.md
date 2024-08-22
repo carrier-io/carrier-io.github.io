@@ -18,7 +18,7 @@ This guide provides step-by-step instructions for installing Carrier on Ubuntu o
 Before installing Carrier, you need to ensure that the following tools are installed on your Ubuntu system:
 
 - [Docker](https://docs.docker.com/desktop/install/ubuntu/) 4.19.0+
-- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/) 1.29.2+
 - [Git](https://git-scm.com/downloads) 2.40.1+
 - [Make](https://wiki.ubuntu.com/ubuntu-make)
 

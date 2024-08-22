@@ -17,9 +17,9 @@ This guide provides step-by-step instructions for installing Carrier on Debian o
 
 Before installing Carrier, you need to ensure that the following tools are installed on your Debian system:
 
-- [Docker](https://docs.docker.com/engine/install/debian/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
-- [Git](https://git-scm.com/downloads)
+- [Docker](https://docs.docker.com/engine/install/debian/) 4.19.0+
+- [Docker Compose](https://docs.docker.com/compose/install/) 1.29.2+
+- [Git](https://git-scm.com/downloads) 2.40.1+
 - [Make](https://www.gnu.org/software/make/)
 
 > After executing the installation commands, it is important to ensure that there are no errors. Please verify that the installation process completed successfully without encountering any issues.

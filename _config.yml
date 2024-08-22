@@ -30,10 +30,10 @@ description: >-                        # used by seo meta and the atom feed
 url: "https://getcarrier.io"
 
 github:
-  username: karenflorykian             # change to your github username
+  username: carrier-io             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: CarrierPlatform            # change to your twitter username
 
 social:
   # Change to your full name.
