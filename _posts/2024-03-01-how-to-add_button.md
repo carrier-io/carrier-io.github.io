@@ -1,5 +1,5 @@
 ---
-title:  How to add buttons from design system;
+title:  How to add buttons from design system
 author: User
 date: 2024-03-01 12:00:00 +0800
 categories: [Performance, UI, fetchData]
@@ -9,15 +9,9 @@ render_with_liquid: false
 
 ## Overview
 
-This guide provides step-by-step instructions on how to use ui components from design.
+This guide provides how to add buttons from design system.
 
-### Entrypoint and parameters for task
-
-Example how to create button which by click filling dropdown with new data by Vue.js component:
-just copy the required element.
-
-
-1. There are button and dropdown
+1. Choose the desired button from the button section, copy the HTML code of the element and paste it in the desired place as follows:
    ![Tasks section](/assets/posts_img/ds_buttons.png)
 2. In order to add an event to a click - bind it to the corresponding function in the vue.j methods
 3. And for the appearance of a temporary spinner - add a display condition through v-if, and associate it with the value of the variable of data.
