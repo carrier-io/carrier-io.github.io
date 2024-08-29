@@ -13,8 +13,9 @@ This guide provides how to use vue.js in project by example how to run task at U
 
 ### Step 1: Add HTML components
 
-1. At first need to add button which will be open modal dialog component:
-> gitHub - https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L98
+1. At first need to add button which will be open modal dialog component.
+
+[github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L98)
 
 ![guide](/assets/posts_img/guide_vue__1.png)
 ![guide](/assets/posts_img/guide_vue__2.png)
@@ -30,8 +31,9 @@ This guide provides how to use vue.js in project by example how to run task at U
 ```
 
 2. At Secondary need to add modal dialog with tasks lists and parameters. this part of the code should be added in the component file where the button above will be located:
-   ( more details about how modal windows work - https://getbootstrap.com/docs/4.6/components/modal)
-> gitHub - https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L242
+   [more details about how modal windows work](https://getbootstrap.com/docs/4.6/components/modal)
+
+[github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L242)
 ```bash
 // file: ui_performance/static/js/components/UiResutsInfo.html
  <div class="modal fixed-left fade shadow-sm" tabindex="-1" role="dialog" id="RunTaskModal">
@@ -74,7 +76,9 @@ This guide provides how to use vue.js in project by example how to run task at U
 
 4. To add additional parameters to the selected task, use the global component "params_table_content". Which is passed to the component via the template and will be displayed in the right place via the slot.
    ![guide](/assets/posts_img/guide_vue__3.png)
-> github - https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/templates/results/content.html#L6
+
+[github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/templates/results/content.html#L6)
+
 ```bash
   // file: ui_performance/templates/results/content.html
   <ui-result
@@ -104,8 +108,9 @@ This guide provides how to use vue.js in project by example how to run task at U
 
 1. When opening a modal window, we attach an event handler: when the window is shown - we fill the list with tasks previously received from the server.
 We also add the default value of one of the parameters of any task that contains the report ID
-A hook 'mounted' is used for this (more details about how the hook works - https://v3.ru.vuejs.org/ru/api/options-lifecycle-hooks.html)
-> github - https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L20
+A hook 'mounted' is used for this [more details about how the hook works](https://v3.ru.vuejs.org/ru/api/options-lifecycle-hooks.html)
+
+[github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L20)
 
 ```bash
     // file: ui_performance/static/js/components/UiResutsInfo.html
@@ -132,7 +137,7 @@ A hook 'mounted' is used for this (more details about how the hook works - https
 
 3. To start the task we use the run button. Which we associate with the method "handleRunTask".
    If the data is successfully sent to the server, the modal window is closed and the parameter table is cleared
-   (More about two-way binding vue https://v1.vuejs.org/guide/syntax.html)
+   [More about two-way binding vue](https://v1.vuejs.org/guide/syntax.html)
 
 ![guide](/assets/posts_img/guide_vue__4.png)
 ```bash
@@ -143,7 +148,7 @@ A hook 'mounted' is used for this (more details about how the hook works - https
   </button>
 ```
 
-> github - https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L64
+[github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L64)
 
 ```bash
   // file: ui_performance/static/js/components/UiResutsInfo.html
@@ -162,7 +167,7 @@ A hook 'mounted' is used for this (more details about how the hook works - https
 4. To send a task with its parameters to the server, we use the native fetch method.
    (More details about the fetch method are described here - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-> github - https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L73
+[github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L73)
 
 ```bash
    async runTask() {
