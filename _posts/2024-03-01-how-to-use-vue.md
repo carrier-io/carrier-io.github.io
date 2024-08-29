@@ -13,7 +13,7 @@ This guide provides how to use vue.js in project by example how to run task at U
 
 ### Step 1: Add HTML components
 
-1. At first need to add button which will be open modal dialog component.
+At first need to add button which will be open modal dialog component.
 
 [github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L98)
 
@@ -30,7 +30,7 @@ This guide provides how to use vue.js in project by example how to run task at U
       ...
 ```
 
-2. At Secondary need to add modal dialog with tasks lists and parameters. this part of the code should be added in the component file where the button above will be located:
+At Secondary need to add modal dialog with tasks lists and parameters. this part of the code should be added in the component file where the button above will be located:
    [more details about how modal windows work](https://getbootstrap.com/docs/4.6/components/modal)
 
 [github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L242)
@@ -72,9 +72,9 @@ This guide provides how to use vue.js in project by example how to run task at U
         </div>
 ```
 
-3. Note that the button is linked to the modal window by the attribute 'data-target="#RunTaskModal"' which matches the window id 'id="#RunTaskModal"'.
+>Note that the button is linked to the modal window by the attribute 'data-target="#RunTaskModal"' which matches the window id 'id="#RunTaskModal"'.
 
-4. To add additional parameters to the selected task, use the global component "params_table_content". Which is passed to the component via the template and will be displayed in the right place via the slot.
+To add additional parameters to the selected task, use the global component "params_table_content". Which is passed to the component via the template and will be displayed in the right place via the slot.
    ![guide](/assets/posts_img/guide_vue__3.png)
 
 [github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/templates/results/content.html#L6)
@@ -106,7 +106,7 @@ This guide provides how to use vue.js in project by example how to run task at U
 ```
 ### Step 2: Add JS logic
 
-1. When opening a modal window, we attach an event handler: when the window is shown - we fill the list with tasks previously received from the server.
+When opening a modal window, we attach an event handler: when the window is shown - we fill the list with tasks previously received from the server.
 We also add the default value of one of the parameters of any task that contains the report ID
 A hook 'mounted' is used for this [more details about how the hook works](https://v3.ru.vuejs.org/ru/api/options-lifecycle-hooks.html)
 
@@ -133,9 +133,9 @@ A hook 'mounted' is used for this [more details about how the hook works](https:
     }
 ```
 
-2. '$('#selectResult').selectpicker('refresh')' - in order for the selector to correctly render the list of tasks, it needs to be redrawed in the home tree (this is due to the peculiarity of how bootstrap components work in Vue components).
+> '$('#selectResult').selectpicker('refresh')' - in order for the selector to correctly render the list of tasks, it needs to be redrawed in the home tree (this is due to the peculiarity of how bootstrap components work in Vue components).
 
-3. To start the task we use the run button. Which we associate with the method "handleRunTask".
+To start the task we use the run button. Which we associate with the method "handleRunTask".
    If the data is successfully sent to the server, the modal window is closed and the parameter table is cleared
    [More about two-way binding vue](https://v1.vuejs.org/guide/syntax.html)
 
@@ -164,7 +164,7 @@ A hook 'mounted' is used for this [more details about how the hook works](https:
     }
   }
 ```
-4. To send a task with its parameters to the server, we use the native fetch method.
+To send a task with its parameters to the server, we use the native fetch method.
    (More details about the fetch method are described here - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
 [github source](https://github.com/carrier-io/ui_performance/blob/59cb930a273e52b2c2c461fca4381a974d51c825/static/js/components/UiResultInfo.js#L73)
@@ -181,4 +181,4 @@ A hook 'mounted' is used for this [more details about how the hook works](https:
      return resp.json();
    },
 ```
-5$("#RunTaskModal_test_params").bootstrapTable('getData') - Allows you to get all the data from the parameter table (more about this - https://bootstrap-table.com/docs/api/methods/#getdata).
+>$("#RunTaskModal_test_params").bootstrapTable('getData') - Allows you to get all the data from the parameter table (more about this - https://bootstrap-table.com/docs/api/methods/#getdata).
