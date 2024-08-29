@@ -1,16 +1,15 @@
 ---
-title: Guide on How to Use Vue.js in Carrier UI
+title: Preconditions and learning materials
 author: User
 date: 2024-08-29 12:00:00 +0800
 categories: [Performance, UI, guide]
-tags: [ui, vue.js]
+tags: [ui, learning]
 render_with_liquid: false
 ---
 
 ## Overview
 
-This guide provides step-by-step instructions on how to use Vue.js in a Carrier project. The example focuses on how to run a task in the UI Performance plugin.
-
+Here is a list of used frameworks and libraries for the project. Before you start adding new components to the ui part of the project, we recommend that you familiarize yourself with it.
 ## Preconditions
 
 Before you start, ensure that the following preconditions are met:
