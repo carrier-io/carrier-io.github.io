@@ -78,8 +78,29 @@ To create a lambda task in Carrier Platform you should follow next steps:
 ![Tasks creation_part1](/assets/posts_img/tasks_creation_part1.png)
 4. Upload your zip file with lambda function and specify lambda handler
 ![Tasks creation_part2](/assets/posts_img/tasks_creation_part2.png)
+
+In case if you already created your task and need to upload new/updated zip file, you can:
+
+4.1. Open 'Artifacts' tab, scroll down and find 'Bucket tasks'.
+
+4.2. Drag and drop updated zip archive with the same name and wait when the file be updated ('Last update' date will be changed)
+![tasks_creation_part4_1.png](../assets/posts_img/tasks_creation_part4_1.png)
+
 5. Add parameters for your task
 ![Tasks creation_part3](/assets/posts_img/tasks_creation_part3.png)
+
+In case if parameters are going to be used from 'Secrets' please:
+
+5.1. Go to the 'Secrets' tab (on this step, you can already save your Task so as not to lose the data you have entered before)
+
+5.2. Click 'Copy' opposite the parameter's name which you want to copy
+![tasks_creation_part5_2](../assets/posts_img/tasks_creation_part5_2.png)
+
+5.3. Insert copied value in the 'DEFAULT VALUE' column for your parameter and add '*secret.*' before it (as it showed on the picture below):
+![Tasks creation_part5_3](../assets/posts_img/tasks_creation_part5_3.png)
+
+5.4. Fill in other necessary fields and check the parameters values don't contain unnecessary spaces.
+
 6. Click Save button to create the task
 ![Tasks creation_part4](/assets/posts_img/tasks_creation_part4.png)
 
