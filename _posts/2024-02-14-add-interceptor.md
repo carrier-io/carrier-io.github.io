@@ -28,7 +28,7 @@ Before you begin configuring Interceptor in Carrier, ensure that you have comple
 - Installed [Docker](https://docs.docker.com/)
 
 ### Step 1: Obtain Secrets Parameters from Carrier Platform
- 
+
 1. Go to your Carrier platform by visiting - [https://${CARRIER_HOST}/](https://${CARRIER_HOST}/) <br />
 *(${CARRIER_HOST} is not a real URL it is just a template of the URL you should have after a successful Carrier installation)*
   - From the project dropdown menu, select the project you want.
@@ -48,14 +48,14 @@ Before you begin configuring Interceptor in Carrier, ensure that you have comple
    - `rabbit_project_password` (used as `${RABBIT_PWD}` parameter)
    - `rabbit_project_user` (used as `${RABBIT_USER}` parameter)
    - `rabbit_project_vhost` (used as `${PROJECT_VHOST}` parameter)
- 
+
 > For your convenience, you can temporarily paste the values into Notepad or another text editor, but **don't save it on your machine**!
 {: .prompt-info }
 
 ### Step 2: Run the Interceptor Docker Container
- 
+
 Execute the following Docker command with parameters from "Secrets" to run the interceptor container:
- 
+
 ```bash
 docker run -d --rm -v /var/run/docker.sock:/var/run/docker.sock \
   -e RAM_QUOTA=4g -e CPU_QUOTA=2 -e CPU_CORES=2 \
@@ -67,9 +67,16 @@ docker run -d --rm -v /var/run/docker.sock:/var/run/docker.sock \
 ```
  > Ensure to replace the placeholders `${CARRIER_HOST}`, `${RABBIT_USER}`, `${RABBIT_PWD}`, `${PROJECT_VHOST}`, and `${AUTH_TOKEN}` with your specific values. Also don't forget to remove all **${ }**.
 {: .prompt-info }
- 
+
+> **Note**: You must set **CPU_CORES=2** in the interceptor configuration.
+> This is essential because one CPU core will be allocated for running the performance test, and the other core will be used for post-processing.
+> If only one core is allocated, the test will start, but the post-processing phase won't.
+> Ensure that both cores are available for smooth task execution.
+>
+>Additionally, make sure that the interceptor version matches across configurations (e.g., `getcarrier/interceptor:latest` or another version you have installed). Mismatched versions, such as `getcarrier/interceptor:beta-1.0` and `getcarrier/interceptor:latest`, could cause inconsistencies in behavior and task execution.
+
 ### Step 3: Run Rabbit Queue Checker Task
- 
+
 1. Navigate to "Configuration" > "Tasks" on your Carrier platform using the following URL: [https://${CARRIER_HOST}/-/configuration/tasks/](https://${CARRIER_HOST}/-/configuration/tasks/)
 ![Tasks RQC](/assets/posts_img/tasks_rqc.png)
 2. Run the "rabbit_queue_checker" task.
@@ -77,7 +84,7 @@ docker run -d --rm -v /var/run/docker.sock:/var/run/docker.sock \
 
  > Please be patient Rabbit Queue Checker Task can take from 3-5 minutes to make new pool avaliable.
 {: .prompt-info }
- 
+
 ### Step 4: Select Load configuration in a test
 1. In the project configuration page, click on the "Performance" tab located in the left menu.
 ![Performance Dropdown](/assets/posts_img/performance_dropdown_rqc.png)
