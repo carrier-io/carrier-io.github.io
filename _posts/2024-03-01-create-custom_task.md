@@ -1,126 +1,143 @@
-
 ---
-title:  Create Custom Tasks (AWS Lambdas) and Execute Using Carrier Platform
+title:  Running Custom Lambda Tasks
 author: User
 date: 2024-03-01 12:00:00 +0800
-categories: [Performance, Tutorial, Tasks]
-tags: [performance, backend, tasks, reporting]
+categories: [Performance, Tutorial, Lambda, Tasks, Automation]
+tags: [performance, automation, backend, tasks, reporting, Lambda]
 render_with_liquid: false
 ---
 
 ## Overview
 
-This guide provides step-by-step instructions on how to create custom tasks (AWS Lambdas) and execute them using Carrier Platform. With custom tasks, you can add additional functionality for processing and reporting test results. Additional information about Lambdas can be found [here](https://github.com/carrier-io/docker-lambda).
+This guide provides step-by-step instructions on how to create, configure, and execute custom  Lambda tasks using the Carrier platform.  Lambda tasks allow you to automate reporting, post-processing, and testing functionalities on the Carrier platform to optimize and streamline performance testing workflows.
 
-### Entrypoint and Parameters for Task
+The guide also covers how you can utilize these custom tasks to automate repetitive processes, like weekly reporting, anomaly detection, and script generation, which ultimately saves time and effort. Additional details about  Lambda usage can be found [here](https://github.com/carrier-io/docker-lambda).
 
-The Lambda function handler is the method in your function code that processes events. When your function is invoked, Lambda runs the handler method. Your function runs until the handler returns a response, exits, or times out. You can use the following general syntax when creating a function handler in Python:
+### Why Use  Lambda Tasks in Carrier?
 
-```bash
+Lambda tasks provide automation capabilities for complex performance testing workflows, helping performance engineers to:
+
+- **Reduce manual reporting**: Automate weekly, monthly, or ad-hoc reports summarizing test results.
+- **Detect performance anomalies**: Use automation to detect anomalies or unexpected behaviors in test results, such as response time spikes or throughput drops.
+- **Automate script generation**: Automatically generate or update test scripts from HAR files or user flows.
+- **Integrate CI/CD workflows**: Automate performance test setup, execution, and result post-processing within CI/CD pipelines.
+
+By using Lambda functions in Carrier, you save time, reduce manual intervention, and ensure consistency in your performance testing processes.
+
+## Step-by-Step Instructions for Setting Up and Running  Lambda Tasks in Carrier
+
+### Step 1: Setting Up Lambda Function Handlers
+
+The Lambda function handler is the method in your function code that processes events. When your function is invoked, Lambda runs the handler method. The handler function follows this general syntax in Python:
+
+```python
 def handler_name(event, context):
     ...
     return some_value
 ```
 
-The Lambda function handler name specified when creating a Task in Carrier is derived from:
+You need to specify the Lambda handler during task creation in Carrier. For example, if your handler is `lambda_handler` in a file named `lambda_function.py`, the handler is referred to as `lambda_function.lambda_handler`.
 
-- The name of the file where the Lambda handler function is located.
+#### Example: Reading Task Parameters from the Event Object
 
-- The name of the Python handler function.
+Carrier will pass task-specific parameters via the event object:
 
-A function handler can have any name; however, the default name in the Lambda console is 'lambda_function.lambda_handler'. This function handler name reflects the function name (lambda_handler) and the file where the handler code is stored (lambda_function.py).
-
-The first argument for lambda handler is the event object. It contains all the parameters that you have specified for the task during task creation. An event is a JSON-formatted document that contains data for a Lambda function to process. The Lambda runtime converts the event to an object and passes it to your function code. It is usually of the Python dict type. It can also be list, str, int, float, or the NoneType type.
-
-To read parameters from the event object in your function, you can use:
-
-```bash
-report_id = event.get("report_id")
-project_id = event.get("project_id")
-token = event.get("token")
-some_parameter = event.get("some_parameter")
+```python
+def lambda_handler(event, context):
+    report_id = event.get("report_id")
+    project_id = event.get("project_id")
+    token = event.get("token")
+    ...
+    return some_value
 ```
 
-### Additional Requirements and Packaging
+This enables you to access key task parameters like report IDs, tokens, and custom task variables.
 
-The official documentation from AWS you can find [here](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html#python-package-create-dependencies)
+---
 
-If your function requires non-standard Python libraries you need to specify them in requirements.txt file. Example you can find [here](https://github.com/carrier-io/control_tower/blob/master/package/requirements.txt). After that, you can build your Lambda function as a zip archive using instruction from official AWS documentation. Also, you can create a bash script to build lambda function using docker container + zip utility as shown below:
+### Step 2: Packaging and Preparing Lambda for Deployment
+
+If your Lambda function uses non-standard Python libraries, you'll need to include them in the `requirements.txt` file. Carrier uses the same packaging rules as  Lambda.
+
+#### Building the Lambda Function with Docker
+
+Use Docker to package your Lambda function with its dependencies:
 
 ```bash
 #!/bin/bash
 
 mkdir lambda
-# build all dependencies from requirements.txt
 docker run --rm -v "$PWD":/var/task lambci/lambda:build-python3.7 pip install -r requirements.txt -t /var/task/lambda
-# copy some additional code required by lambda function
 cp -r perfreporter lambda/perfreporter
-# copy template for email notification
 cp -r templates lambda/templates
-# copy lambda handler
-cp post_processing.py lambda/post_processing.py
+cp lambda_handler.py lambda/lambda_handler.py
 cd lambda
-# create zip archive
-zip jtl_to_excel.zip -r .
-cp jtl_to_excel.zip ../
+zip function.zip -r .
+cp function.zip ../
 cd ..
 rm -rf lambda
 ```
 
-> **Note**: If you plan to use **Interceptor** ([Carrier Agent to the Carrier Platform](https://getcarrier.io/posts/add-interceptor)), you must set **CPU_CORES=2** in the interceptor configuration.
->
->This is essential because one CPU core will be allocated for running the performance test, and the other core will be used for post-processing. If only one core is allocated, the test will start, but the post-processing phase won't. Ensure that both cores are available for smooth task execution.
->
->Make sure that the interceptor version matches across configurations (e.g., `getcarrier/interceptor:latest` or another version you have installed). Mismatched versions, such as `getcarrier/interceptor:beta-1.0` and `getcarrier/interceptor:latest`, could cause inconsistencies in behavior and task execution.
+---
 
+### Step 3: Creating Lambda Task in Carrier
 
-### Create Task in Carrier
+Once the Lambda function is packaged, you can create the task in Carrier:
 
-Follow these steps to create a Lambda task in Carrier Platform:
-
-1. **Go to Configuration > Tasks Section**
+1. **Go to the Configuration Section**:
+   Navigate to the "Tasks" subsection in the Carrier UI.
    ![Tasks section](/assets/posts_img/tasks_section.png)
 
-2. **Click the "+" Button** to start creating a new task.
+2. **Click on the "+" Button** to create a new task.
    ![Tasks add_button](/assets/posts_img/tasks_add_button.png)
 
-3. **Set Task Name and select Runtime**
+3. **Set Task Name and Runtime**:
+   Define your task name and select the appropriate runtime (e.g., Python 3.7).
    ![Tasks creation_part1](/assets/posts_img/tasks_creation_part1.png)
 
-4. Upload your zip file with lambda function and specify lambda handler
+4. **Upload Lambda Function**:
+   Upload the zip file containing your Lambda function and specify the Lambda handler.
    ![Tasks creation_part2](/assets/posts_img/tasks_creation_part2.png)
 
-> **Note**: If you need to update an existing task with a new zip file, follow these steps:
->
-> 4.1. Open 'Artifacts' tab, scroll down and find 'Bucket tasks'.
->
-> 4.2. Drag and drop the updated zip archive with the same name. The 'Last update' date will change once the update is successful.
-   ![Tasks creation_part4_1](/assets/posts_img/tasks_creation_part4_1.png)
-
-5. **Add Parameters for your Task**
+5. **Configure Parameters**:
+   Add parameters that the Lambda function requires (e.g., `report_id`, `project_id`, etc.).
    ![Tasks creation_part3](/assets/posts_img/tasks_creation_part3.png)
 
-  If using parameters from 'Secrets', follow these steps:
+6. **Save and Execute**:
+   Save the task and execute it by selecting it from the task list and clicking the Play button.
+   ![Tasks execution_part1](/assets/posts_img/tasks_execution_part1.png)
 
-  5.1. Go to the 'Secrets' tab.
+## Carrier Tasks
 
-  5.2. Copy the parameter name.
-![Tasks creation_part5_2](/assets/posts_img/tasks_creation_part5_2.png)
+By using  Lambda tasks in Carrier, you can automate performance testing activities!
 
-5.3. Paste it into the 'DEFAULT VALUE' column and add '*secret.*' before it.
-![Tasks creation_part5_3](/assets/posts_img/tasks_creation_part5_3.png)
+### 1. **Explore Carrier’s task automation**: Start by creating basic tasks, and then expand them with more complex scripts and integrations.
+### 2. **Measure the impact**: Use the suggested KPIs and metrics to track improvements in your performance testing workflows.
+### 3. **Contribute**: Explore how you can contribute new features and plugins to extend Carrier’s capabilities.
 
-> **Note**: The parameters values shouldn't contain unnecessary spaces.
+## Self-learning
 
-6. **Click 'Save' to create the Task**
-   ![Tasks creation_part4](/assets/posts_img/tasks_creation_part4.png)
+### 1. **Reporting Automation**
+- **Use Case**: Weekly or monthly report generation (e.g., performance results, Jira ticket summaries, comparison of test runs).
+- **Benefit**: Automating reports reduces the manual effort spent gathering data, formatting it, and delivering insights to stakeholders.
+- **How to Measure**: Calculate the time saved in report generation and the accuracy of automated reports. Track the reduction in manual reporting hours and faster access to results.
 
-### Execute Task
+### 2. **Anomaly Detection in Test Results**
+- **Use Case**: Automated detection of response time spikes, throughput drops, and other anomalies in performance test results.
+- **Benefit**: Early detection of performance issues reduces downtime and improves the stability of the system under test.
+- **How to Measure**: Monitor how quickly anomalies are detected and resolved after automation. Track improvements in response times for identifying and fixing performance issues.
 
-To execute the task:
+### 3. **Test Script Generation and Maintenance**
+- **Use Case**: Automate the generation of test scripts from HAR files or user flow diagrams, reducing time spent on script creation and updates.
+- **Benefit**: Script automation ensures consistency and reduces manual errors in test script generation.
+- **How to Measure**: Compare the time required for manual script creation versus automated generation. Track the number of new test scenarios covered.
 
-**Select the Task from the List** and click the Play button.
-![Tasks execution_part1](/assets/posts_img/tasks_execution_part1.png)
+### 4. **Integration**
+- **Use Case**: Seamlessly integrate custom logic in Jenkins, Azure, or GitHub Actions pipelines using Carrier tasks.
+- **Benefit**: Automate performance testing setups and post-processing in workflows.
+- **How to Measure**: Measure the reduction in setup times and consistency in test environments.
 
-**Check Logs in Runtime** at the bottom of the page.
-![Tasks execution_part2](/assets/posts_img/tasks_execution_part2.png)
+### 5. **Rescripting and Timeline Analysis**
+- **Use Case**: Automate rescripting tasks and create user-flow diagrams from test data to visualize the performance of specific flows.
+- **Benefit**: Enables quick adjustments and optimization of user flows based on real-time performance data.
+- **How to Measure**: Monitor how quickly user flows can be rescripted and optimized using automated tools.
