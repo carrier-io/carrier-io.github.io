@@ -117,27 +117,27 @@ By using  Lambda tasks in Carrier, you can automate performance testing activiti
 
 ## Self-learning
 
-### 1. **Reporting Automation**
+1. **Reporting Automation**
 - **Use Case**: Weekly or monthly report generation (e.g., performance results, Jira ticket summaries, comparison of test runs).
 - **Benefit**: Automating reports reduces the manual effort spent gathering data, formatting it, and delivering insights to stakeholders.
 - **How to Measure**: Calculate the time saved in report generation and the accuracy of automated reports. Track the reduction in manual reporting hours and faster access to results.
 
-### 2. **Anomaly Detection in Test Results**
+2. **Anomaly Detection in Test Results**
 - **Use Case**: Automated detection of response time spikes, throughput drops, and other anomalies in performance test results.
 - **Benefit**: Early detection of performance issues reduces downtime and improves the stability of the system under test.
 - **How to Measure**: Monitor how quickly anomalies are detected and resolved after automation. Track improvements in response times for identifying and fixing performance issues.
 
-### 3. **Test Script Generation and Maintenance**
+3. **Test Script Generation and Maintenance**
 - **Use Case**: Automate the generation of test scripts from HAR files or user flow diagrams, reducing time spent on script creation and updates.
 - **Benefit**: Script automation ensures consistency and reduces manual errors in test script generation.
 - **How to Measure**: Compare the time required for manual script creation versus automated generation. Track the number of new test scenarios covered.
 
-### 4. **Integration**
+4. **Integration**
 - **Use Case**: Seamlessly integrate custom logic in Jenkins, Azure, or GitHub Actions pipelines using Carrier tasks.
 - **Benefit**: Automate performance testing setups and post-processing in workflows.
 - **How to Measure**: Measure the reduction in setup times and consistency in test environments.
 
-### 5. **Rescripting and Timeline Analysis**
+5. **Rescripting and Timeline Analysis**
 - **Use Case**: Automate rescripting tasks and create user-flow diagrams from test data to visualize the performance of specific flows.
 - **Benefit**: Enables quick adjustments and optimization of user flows based on real-time performance data.
 - **How to Measure**: Monitor how quickly user flows can be rescripted and optimized using automated tools.
