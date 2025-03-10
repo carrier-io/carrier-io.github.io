@@ -53,8 +53,6 @@ def lambda_handler(event, context):
 
 This enables you to access key task parameters like report IDs, tokens, and custom task variables.
 
----
-
 ### Step 2: Packaging and Preparing Lambda for Deployment
 
 If your Lambda function uses non-standard Python libraries, you'll need to include them in the `requirements.txt` file. Carrier uses the same packaging rules as  Lambda.
@@ -78,12 +76,26 @@ cp function.zip ../
 cd ..
 rm -rf lambda
 ```
- > For example, docker run command for Python 3.11 will looks like: 
+ > For example, here is a docker run command for Python 3.11: 
  ```bash
  docker run --rm -v "$PWD/":/var/task getcarrier/lambda:python3.11-build pip install -r requirements.txt -t /var/task/lambda
  ```
 {: .prompt-tip }
----
+
+ **Here you can find a list with diferent Python builder images**:
+
+ *Choose the version that suits the requirements of your task and satisfies the architecture of the machine on which the build is executed*
+ - getcarrier/lambda:python3.11-build
+ - getcarrier/lambda:python3.11-build-x86_64
+ - getcarrier/lambda:python3.11-build-arm64
+ - getcarrier/lambda:python3.10-build
+ - getcarrier/lambda:python3.10-build-x86_64
+ - getcarrier/lambda:python3.10-build-arm64
+ - lambci/lambda:build-python3.8
+ - lambci/lambda:build-python3.7
+ - lambci/lambda:build-python3.6
+ - lambci/lambda:build-python2.7
+
 
 ### Step 3: Creating Lambda Task in Carrier
 
@@ -98,7 +110,12 @@ Once the Lambda function is packaged, you can create the task in Carrier:
 
 3. **Set Task Name and Runtime**:
    Define your task name and select the appropriate runtime (e.g., Python 3.7).
+   > You have to select the same runtime version as you used in your build. Version mismatch will cause errors!
+   {: .prompt-info }
    ![Tasks creation_part1](/assets/posts_img/tasks_creation_part1.png)
+   **List of avaliable Runtimes**:
+   ![Avaliable Runtimes](/assets/posts_img/runtime_versions.png)
+
 
 4. **Upload Lambda Function**:
    Upload the zip file containing your Lambda function and specify the Lambda handler.
