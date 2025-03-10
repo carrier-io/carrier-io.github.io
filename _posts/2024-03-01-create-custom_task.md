@@ -62,7 +62,8 @@ If your Lambda function uses non-standard Python libraries, you'll need to inclu
 #### Building the Lambda Function with Docker
 
 Use Docker to package your Lambda function with its dependencies:
-
+ > If you want to use another Python version you could find it here [getcarrier/lambda](https://hub.docker.com/r/getcarrier/lambda/tags)
+{: .prompt-info }
 ```bash
 #!/bin/bash
 
@@ -77,7 +78,11 @@ cp function.zip ../
 cd ..
 rm -rf lambda
 ```
-
+ > For example, docker run command for Python 3.11 will looks like: 
+ ```bash
+ docker run --rm -v "$PWD/":/var/task getcarrier/lambda:python3.11-build pip install -r requirements.txt -t /var/task/lambda
+ ```
+{: .prompt-tip }
 ---
 
 ### Step 3: Creating Lambda Task in Carrier
