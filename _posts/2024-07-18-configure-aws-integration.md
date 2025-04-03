@@ -81,6 +81,9 @@ Follow the steps below to configure AWS integration in Carrier:
 2. Check other parameters of the test plan.
 3. Click ‘Update’ or ‘Update And Start’.
 
+> Note: If you are configuring **Backend test** take into account that maximum **CPU cores** you can use are **6** and maximum **memory** are **11(Gb)**. These limitations are related to the use of Java in Backend tests.
+{: .prompt-info }
+
 ![Load Configuration](/assets/posts_img/aws_load_configuration.png)
 
 #### Step 7: Verify Settings in Debug Mode
