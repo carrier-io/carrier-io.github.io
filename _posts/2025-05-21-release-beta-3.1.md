@@ -2,7 +2,7 @@
 title: Release beta-3.1
 author: User
 date: 2025-05-21 12:00:00 +0800
-categories: [Carrier, Configuration]
+categories: [Carrier, Release Notes]
 tags: [carrier, releases, notes]
 render_with_liquid: false
 pin: true
