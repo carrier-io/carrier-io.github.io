@@ -80,7 +80,7 @@ After completing these steps, you have successfully installed Docker, Docker Com
 ### Carrier Installation Steps
 1. Using root user clone the carrier-io [centry](https://github.com/carrier-io/centry/blob/beta-1.0/Makefile) repository to the `/opt` directory:
 ```shell
-git clone https://github.com/carrier-io/centry.git -b beta-3.0 /opt/centry
+git clone https://github.com/carrier-io/centry.git -b beta-3.1 /opt/centry
 ```
 
 2. Navigate to the downloaded folder:
@@ -122,7 +122,7 @@ It is recommended to update `.env` and `Makefile` manually, but you can also try
         VOLUMES_PATH=/opt/centry/volumes
         ....
 
-5. Review list of default plugins in config file (optional. It contains all required plugins for beta-3.0):
+5. Review list of default plugins in config file (optional. It contains all required plugins for beta-3.1):
 ```shell
 cat config/pylon.yml
 ```

@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ## Overview
 
-This guide provides step-by-step instructions for installing Carrier on CentOS operating systems. Carrier is a powerful platform for performance and security testing.
+This guide provides step-by-step instructions for installing Carrier on CentOS operating systems. Carrier is a powerful platform for performance testing.
 
 > Please find the hardware requirements by following the [link](http://getcarrier.io/posts/carrier-install/#prerequisites).
 {: .prompt-info }
@@ -146,7 +146,7 @@ Make sure to execute these additional steps before proceeding with the Carrier i
 
 1. Using root user clone the carrier-io centry repository to the `/opt` directory:
 ```bash
-git clone https://github.com/carrier-io/centry.git -b beta-3.0 /opt/centry
+git clone https://github.com/carrier-io/centry.git -b beta-3.1 /opt/centry
 ```
 
 2. Navigate to the downloaded folder:
@@ -183,7 +183,7 @@ It is recommended to update `.env` and `Makefile` manually, but you can also try
         VOLUMES_PATH=/opt/centry/volumes
         ....
 
-5. Review list of default plugins in config file (optional. It contains all required plugins for beta-3.0):
+5. Review list of default plugins in config file (optional. It contains all required plugins for beta-3.1):
 ```bash
 cat config/pylon.yml
 ```

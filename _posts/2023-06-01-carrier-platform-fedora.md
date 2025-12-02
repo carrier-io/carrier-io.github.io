@@ -103,7 +103,7 @@ Make sure to execute these additional steps before proceeding with the Carrier i
 
 1. Сlone the carrier-io centry repository to the `/opt` directory:
 ```bash
-git clone https://github.com/carrier-io/centry.git -b beta-3.0 /opt/centry
+git clone https://github.com/carrier-io/centry.git -b beta-3.1 /opt/centry
 ```
 
 2. Navigate to the downloaded folder:
@@ -210,7 +210,7 @@ sudo make up
 
 ## Next Step: Create a Project in Carrier
 
-Once you have completed the installation steps, you can proceed to create your first project in Carrier. The project allows you to organize and manage your performance and security tests.
+Once you have completed the installation steps, you can proceed to create your first project in Carrier. The project allows you to organize and manage your performance tests.
 
 Follow the guide on [how to create a project in Carrier](http://getcarrier.io/posts/carrier-create-project/) to get started.
 
