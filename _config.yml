@@ -27,7 +27,7 @@ description: >-                        # used by seo meta and the atom feed
     Continuous Test Automation Framework helps to enable shift-left testing practices into Software Development Process without stress of Development Team
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://getcarrier.io"
+url: "https://carrier-io.github.io"
 
 github:
   username: carrier-io             # change to your github username

@@ -24,7 +24,7 @@ Before you begin, ensure you have:
 To run a JMeter test using Control-Tower, use the following command:
 
 ```zsh
-docker run -e project_id=${project_id} -e galloper_url=https://platform.getcarrier.io -e token=some_token -d getcarrier/control_tower:latest --test_id=${test_id} -e '{"cmd": "-JVUSERS=7 -JDURATION=60"}'
+docker run -e project_id=${project_id} -e galloper_url=#{CARRIER_URL} -e token=some_token -d getcarrier/control_tower:latest --test_id=${test_id} -e '{"cmd": "-JVUSERS=7 -JDURATION=60"}'
 ```
 
 **Override JMeter Parameters:**
@@ -36,7 +36,7 @@ docker run -e project_id=${project_id} -e galloper_url=https://platform.getcarri
 To run a Gatling test using Control-Tower, use the following command:
 
 ```zsh
-docker run -e project_id=${project_id} -e galloper_url=https://platform.getcarrier.io -e token=${token} -d getcarrier/control_tower:latest --test_id=${test_id} -e '{"GATLING_TEST_PARAMS": "-Dtest_type=custom_type -Denv_type=custom_env -DvUsers=10 -Dduration=90"}'
+docker run -e project_id=${project_id} -e galloper_url=#{CARRIER_URL} -e token=${token} -d getcarrier/control_tower:latest --test_id=${test_id} -e '{"GATLING_TEST_PARAMS": "-Dtest_type=custom_type -Denv_type=custom_env -DvUsers=10 -Dduration=90"}'
 ```
 
 **Override Gatling Parameters:**
@@ -48,7 +48,7 @@ docker run -e project_id=${project_id} -e galloper_url=https://platform.getcarri
 To get a JUnit report after test execution, mount a local folder to the container:
 
 ```zsh
-docker run -v /reports:/tmp/reports -e project_id=${project_id} -e galloper_url=https://platform.getcarrier.io -e token=${token} -d getcarrier/control_tower:latest --test_id=${test_id} -e '{"GATLING_TEST_PARAMS": "-Dtest_type=custom_type -Denv_type=custom_env -DvUsers=10 -Dduration=90"}'
+docker run -v /reports:/tmp/reports -e project_id=${project_id} -e galloper_url=#{CARRIER_URL} -e token=${token} -d getcarrier/control_tower:latest --test_id=${test_id} -e '{"GATLING_TEST_PARAMS": "-Dtest_type=custom_type -Denv_type=custom_env -DvUsers=10 -Dduration=90"}'
 ```
 
 - The `/reports` folder on your host will contain the JUnit report after the test completes.

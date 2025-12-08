@@ -10,7 +10,7 @@ render_with_liquid: false
 ## Overview
 
 The troubleshooting guide for common issues encountered during development.
-> We also recommend that you familiarize yourself with the list of documentation for the frameworks and libraries used in this project [here](https://getcarrier.io/posts/Preconditions-and-Learning-Materials/).
+> We also recommend that you familiarize yourself with the list of documentation for the frameworks and libraries used in this project [here](https://carrier-io.github.io/posts/Preconditions-and-Learning-Materials/).
 ### Debugging with vue devtools
 
 [link to download the plugin](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?pli=1)

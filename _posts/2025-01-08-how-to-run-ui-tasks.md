@@ -17,7 +17,7 @@ Before you begin executing Tasks for UI tests in Carrier, ensure that you have c
 - Executed UI test test and got a results
 - Created Task
 
-> Note: You can find how to create a Task in the following [guide](https://getcarrier.io/posts/create-custom_task/).
+> Note: You can find how to create a Task in the following [guide](https://carrier-io.github.io/posts/create-custom_task/).
 {: .prompt-info }
 
 ### Steps

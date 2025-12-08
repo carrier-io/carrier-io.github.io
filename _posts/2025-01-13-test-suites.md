@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ## Overview
 
-This guide provides step-by-step instructions for configuration Test Suites in Carrier. 
+This guide provides step-by-step instructions for configuration Test Suites in Carrier.
 Test Suites help to make several simultaneous test runs with different parameters. This can be useful for example for testing under different load or different load generators.
 
 ### Prerequisites
@@ -20,7 +20,7 @@ Before you begin working with Suites, ensure that you have completed the followi
 - Created a project in Carrier.
 - Configured Backend and/or UI test.
 
-> Note: You can find out how to create project in Carrier in the following [guide](https://getcarrier.io/posts/carrier-create-project/)
+> Note: You can find out how to create project in Carrier in the following [guide](https://carrier-io.github.io/posts/carrier-create-project/)
 {: .prompt-info }
 
 ### Steps
@@ -90,7 +90,7 @@ Follow the steps below to know how to use Suites in Carrier:
 2. In the opened page, you could open each test result details
 ![Suite Results Tests](/assets/posts_img/suite_results_tests.png)
 
-3. There are 4 charts below: **Avg. throughput**, **Error rate**, **Responce time** and **Page speed**. You could select **tests** for them, **backend agregation** and **UI metric** from a top dropdown. Also you could chose between **categorical** and **time** variations for graphs and **zoom** each of them using magnifying glass button.  
+3. There are 4 charts below: **Avg. throughput**, **Error rate**, **Responce time** and **Page speed**. You could select **tests** for them, **backend agregation** and **UI metric** from a top dropdown. Also you could chose between **categorical** and **time** variations for graphs and **zoom** each of them using magnifying glass button.
 ![Suite Results Graphs](/assets/posts_img/suite_results_graphs.png)
 Zoomed graph:
 ![Suite Graphs Zoom](/assets/posts_img/suite_graph_zoom.png)

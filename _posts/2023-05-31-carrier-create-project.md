@@ -91,8 +91,8 @@ To add a new test, select the "Backend" tab.
 
 ## Next Step: Changing the Default Passwords
 
-Follow the guide on [how to change default Admin passwords in Carrier and Keycloak](https://getcarrier.io/posts/change-passwords/) to get started.
-Follow the guide on [how to configure backend performance test](https://getcarrier.io/posts/backend-test-configuration/) to get started.
+Follow the guide on [how to change default Admin passwords in Carrier and Keycloak](https://carrier-io.github.io/posts/change-passwords/) to get started.
+Follow the guide on [how to configure backend performance test](https://carrier-io.github.io/posts/backend-test-configuration/) to get started.
 
 
 ### Additional: Creating a Project for Carrier Admin User

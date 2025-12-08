@@ -94,7 +94,7 @@ docker run -d --rm -v /var/run/docker.sock:/var/run/docker.sock \
 ![Settings Button](/assets/posts_img/settings_button.png)
 4. Scroll down to the Load configuration section and click on Engine location dropdown.
 ![Load Config](/assets/posts_img/load_config.png)
-4. Select Project pool with name `${QUEUE_NAME}` from Docker command in [Step 2](https://getcarrier.io/posts/add-interceptor/#step-2-run-the-interceptor-docker-container)
+4. Select Project pool with name `${QUEUE_NAME}` from Docker command in [Step 2](https://carrier-io.github.io/posts/add-interceptor/#step-2-run-the-interceptor-docker-container)
 ![New Queue](/assets/posts_img/new_queue.png)
 5. Click on Update And Start button.
 ![Update Queue](/assets/posts_img/update_queue.png)

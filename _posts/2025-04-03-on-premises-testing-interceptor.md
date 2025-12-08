@@ -1,5 +1,5 @@
 ---
-title: On-Premises Testing with Carrier Interceptors 
+title: On-Premises Testing with Carrier Interceptors
 author: User
 date: 2025-04-03 12:00:00 +0800
 categories: [Performance, Tutorial]
@@ -25,7 +25,7 @@ Implementing on-premises testing with Carrier Interceptors offers several advant
 5. **Resource Utilization**: Reduces the need for additional investments in cloud-based testing services.
 6. **Flexibility**: Offers greater control and flexibility, ensuring optimal performance without relying on external service providers.
 
-### Configure On-Premises Interceptor 
+### Configure On-Premises Interceptor
 
 Before setting up Carrier Interceptors, ensure the following prerequisites are met:
 
@@ -33,7 +33,7 @@ Before setting up Carrier Interceptors, ensure the following prerequisites are m
 - A project is created in Carrier.
 - Installed [Docker](https://docs.docker.com/).
 
-Follow these instructions to [Add Interceptor](https://getcarrier.io/docs/) to your Carrier installation. Steps to configure the interceptor:
+Follow these instructions to [Add Interceptor](https://carrier-io.github.io/docs/) to your Carrier installation. Steps to configure the interceptor:
 1. Obtain Secrets Parameters from the Carrier Platform.
 2. Run the Interceptor Docker Container.
 3. Run the Rabbit Queue Checker Task.
@@ -43,7 +43,7 @@ Ensure that ports `3100`, `5672`, and `8086` are set to ALLOW OUT. These ports a
 - `3100` - Loki (used for logs aggregation)
 - `5672` - RabbitMQ (task broker and queue)
 - `8086` - InfluxDB (store time series test results)
-  
+
 ### Next Steps
 
 By configuring Carrier Interceptors, you can ensure that your performance testing is secure and efficient. This setup allows you to test applications within your own infrastructure, providing accurate performance metrics and maintaining compliance with regulatory requirements.

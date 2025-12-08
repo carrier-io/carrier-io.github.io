@@ -10,7 +10,7 @@ render_with_liquid: false
 ## Overview
 
 This guide provides step-by-step instructions on how to use Vue.js in a Carrier project. The example focuses on how to run a task in the UI Performance plugin.
-> We also recommend that you familiarize yourself with the list of documentation for the frameworks and libraries used in this project [here](https://getcarrier.io/posts/Preconditions-and-Learning-Materials/).
+> We also recommend that you familiarize yourself with the list of documentation for the frameworks and libraries used in this project [here](https://carrier-io.github.io/posts/Preconditions-and-Learning-Materials/).
 ### Step 1: Add HTML Components
 
 First, add a button that will open the modal dialog component.

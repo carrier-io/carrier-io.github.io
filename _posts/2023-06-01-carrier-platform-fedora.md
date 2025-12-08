@@ -11,7 +11,7 @@ render_with_liquid: false
 
 This guide provides step-by-step instructions for installing Carrier on Fedora operating systems.
 
-> Please find the hardware requirements by following the [link](http://getcarrier.io/posts/carrier-install/#prerequisites).
+> Please find the hardware requirements by following the [link](http://carrier-io.github.io/posts/carrier-install/#prerequisites).
 {: .prompt-info }
 
 ### Prerequisites
@@ -212,7 +212,7 @@ sudo make up
 
 Once you have completed the installation steps, you can proceed to create your first project in Carrier. The project allows you to organize and manage your performance tests.
 
-Follow the guide on [how to create a project in Carrier](http://getcarrier.io/posts/carrier-create-project/) to get started.
+Follow the guide on [how to create a project in Carrier](http://carrier-io.github.io/posts/carrier-create-project/) to get started.
 
 
 ## Troubleshooting

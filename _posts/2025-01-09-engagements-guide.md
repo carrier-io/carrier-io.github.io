@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ## Overview
 
-This guide provides step-by-step instructions for Engagements in Carrier. 
+This guide provides step-by-step instructions for Engagements in Carrier.
 - Engagements is a tool that can help with tracking project progress, allowing teams to plan, assign, and monitor tasks through customizable workflows and boards.
 - Engagements supports Kanban board, enabling teams to create sprints, manage backlogs, and visualize their workflow to enhance productivity and collaboration.
 - Engagements also provides various reporting and analytics features, helping teams to measure performance, track progress against goals, and make data-driven decisions to improve efficiency and outcomes
@@ -22,7 +22,7 @@ Before you begin working with Engagements, ensure that you have completed the fo
 - Created a project in Carrier with checked **engagements** checkbox.
 ![Engagements checkbox](/assets/posts_img/engagements_checkbox.png)
 
-> Note: You can find out how to create project in Carrier in the following [guide](https://getcarrier.io/posts/carrier-create-project/)
+> Note: You can find out how to create project in Carrier in the following [guide](https://carrier-io.github.io/posts/carrier-create-project/)
 {: .prompt-info }
 
 ### Steps
@@ -69,7 +69,7 @@ Follow the steps below to know how to use Engagements in Carrier:
 - **Name** - name that will appear in your Boards list.
 - **Mapping field** - Field used to sort tickets to columns (Recomended using only **Status** field).
 - **Columns** - Kanban board columns, such as: Open, Postponed, Blocked, In progress, In review, Done.
-- **Ticket card attributes** - attributes such as: Title, Assignee, Status, Severity, Ticket type, Engagement. 
+- **Ticket card attributes** - attributes such as: Title, Assignee, Status, Severity, Ticket type, Engagement.
 - **Engagement** - which Engagement is related to Board.
 
 4. Also you can configure schedule to send an email with board summary.
@@ -121,5 +121,5 @@ At the bottom of the page you can add or edit comments, and check the latest act
 4. This page contains information about all the tickets, you can click on the ticket name to get more details.
 ![Ticket page](/assets/posts_img/ticket_page.png)
 
-5. On the following page, you can edit your tickets (for example, assign a ticket to the board).  
+5. On the following page, you can edit your tickets (for example, assign a ticket to the board).
 ![Ticket edit page](/assets/posts_img/ticket_to_board_assignee.png)

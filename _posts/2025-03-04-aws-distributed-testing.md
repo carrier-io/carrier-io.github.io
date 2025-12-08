@@ -15,9 +15,9 @@ This guide provides step-by-step instructions for performing distributed testing
 
 Before you begin with distributed testing using AWS in Carrier, ensure that you have completed the following:
 
-- [Installed and set up Carrier](https://getcarrier.io/posts/carrier-install) successfully or you have a Carrier account with the necessary permissions
-- [Created a project in Carrier](https://getcarrier.io/posts/carrier-create-project)
-- [Configured AWS integration](https://getcarrier.io/posts/configure-aws-integration)
+- [Installed and set up Carrier](https://carrier-io.github.io/posts/carrier-install) successfully or you have a Carrier account with the necessary permissions
+- [Created a project in Carrier](https://carrier-io.github.io/posts/carrier-create-project)
+- [Configured AWS integration](https://carrier-io.github.io/posts/configure-aws-integration)
 - Configured backend test
 
 ### Steps
@@ -50,7 +50,7 @@ Follow the steps below to perform distributed testing using AWS in Carrier:
 2. Enter the number of AWS instances you want to use for distributed testing.
 ![Distributed Testing Runners](/assets/posts_img/distributed_testing_runners.png)
 3. Configure additional parameters such as instance type, region, and any other relevant settings.
-4. Configure the `vUsers` parameter. 
+4. Configure the `vUsers` parameter.
 ![Distributed Testing vUsers](/assets/posts_img/distributed_testing_vusers.png)
 > Note: The specified value will be multiplied by the number of runners in the final test results (e.g., 1 vUser with 2 runners results in 2 vUsers).
 

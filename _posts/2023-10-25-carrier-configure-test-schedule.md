@@ -17,7 +17,7 @@ Before you begin configuring a Backend test in Carrier, ensure that you have com
 
 - Installed and set up Carrier successfully
 - Created a project in Carrier
-- Configured UI or Beckend test (Please find useful guides about it here: [Performance Tutorial](https://getcarrier.io/categories/performance-tutorial/))
+- Configured UI or Beckend test (Please find useful guides about it here: [Performance Tutorial](https://carrier-io.github.io/categories/performance-tutorial/))
 
 ### Steps
 
@@ -52,8 +52,8 @@ Follow the steps below to configure schedules for tests in Carrier:
 3. In the menu that appears, enter the name of the schedule, for example `DemoSchedule`
 ![Demo Schedule](/assets/posts_img/schedule_name.png)
 4. You can set when tests will run using 4 ready-made options: Daily, Weekly, Monthly, Yearly. In this case, your current time will be selected as the test start time.
-![Time set](/assets/posts_img/time_set_daily.png) 
-5. If you want to configure the test with a different schedule, you need to choose Custom option and use the crontab expression. For example, if you want to run tests every 4 hours, you should use `0 */4 * * *` crontab expression. You can learn more about the crontab expressions by the [link](https://crontab.guru/). 
+![Time set](/assets/posts_img/time_set_daily.png)
+5. If you want to configure the test with a different schedule, you need to choose Custom option and use the crontab expression. For example, if you want to run tests every 4 hours, you should use `0 */4 * * *` crontab expression. You can learn more about the crontab expressions by the [link](https://crontab.guru/).
 ![Crontab expression](/assets/posts_img/crontab_exp.png)
 6. To add parameters to a scheduled test, click the Add parameters button.
 ![Add schedule parameter](/assets/posts_img/add_schedule_parameter.png)

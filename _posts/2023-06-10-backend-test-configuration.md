@@ -110,4 +110,4 @@ Follow the steps below to configure a Backend test in Carrier:
 ## Next Steps
 
 Once you have configured and executed your Backend test in Carrier, you may want to explore other testing capabilities and features offered by Carrier, such as Frontend testing, Security testing, and advanced reporting and analysis options.
-Follow the guide on [how to analyze and compare test runs in Carrier](http://getcarrier.io/posts/backend-comparison/) to get started.
+Follow the guide on [how to analyze and compare test runs in Carrier](http://carrier-io.github.io/posts/backend-comparison/) to get started.

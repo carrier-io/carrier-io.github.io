@@ -16,7 +16,7 @@ This guide provides step-by-step instructions on how to configure CI for executi
 Before you begin, make sure you have completed the following:
 
 - Installed and set up Carrier successfully
-- Created a project in Carrier (Please find the configuration guides by following the [link](https://getcarrier.io/categories/performance-tutorial/#page-category))
+- Created a project in Carrier (Please find the configuration guides by following the [link](https://carrier-io.github.io/categories/performance-tutorial/#page-category))
 
 ### Steps
 
@@ -95,9 +95,9 @@ jobs:
         run: |
                 # Intercept test break to reset folder chmod
                 trap "sudo chmod -R 777 $GITHUB_WORKSPACE" SIGINT SIGTERM SIGKILL
-              
+
                 # PUT YOUR DOCKER COMMAND ON THE LINE 31 BELOW \/ \/ \/
-                               
+
                 sudo chmod -R 777 $GITHUB_WORKSPACE
 ```
 2. Template of .yml file for **AzureDevOps Pipelines** (Put your pool name on the line 7 and your Docker Command on the line 28):
@@ -128,9 +128,9 @@ stages:
               script: |
                 # Intercept test break to reset folder chmod
                 trap "sudo chmod -R 777 $(Build.SourcesDirectory)" SIGINT SIGTERM SIGKILL
-              
-                # PUT YOUR DOCKER COMMAND ON THE LINE 28 BELOW \/ \/ \/          
-                
+
+                # PUT YOUR DOCKER COMMAND ON THE LINE 28 BELOW \/ \/ \/
+
                 sudo chmod -R 777 $(Build.SourcesDirectory)
 ```
 3. Template of .yml file for **GitLab Pipelines** (Put your Docker Command on the line 13):

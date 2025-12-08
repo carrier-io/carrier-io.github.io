@@ -33,6 +33,6 @@ To get a better understanding of the concepts covered in this guide, review the 
   - [MDN Web Docs: Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
 4. **Carrier Documentation**: Explore Carrier's official documentation for more details on using its plugins and APIs.
-  - [Carrier Documentation](https://getcarrier.io/docs/)
+  - [Carrier Documentation](https://carrier-io.github.io/docs/)
 
 
